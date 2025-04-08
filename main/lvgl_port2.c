@@ -7,11 +7,8 @@
 #include "uiled.h"
 #include "driver/gpio.h"
 
-void app_main(void)
-{
-    lv_port_init();
-    st7789_lcd_backlight(1);
-    ui_led_create();
+void led1_config(void)
+{ 
     gpio_config_t led_cfg={
         .mode = GPIO_MODE_OUTPUT,
         .pull_down_en = GPIO_PULLDOWN_DISABLE,
@@ -21,7 +18,14 @@ void app_main(void)
     };
     gpio_config(&led_cfg);
     gpio_set_level(GPIO_NUM_27, 0);
-    
+}
+
+void app_main(void)
+{
+    led1_config();
+    lv_port_init();
+    st7789_lcd_backlight(1);
+    ui_led_create();
     while(1)
     {
         lv_task_handler();
