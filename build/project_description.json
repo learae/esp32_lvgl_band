@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "lvgl_port2",
-    "project_version":    "1",
+    "project_version":    "ad45b2e-dirty",
     "project_path":       "/home/vl/esp32/project_my/lvgl_port2",
     "idf_path":           "/home/vl/esp32/esp-idf",
     "build_dir":          "/home/vl/esp32/project_my/lvgl_port2/build",
@@ -100,7 +100,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/bsp/libbsp.a",
-            "sources": [ "/home/vl/esp32/project_my/lvgl_port2/components/bsp/st7789_driver.c", "/home/vl/esp32/project_my/lvgl_port2/components/bsp/cst816t_driver.c" ],
+            "sources": [ "/home/vl/esp32/project_my/lvgl_port2/components/bsp/st7789_driver.c", "/home/vl/esp32/project_my/lvgl_port2/components/bsp/cst816t_driver.c", "/home/vl/esp32/project_my/lvgl_port2/components/bsp/dht11.c", "/home/vl/esp32/project_my/lvgl_port2/components/bsp/led_ws2812.c" ],
             "include_dirs": [ "." ]
         },
         "bt": {
@@ -835,7 +835,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c", "/home/vl/esp32/project_my/lvgl_port2/main/lv_port.c", "/home/vl/esp32/project_my/lvgl_port2/main/uiled.c" ],
+            "sources": [ "/home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c", "/home/vl/esp32/project_my/lvgl_port2/main/lv_port.c", "/home/vl/esp32/project_my/lvgl_port2/main/uiled.c", "/home/vl/esp32/project_my/lvgl_port2/main/ui_temp_hum.c", "/home/vl/esp32/project_my/lvgl_port2/main/img/humidity_img.c", "/home/vl/esp32/project_my/lvgl_port2/main/img/temp_img.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {

@@ -5,6 +5,7 @@
 #include "lv_demos.h"
 #include "st7789_driver.h"
 #include "uiled.h"
+#include "ui_temp_hum.h"
 #include "driver/gpio.h"
 
 void led1_config(void)
@@ -22,10 +23,9 @@ void led1_config(void)
 
 void app_main(void)
 {
-    led1_config();
     lv_port_init();
     st7789_lcd_backlight(1);
-    ui_led_create();
+    ui_thp_create();
     while(1)
     {
         lv_task_handler();

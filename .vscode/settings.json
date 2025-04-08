@@ -2,6 +2,19 @@
     "idf.pythonInstallPath": "/home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python",
     "files.associations": {
         "*.c": "cuda-cpp",
-        "i2c.h": "c"
+        "i2c.h": "c",
+        "*.tcc": "cpp",
+        "charconv": "cpp",
+        "chrono": "cpp",
+        "optional": "cpp",
+        "format": "cpp",
+        "ratio": "cpp",
+        "system_error": "cpp",
+        "array": "cpp",
+        "functional": "cpp",
+        "regex": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp"
     }
 }
