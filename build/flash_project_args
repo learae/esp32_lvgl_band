@@ -2,3 +2,4 @@
 0x1000 bootloader/bootloader.bin
 0x10000 lvgl_port2.bin
 0x8000 partition_table/partition-table.bin
+0x210000 ui_img.bin

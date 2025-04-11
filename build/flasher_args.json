@@ -10,11 +10,13 @@
     "flash_files" : {
         "0x1000" : "bootloader/bootloader.bin",
         "0x10000" : "lvgl_port2.bin",
-        "0x8000" : "partition_table/partition-table.bin"
+        "0x8000" : "partition_table/partition-table.bin",
+        "0x210000" : "ui_img.bin"
     },
     "bootloader" : { "offset" : "0x1000", "file" : "bootloader/bootloader.bin", "encrypted" : "false" },
     "app" : { "offset" : "0x10000", "file" : "lvgl_port2.bin", "encrypted" : "false" },
     "partition-table" : { "offset" : "0x8000", "file" : "partition_table/partition-table.bin", "encrypted" : "false" },
+    "ui_img" : { "offset" : "0x210000", "file" : "ui_img.bin", "encrypted" : "false" },
     "extra_esptool_args" : {
         "after"  : "hard_reset",
         "before" : "default_reset",

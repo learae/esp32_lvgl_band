@@ -15,6 +15,7 @@
         "regex": "cpp",
         "tuple": "cpp",
         "type_traits": "cpp",
-        "utility": "cpp"
+        "utility": "cpp",
+        "esp_vfs_fat.h": "c"
     }
 }

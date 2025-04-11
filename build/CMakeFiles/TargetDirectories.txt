@@ -630,6 +630,9 @@
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/wifi_provisioning/CMakeFiles/install/local.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/wifi_provisioning/CMakeFiles/install/strip.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/CMakeFiles/__idf_main.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/CMakeFiles/spiffs_ui_img_bin.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/CMakeFiles/ui_img-flash.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/CMakeFiles/encrypted-ui_img-flash.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/CMakeFiles/edit_cache.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/CMakeFiles/rebuild_cache.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/CMakeFiles/list_install_components.dir

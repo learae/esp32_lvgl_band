@@ -1,0 +1,59 @@
+[1/1302] Generating project_elf_src_esp32.c
+[2/1302] Generating memory.ld linker script...
+[3/1302] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aesni.c.obj
+[4/1302] Building C object esp-idf/mbedtls/mbedtls/3rdparty/everest/CMakeFiles/everest.dir/library/Hacl_Curve25519_joined.c.obj
+[5/1302] Building C object esp-idf/mbedtls/mbedtls/3rdparty/everest/CMakeFiles/everest.dir/library/x25519.c.obj
+[6/1302] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aesce.c.obj
+[7/1302] cd /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/spiffs/spiffsgen.py 0x40000 /home/vl/esp32/project_my/lvgl_port2/main/img /home/vl/esp32/project_my/lvgl_port2/build/ui_img.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+FAILED: esp-idf/main/CMakeFiles/spiffs_ui_img_bin /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/CMakeFiles/spiffs_ui_img_bin 
+cd /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/spiffs/spiffsgen.py 0x40000 /home/vl/esp32/project_my/lvgl_port2/main/img /home/vl/esp32/project_my/lvgl_port2/build/ui_img.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/spiffs/spiffsgen.py", line 434, in create_file
+    block.update_obj(contents_chunk)
+  File "/home/vl/esp32/esp-idf/components/spiffs/spiffsgen.py", line 349, in update_obj
+    raise SpiffsFullError()
+SpiffsFullError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/spiffs/spiffsgen.py", line 438, in create_file
+    raise SpiffsFullError
+SpiffsFullError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/spiffs/spiffsgen.py", line 593, in <module>
+    main()
+  File "/home/vl/esp32/esp-idf/components/spiffs/spiffsgen.py", line 585, in main
+    spiffs.create_file('/' + os.path.relpath(full_path, args.base_dir).replace('\\', '/'), full_path)
+  File "/home/vl/esp32/esp-idf/components/spiffs/spiffsgen.py", line 449, in create_file
+    block = self._create_block()
+            ^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/spiffs/spiffsgen.py", line 398, in _create_block
+    raise SpiffsFullError('the image size has been exceeded')
+SpiffsFullError: the image size has been exceeded
+[8/1302] Building C object esp-idf/mbedtls/mbedtls/3rdparty/everest/CMakeFiles/everest.dir/library/everest.c.obj
+[9/1302] Building C object esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m/p256-m.c.obj
+[10/1302] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum_mod.c.obj
+[11/1302] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum_mod_raw.c.obj
+[12/1302] Building C object esp-idf/mbedtls/mbedtls/3rdparty/p256-m/CMakeFiles/p256m.dir/p256-m_driver_entrypoints.c.obj
+[13/1302] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/asn1write.c.obj
+[14/1302] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/asn1parse.c.obj
+[15/1302] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aes.c.obj
+[16/1302] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/base64.c.obj
+[17/1302] Generating ../../partition_table/partition-table.bin
+Partition table binary generated. Contents:
+*******************************************************************************
+# ESP-IDF Partition Table
+# Name, Type, SubType, Offset, Size, Flags
+nvs,data,nvs,0x9000,24K,
+phy_init,data,phy,0xf000,4K,
+factory,app,factory,0x10000,2M,
+ui_img,data,spiffs,0x210000,256K,
+*******************************************************************************
+[18/1302] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/aria.c.obj
+[19/1302] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum_core.c.obj
+[20/1302] Building C object esp-idf/mbedtls/mbedtls/library/CMakeFiles/mbedcrypto.dir/bignum.c.obj
+ninja: build stopped: subcommand failed.
