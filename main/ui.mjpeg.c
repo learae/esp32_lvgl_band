@@ -31,7 +31,8 @@ void file_btn_event_cb(lv_event_t *e)
     default:
         break;
     }
-
+    }
+}
 void ui_mjpeg_create(void)
 {
     s_lv_file_page = lv_obj_create(lv_scr_act());
