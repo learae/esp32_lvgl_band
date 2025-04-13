@@ -17,6 +17,21 @@ static lv_obj_t *s_lv_player_back = NULL;
 
 static lv_obj_t *s_lv_player_play = NULL;
 
+void file_btn_event_cb(lv_event_t *e)
+{
+    lv_event_code_t *code = lv_event_get_code(e);
+    lv_obj_t *btn = lv_event_get_target(e);
+    switch (*code) {
+    {
+    case LV_EVENT_CLICKED:
+        ESP_LOGI("file_btn_event_cb", "Clicked");
+        lv_scr_load(s_lv_player_page);//跳转播放器页面
+        break;
+    
+    default:
+        break;
+    }
+
 void ui_mjpeg_create(void)
 {
     s_lv_file_page = lv_obj_create(lv_scr_act());
@@ -47,7 +62,7 @@ void ui_mjpeg_create(void)
     int file_num = sdcard_filelist(&file);
     for (int i = 0; i < file_num; i++) {
         lv_obj_t *btn = lv_list_add_btn(s_lv_file_lists, LV_SYMBOL_FILE, file[i]);
-        lv_obj_add_event_cb(btn, file_btn_event_cb, LV_EVENT_CLICKED, (void *)file[i]);
+        lv_obj_add_event_cb(btn, file_btn_event_cb, LV_EVENT_CLICKED, NULL);
     }
 
     s_lv_player_page = lv_obj_create(lv_scr_act()); //加载播放器页面
