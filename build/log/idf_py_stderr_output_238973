@@ -1,0 +1,355 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081e41: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008d9b5: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x4008e8c2: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4008f91b: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x4008e9cc: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x4008e97e: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+0x40085bfe: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1233
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

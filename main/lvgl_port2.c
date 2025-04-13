@@ -49,5 +49,6 @@ void app_main(void)
     lv_port_init();
     st7789_lcd_backlight(1);
     ui_mjpeg_create();
-    xTaskCreatePinnedToCore(lv_mjpeg_tack, "lv_mjpeg_tack", 4096, NULL, 5, NULL, 1);
+    //ui_thp_create();
+    xTaskCreatePinnedToCore(lv_mjpeg_tack, "lv_mjpeg_tack", 8192, NULL, 5, NULL, 1);
 }

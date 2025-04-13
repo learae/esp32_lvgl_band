@@ -19,9 +19,9 @@ static lv_obj_t *s_lv_player_play = NULL;
 
 void file_btn_event_cb(lv_event_t *e)
 {
-    lv_event_code_t *code = lv_event_get_code(e);
+    lv_event_code_t code = lv_event_get_code(e);
     lv_obj_t *btn = lv_event_get_target(e);
-    switch (*code) {
+    switch (code) {
     {
     case LV_EVENT_CLICKED:
         ESP_LOGI("file_btn_event_cb", "Clicked");
@@ -35,9 +35,11 @@ void file_btn_event_cb(lv_event_t *e)
 }
 void ui_mjpeg_create(void)
 {
-    s_lv_file_page = lv_obj_create(lv_scr_act());
-    lv_obj_set_style_bg_color(s_lv_file_page, lv_color_black(), LV_PART_MAIN | LV_STATE_DEFAULT);
-    lv_scr_load(s_lv_file_page);//加载文件页面
+   lv_obj_set_style_bg_color(lv_scr_act(),lv_color_black(),0);
+   
+   //创建文件列表页面
+   s_lv_file_page = lv_obj_create(NULL);
+   lv_obj_set_style_bg_color(s_lv_file_page,lv_color_black(),0);
 
     //创建标题
     s_lv_file_title = lv_label_create(s_lv_file_page);
@@ -58,15 +60,17 @@ void ui_mjpeg_create(void)
     lv_obj_set_style_text_color(s_lv_file_lists, lv_color_white(), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(s_lv_file_lists, &lv_font_montserrat_16, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    sdcard_init();
-    char file[20][256] = {0};
-    int file_num = sdcard_filelist(&file);
-    for (int i = 0; i < file_num; i++) {
+    //sdcard_init();
+    char file[10][50] = {};
+    strcpy(file[0], "1234");
+    strcpy(file[1], "5678");
+    //int file_num = sdcard_filelist(&file);
+    for (int i = 0; i < 2; i++) {
         lv_obj_t *btn = lv_list_add_btn(s_lv_file_lists, LV_SYMBOL_FILE, file[i]);
         lv_obj_add_event_cb(btn, file_btn_event_cb, LV_EVENT_CLICKED, NULL);
     }
 
-    s_lv_player_page = lv_obj_create(lv_scr_act()); //加载播放器页面
+    s_lv_player_page = lv_obj_create(NULL); //加载播放器页面
     lv_obj_set_style_bg_color(s_lv_player_page, lv_color_black(), LV_PART_MAIN | LV_STATE_DEFAULT);
 
     s_lv_player_ctrl = lv_list_create(s_lv_player_page);
@@ -83,4 +87,5 @@ void ui_mjpeg_create(void)
     s_lv_player_play = lv_btn_create(s_lv_player_page);
     lv_obj_align(s_lv_player_play, LV_ALIGN_TOP_MID, 0,30);
     
+    lv_scr_load(s_lv_file_page);
 }
