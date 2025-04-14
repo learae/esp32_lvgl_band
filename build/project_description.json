@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "lvgl_port2",
-    "project_version":    "66fc197-dirty",
+    "project_version":    "48bb595-dirty",
     "project_path":       "/home/vl/esp32/project_my/lvgl_port2",
     "idf_path":           "/home/vl/esp32/esp-idf",
     "build_dir":          "/home/vl/esp32/project_my/lvgl_port2/build",

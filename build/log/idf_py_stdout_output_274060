@@ -261,4 +261,31 @@ entry 0x40080640
 [0;32mI (826) cpu_start: Application information:[0m
 [0;32mI (829) cpu_start: Project name:     lvgl_port2[0m
 [0;32mI (834) cpu_start: App version:      66fc197-dirty[0m
-[0;3
+[0;32mI (839) cpu_start: Compile time:     Apr 13 2025 09:06:05[0m
+[0;32mI (845) cpu_start: ELF file SHA256:  0d48344c8...[0m
+[0;32mI (851) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (855) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (860) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (865) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (870) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (877) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (883) heap_init: At 3FFB3498 len 0002CB68 (178 KiB): DRAM[0m
+[0;32mI (889) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (895) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (902) heap_init: At 4009485C len 0000B7A4 (45 KiB): IRAM[0m
+[0;32mI (909) esp_psram: Adding pool of 2048K of PSRAM memory to heap allocator[0m
+[0;32mI (917) spi_flash: detected chip: generic[0m
+[0;32mI (920) spi_flash: flash io: dio[0m
+[0;33mW (924) spi_flash: Detected size(8192k) larger than the size in the binary image header(4096k). Using the size in the binary image header.[0m
+[0;33mW (938) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (949) main_task: Started on CPU0[0m
+[0;32mI (959) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (959) main_task: Calling app_main()[0m
+[0;32mI (999) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (999) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (999) st7789: create esp_lcd_new_panel[0m
+[0;32mI (1009) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1859) cst816t: 	Chip ID: 0xb6[0m
+[0;32mI (1859) cst816t: 	Firmware version: 0x01[0m
+[0;32mI (1859) cst816t: 	Factory ID: 0xff[0m
+[0;32mI (1889) main_task: Returned from app_main()[0m
