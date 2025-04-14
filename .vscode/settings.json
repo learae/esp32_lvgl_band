@@ -16,6 +16,7 @@
         "tuple": "cpp",
         "type_traits": "cpp",
         "utility": "cpp",
-        "esp_vfs_fat.h": "c"
+        "esp_vfs_fat.h": "c",
+        "mjpeg_frame.h": "c"
     }
 }

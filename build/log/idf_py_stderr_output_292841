@@ -1,0 +1,65 @@
+CMake Error at /home/vl/esp32/esp-idf/tools/cmake/component.cmake:224 (message):
+  CMake Warning (dev) at build_properties.temp.cmake:8:
+
+    Syntax Warning in cmake code at column 106
+
+  
+
+    Argument not separated from preceding token by whitespace.
+
+  Call Stack (most recent call first):
+
+    /home/vl/esp32/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:3 (include)
+
+  This warning is for project developers.  Use -Wno-dev to suppress it.
+
+  
+
+  CMake Warning (dev) at
+  /home/vl/esp32/project_my/lvgl_port2/main/CMakeLists.txt:3:
+
+    Syntax Warning in cmake code at column 35
+
+  
+
+    Argument not separated from preceding token by whitespace.
+
+  Call Stack (most recent call first):
+
+    /home/vl/esp32/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:107 (include)
+    /home/vl/esp32/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:127 (__component_get_requirements)
+
+  This warning is for project developers.  Use -Wno-dev to suppress it.
+
+  
+
+  CMake Error at
+  /home/vl/esp32/project_my/lvgl_port2/main/CMakeLists.txt:5:
+
+    Parse error.  Function missing ending ")".  Instead found unterminated
+    string with text ")
+
+  
+
+
+
+
+
+    spiffs_create_partition_image(ui_img ../main/img FLASH_IN_PROJECT)".
+
+  Call Stack (most recent call first):
+
+    /home/vl/esp32/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:107 (include)
+    /home/vl/esp32/esp-idf/tools/cmake/scripts/component_get_requirements.cmake:127 (__component_get_requirements)
+
+  
+
+  
+
+Call Stack (most recent call first):
+  /home/vl/esp32/esp-idf/tools/cmake/build.cmake:578 (__component_get_requirements)
+  /home/vl/esp32/esp-idf/tools/cmake/project.cmake:605 (idf_build_process)
+  CMakeLists.txt:10 (project)
+
+
+ninja: error: rebuilding 'build.ninja': subcommand failed

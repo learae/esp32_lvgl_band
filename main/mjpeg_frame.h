@@ -11,9 +11,7 @@ typedef struct {
 typedef struct mjpeg_frame_cfg_t {
     size_t size;   // 图像数据大小
 } mjpeg_frame_cfg_t;
-{
-    /* data */
-};
+
 
 void jpeg_frame_config(mjpeg_frame_cfg_t *cfg);
 

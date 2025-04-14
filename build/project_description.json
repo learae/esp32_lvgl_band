@@ -1,7 +1,7 @@
 {
     "version":            "1.1",
     "project_name":       "lvgl_port2",
-    "project_version":    "48bb595-dirty",
+    "project_version":    "c86f4c4-dirty",
     "project_path":       "/home/vl/esp32/project_my/lvgl_port2",
     "idf_path":           "/home/vl/esp32/esp-idf",
     "build_dir":          "/home/vl/esp32/project_my/lvgl_port2/build",
@@ -835,7 +835,7 @@
             "managed_reqs": [],
             "managed_priv_reqs": [],
             "file": "/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/libmain.a",
-            "sources": [ "/home/vl/esp32/project_my/lvgl_port2/main/ui.mjpeg.c", "/home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c", "/home/vl/esp32/project_my/lvgl_port2/main/lv_port.c", "/home/vl/esp32/project_my/lvgl_port2/main/uiled.c", "/home/vl/esp32/project_my/lvgl_port2/main/ui_temp_hum.c", "/home/vl/esp32/project_my/lvgl_port2/main/humidity_img.c", "/home/vl/esp32/project_my/lvgl_port2/main/temp_img.c" ],
+            "sources": [ "/home/vl/esp32/project_my/lvgl_port2/main/mjpeg_frame.c", "/home/vl/esp32/project_my/lvgl_port2/main/ui.mjpeg.c", "/home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c", "/home/vl/esp32/project_my/lvgl_port2/main/lv_port.c", "/home/vl/esp32/project_my/lvgl_port2/main/uiled.c", "/home/vl/esp32/project_my/lvgl_port2/main/ui_temp_hum.c", "/home/vl/esp32/project_my/lvgl_port2/main/humidity_img.c", "/home/vl/esp32/project_my/lvgl_port2/main/temp_img.c" ],
             "include_dirs": [ "." ]
         },
         "mbedtls": {
