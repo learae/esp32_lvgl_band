@@ -156,7 +156,7 @@ void jpeg_frame_start(const char *filename)
 
 void jpeg_frame_stop(void)
 {
-    xEventGroupSetBits(&mjpeg_event_group, JPEG_STOP_STR);
+    xEventGroupSetBits(mjpeg_event_group, JPEG_STOP_STR);
 }
 
 

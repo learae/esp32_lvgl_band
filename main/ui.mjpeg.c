@@ -153,12 +153,10 @@ void ui_mjpeg_create(void)
     lv_obj_set_style_text_color(s_lv_file_lists, lv_color_white(), LV_PART_MAIN | LV_STATE_DEFAULT);
     lv_obj_set_style_text_font(s_lv_file_lists, &lv_font_montserrat_16, LV_PART_MAIN | LV_STATE_DEFAULT);
 
-    //sdcard_init();
+    sdcard_init();
     char file[10][50] = {};
-    strcpy(file[0], "1234");
-    strcpy(file[1], "5678");
-    //int file_num = sdcard_filelist(&file);
-    for (int i = 0; i < 2; i++) {
+    int file_num = sdcard_filelist(&file);
+    for (int i = 0; i < file_num; i++) {
         lv_obj_t *btn = lv_list_add_btn(s_lv_file_lists, LV_SYMBOL_FILE, file[i]);
         lv_obj_add_event_cb(btn, file_btn_event_cb, LV_EVENT_CLICKED, NULL);
     }

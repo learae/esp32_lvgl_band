@@ -65,3 +65,4 @@
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/libmain.a
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/lvgl/liblvgl.a
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/bsp/libbsp.a
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/jpeg/libjpeg.a
