@@ -12,6 +12,9 @@
 #include "ui.mjpeg.h"
 #include "esp_vfs_fat.h"
 
+#include "ui/generated/gui_guider.h"
+lv_ui guider_ui;
+
 void spiffs_init(char *partition_label,char*mount)
 {
     esp_vfs_spiffs_conf_t conf = {
@@ -45,10 +48,11 @@ void lv_mjpeg_tack(void *params)
 
 void app_main(void)
 {
-    spiffs_init("ui_img","/main/img");
+    //spiffs_init("ui_img","/main/img");
     lv_port_init();
     st7789_lcd_backlight(1);
-    ui_mjpeg_create();
+    //ui_mjpeg_create();
     //ui_thp_create();
+    setup_ui(&guider_ui);
     xTaskCreatePinnedToCore(lv_mjpeg_tack, "lv_mjpeg_tack", 8192, NULL, 5, NULL, 1);
 }

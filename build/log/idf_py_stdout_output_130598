@@ -1,0 +1,42 @@
+[1/30] cd /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/spiffs/spiffsgen.py 0x40000 /home/vl/esp32/project_my/lvgl_port2/main/img /home/vl/esp32/project_my/lvgl_port2/build/ui_img.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[2/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_load_page.c.obj
+[3/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_lis_page.c.obj
+[4/30] Performing build step for 'bootloader'
+[1/1] cd /home/vl/esp32/project_my/lvgl_port2/build/bootloader/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/vl/esp32/project_my/lvgl_port2/build/bootloader/bootloader.bin
+Bootloader binary size 0x6850 bytes. 0x7b0 bytes (7%) free.
+[5/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_heart_page.c.obj
+[6/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_light_page.c.obj
+[7/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_settings_page.c.obj
+[8/30] No install step for 'bootloader'
+[9/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_music_list.c.obj
+[10/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_screen.c.obj
+[11/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_shezhi.c.obj
+[12/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/custom/custom.c.obj
+[13/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_math_page.c.obj
+[14/30] Completed 'bootloader'
+[15/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_connect_page.c.obj
+[16/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_temp_page.c.obj
+[17/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_tianqi_page.c.obj
+[18/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_duogongneng.c.obj
+[19/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/widgets_init.c.obj
+[20/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_txt_page.c.obj
+[21/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_txt_veiw.c.obj
+[22/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_vol_page.c.obj
+[23/30] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_tianqi_page1.c.obj
+[24/30] Linking C static library esp-idf/ui/libui.a
+[25/30] Linking C static library esp-idf/main/libmain.a
+[26/30] Generating ld/sections.ld
+[27/30] Building C object CMakeFiles/lvgl_port2.elf.dir/project_elf_src_esp32.c.obj
+[28/30] Linking CXX executable lvgl_port2.elf
+[29/30] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+[30/30] cd /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/vl/esp32/project_my/lvgl_port2/build/partition_table/partition-table.bin /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+FAILED: esp-idf/esptool_py/CMakeFiles/app_check_size /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/esptool_py/CMakeFiles/app_check_size 
+cd /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/vl/esp32/project_my/lvgl_port2/build/partition_table/partition-table.bin /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+Error: app partition is too small for binary lvgl_port2.bin size 0x20f3b0:
+  - Part 'factory' 0/0 @ 0x10000 size 0x200000 (overflow 0xf3b0)
+ninja: build stopped: subcommand failed.

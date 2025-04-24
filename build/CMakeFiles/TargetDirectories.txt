@@ -660,3 +660,10 @@
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/jpeg/CMakeFiles/install.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/jpeg/CMakeFiles/install/local.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/jpeg/CMakeFiles/install/strip.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/ui/CMakeFiles/__idf_ui.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/ui/CMakeFiles/edit_cache.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/ui/CMakeFiles/rebuild_cache.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/ui/CMakeFiles/list_install_components.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/ui/CMakeFiles/install.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/ui/CMakeFiles/install/local.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/ui/CMakeFiles/install/strip.dir

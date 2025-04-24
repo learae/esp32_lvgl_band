@@ -1,0 +1,18 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32
+NOTICE: Processing 1 dependencies:
+NOTICE: [1/1] idf (5.2.0)
+-- Project sdkconfig file /home/vl/esp32/project_my/lvgl_port2/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- App "lvgl_port2" version: 65791ef-dirty
+-- Adding linker script /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/vl/esp32/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+-- Adding linker script /home/vl/esp32/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/vl/esp32/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/vl/esp32/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/vl/esp32/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /home/vl/esp32/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /home/vl/esp32/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Configuring incomplete, errors occurred!
+FAILED: build.ninja 
+/usr/bin/cmake --regenerate-during-build -S/home/vl/esp32/project_my/lvgl_port2 -B/home/vl/esp32/project_my/lvgl_port2/build

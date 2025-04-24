@@ -1,0 +1,139 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40116de7: task_wdt_timeout_handling at /home/vl/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c:441
+0x4011721c: task_wdt_isr at /home/vl/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c:515
+0x40085a9d: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x40126dca: lv_memset_00 at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_mem.c:501
+0x400e1017: lv_draw_label_dsc_init at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/draw/lv_draw_label.c:57
+0x400e0d0e: show_error at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/draw/lv_draw_img.c:363
+0x400e1009: lv_draw_img at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/draw/lv_draw_img.c:85
+0x4010fbf2: draw_main at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c:294
+0x4010fc7b: lv_imgbtn_event at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c:190
+0x40127145: lv_obj_event_base at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:98
+0x400e6a01: event_send_core at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:458
+0x400e6af6: lv_event_send at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:75
+0x400e01d2: lv_obj_redraw at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:148
+0x400e0289: refr_obj at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:974
+0x400e023b: lv_obj_redraw at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:182
+0x400e0289: refr_obj at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:974
+0x400e023b: lv_obj_redraw at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:182
+0x400e0289: refr_obj at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:974
+0x400e0528: refr_obj_and_children at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:856
+0x400e072a: refr_area_part at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:791
+0x400e08b0: refr_area at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:680
+0x400e09cc: refr_invalid_areas at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:618
+0x400e0bae: _lv_disp_refr_timer at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:325
+0x400e5b11: lv_timer_exec at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:313 (discriminator 2)
+0x400e5bcc: lv_timer_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:109
+0x400d96b1: lv_task_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/lv_api_map.h:37
+ (inlined by) app_main at /home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c:60
+0x4012a49f: main_task at /home/vl/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008c43d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081d3d: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008b919: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40092a35: __assert_func at /home/vl/esp32/esp-idf/components/newlib/assert.c:81
+0x40082647: heap_caps_free at /home/vl/esp32/esp-idf/components/heap/heap_caps.c:392 (discriminator 1)
+0x40092a65: free at /home/vl/esp32/esp-idf/components/newlib/heap.c:39
+0x400e5362: lv_mem_free at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_mem.c:183
+0x400fef45: lv_label_set_text at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/widgets/lv_label.c:116
+0x4010ef89: lv_dclock_set_text_fmt at /home/vl/esp32/project_my/lvgl_port2/components/ui/custom/custom.c:69
+0x4010eed7: screen_digital_clock_home_timer at /home/vl/esp32/project_my/lvgl_port2/components/ui/generated/widgets_init.c:91
+0x400e5b11: lv_timer_exec at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:313 (discriminator 2)
+0x400e5bcc: lv_timer_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:109
+0x400d96b1: lv_task_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/lv_api_map.h:37
+ (inlined by) app_main at /home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c:60
+0x4012a49f: main_task at /home/vl/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008c43d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40116de7: task_wdt_timeout_handling at /home/vl/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c:441
+0x4011721c: task_wdt_isr at /home/vl/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c:515
+0x40085a9d: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008c5fd: vPortClearInterruptMaskFromISR at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:564
+ (inlined by) xPortInIsrContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:446
+0x400911fd: xPortEnterCriticalTimeoutSafe at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:582
+ (inlined by) vPortEnterCriticalSafe at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:592
+ (inlined by) multi_heap_internal_lock at /home/vl/esp32/esp-idf/components/heap/multi_heap.c:165
+0x400911bd: multi_heap_free_impl at /home/vl/esp32/esp-idf/components/heap/multi_heap.c:231
+0x4008264e: heap_caps_free at /home/vl/esp32/esp-idf/components/heap/heap_caps.c:393
+0x40092a65: free at /home/vl/esp32/esp-idf/components/newlib/heap.c:39
+0x400e5362: lv_mem_free at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_mem.c:183
+0x400e3965: lv_img_decoder_open at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/draw/lv_img_decoder.c:162
+0x400e305a: _lv_img_cache_open at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/draw/lv_img_cache.c:123
+0x400e0d91: decode_and_draw at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/draw/lv_draw_img.c:246
+0x400e0ffc: lv_draw_img at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/draw/lv_draw_img.c:80
+0x4010fbf2: draw_main at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c:294
+0x4010fc7b: lv_imgbtn_event at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c:190
+0x40127145: lv_obj_event_base at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:98
+0x400e6a01: event_send_core at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:458
+0x400e6af6: lv_event_send at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:75
+0x400e01d2: lv_obj_redraw at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:148
+0x400e0289: refr_obj at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:974
+0x400e023b: lv_obj_redraw at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:182
+0x400e0289: refr_obj at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:974
+0x400e023b: lv_obj_redraw at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:182
+0x400e0289: refr_obj at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:974
+0x400e0528: refr_obj_and_children at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:856
+0x400e072a: refr_area_part at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:791
+0x400e08b0: refr_area at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:680
+0x400e09cc: refr_invalid_areas at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:618
+0x400e0bae: _lv_disp_refr_timer at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:325
+0x400e5b11: lv_timer_exec at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:313 (discriminator 2)
+0x400e5bcc: lv_timer_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:109
+0x400d96b1: lv_task_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/lv_api_map.h:37
+ (inlined by) app_main at /home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c:60
+0x4012a49f: main_task at /home/vl/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008c43d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[1;31m--- Error: device reports readiness to read but returned no data (device disconnected or multiple access on port?)[0m
+[0;33m--- Waiting for the device to reconnect[0m[0;33m--- 0x40116de7: task_wdt_timeout_handling at /home/vl/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c:441
+0x4011721c: task_wdt_isr at /home/vl/esp32/esp-idf/components/esp_system/task_wdt/task_wdt.c:515
+0x40085a9d: _xt_lowint1 at /home/vl/esp32/esp-idf/components/xtensa/xtensa_vectors.S:1240
+0x4000bfed: _xtos_set_intlevel in ROM
+0x4008c7dd: vPortClearInterruptMaskFromISR at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:564
+ (inlined by) vPortExitCritical at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:504
+0x40091232: vPortExitCriticalSafe at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/include/freertos/portmacro.h:600
+ (inlined by) multi_heap_internal_unlock at /home/vl/esp32/esp-idf/components/heap/multi_heap.c:170
+0x4009127e: multi_heap_malloc_impl at /home/vl/esp32/esp-idf/components/heap/multi_heap.c:218
+0x40082535: heap_caps_malloc_base at /home/vl/esp32/esp-idf/components/heap/heap_caps.c:179
+0x400825d1: heap_caps_malloc_default at /home/vl/esp32/esp-idf/components/heap/heap_caps.c:236
+0x40092a45: malloc at /home/vl/esp32/esp-idf/components/newlib/heap.c:24
+0x400e5341: lv_mem_alloc at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_mem.c:136
+0x400e38ed: lv_img_decoder_open at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/draw/lv_img_decoder.c:124
+0x400e305a: _lv_img_cache_open at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/draw/lv_img_cache.c:123
+0x400e0d91: decode_and_draw at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/draw/lv_draw_img.c:246
+0x400e0ffc: lv_draw_img at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/draw/lv_draw_img.c:80
+0x4010fbf2: draw_main at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c:294
+0x4010fc7b: lv_imgbtn_event at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/extra/widgets/imgbtn/lv_imgbtn.c:190
+0x40127145: lv_obj_event_base at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:98
+0x400e6a01: event_send_core at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:458
+0x400e6af6: lv_event_send at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:75
+0x400e01d2: lv_obj_redraw at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:148
+0x400e0289: refr_obj at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:974
+0x400e023b: lv_obj_redraw at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:182
+0x400e0289: refr_obj at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:974
+0x400e023b: lv_obj_redraw at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:182
+0x400e0289: refr_obj at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:974
+0x400e0528: refr_obj_and_children at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:856
+0x400e072a: refr_area_part at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:791
+0x400e08b0: refr_area at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:680
+0x400e09cc: refr_invalid_areas at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:618
+0x400e0bae: _lv_disp_refr_timer at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_refr.c:325
+0x400e5b11: lv_timer_exec at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:313 (discriminator 2)
+0x400e5bcc: lv_timer_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:109
+0x400d96b1: lv_task_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/lv_api_map.h:37
+ (inlined by) app_main at /home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c:60
+0x4012a49f: main_task at /home/vl/esp32/esp-idf/components/freertos/app_startup.c:208
+0x4008c43d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m.[0m[0;33m[0m
+[0m

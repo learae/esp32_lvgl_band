@@ -1,0 +1,98 @@
+[1/78] cd /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/spiffs/spiffsgen.py 0x4000 /home/vl/esp32/project_my/lvgl_port2/main/img /home/vl/esp32/project_my/lvgl_port2/build/ui_img.bin --page-size=256 --obj-name-len=32 --meta-len=4 --use-magic --use-magic-len
+[2/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/guider_fonts/lv_font_Abel_regular_20.c.obj
+[3/78] Performing build step for 'bootloader'
+[1/1] cd /home/vl/esp32/project_my/lvgl_port2/build/bootloader/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/vl/esp32/project_my/lvgl_port2/build/bootloader/bootloader.bin
+Bootloader binary size 0x6850 bytes. 0x7b0 bytes (7%) free.
+[4/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/guider_fonts/lv_font_Acme_Regular_26.c.obj
+[5/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/custom/custom.c.obj
+[6/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/gui_guider.c.obj
+[7/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/guider_fonts/lv_font_AlexBrush_Regular_20.c.obj
+[8/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/guider_fonts/lv_font_montserratMedium_12.c.obj
+[9/78] No install step for 'bootloader'
+[10/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/guider_fonts/lv_font_montserratMedium_16.c.obj
+[11/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/guider_fonts/lv_font_montserratMedium_10.c.obj
+[12/78] Completed 'bootloader'
+[13/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/guider_fonts/lv_font_montserratMedium_18.c.obj
+[14/78] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/lvgl_port2.c.obj
+[15/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/guider_fonts/lv_font_montserratMedium_20.c.obj
+[16/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/guider_fonts/lv_font_montserratMedium_22.c.obj
+[17/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/guider_fonts/lv_font_montserratMedium_28.c.obj
+[18/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/events_init.c.obj
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c: In function 'light_page_pwm_mode_event_handler':
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:758:13: warning: unused variable 'status' [-Wunused-variable]
+  758 |         int status = lv_obj_has_state(status_obj, LV_STATE_CHECKED) ? true : false;
+      |             ^~~~~~
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c: In function 'light_page_dc_mode_event_handler':
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:774:13: warning: unused variable 'status' [-Wunused-variable]
+  774 |         int status = lv_obj_has_state(status_obj, LV_STATE_CHECKED) ? true : false;
+      |             ^~~~~~
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c: In function 'math_page_btnm_1_event_handler':
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:1211:18: warning: unused variable 'id' [-Wunused-variable]
+ 1211 |         uint32_t id = lv_btnmatrix_get_selected_btn(obj);
+      |                  ^~
+[19/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/guider_fonts/lv_font_montserratMedium_32.c.obj
+[20/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_WifadasdFi_alpha_40x40.c.obj
+[21/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_WiF01651i_alpha_40x40.c.obj
+[22/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/guider_fonts/lv_font_montserratMedium_36.c.obj
+[23/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_L_alpha_45x45.c.obj
+[24/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_cloud_alpha_40x40.c.obj
+[25/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_conncet_alpha_38x37.c.obj
+[26/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_heart_alpha_28x26.c.obj
+[27/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_ear_alpha_35x35.c.obj
+[28/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_heart_alpha_35x38.c.obj
+[29/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_math_alpha_35x35.c.obj
+[30/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_music_alpha_40x40.c.obj
+[31/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_l2_alpha_45x45.c.obj
+[32/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_iphone_alpha_40x40.c.obj
+[33/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_o_alpha_24x24.c.obj
+[34/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/guider_fonts/lv_font_Acme_Regular_60.c.obj
+[35/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_nouth_alpha_45x45.c.obj
+[36/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_o_alpha_25x25.c.obj
+[37/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_sz2_alpha_40x40.c.obj
+[38/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_o_alpha_40x40.c.obj
+[39/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_sz_alpha_40x40.c.obj
+[40/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_sz_alpha_50x50.c.obj
+[41/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_tq1_alpha_40x3.c.obj
+[42/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_temp_alpha_61x70.c.obj
+[43/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_4afc305c6f5f0a5ea5b41a1f0498f5f7_alpha_240x280.c.obj
+[44/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_temp_alpha_40x40.c.obj
+[45/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_Goh5hdWXoAAeyeG_alpha_240x280.c.obj
+[46/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_text_alpha_38x40.c.obj
+[47/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_tq1_alpha_40x35.c.obj
+[48/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_voll_alpha_21x23.c.obj
+[49/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_BlurMoment_Gaussian_2025_3_18_17_16_alpha_240x280.c.obj
+[50/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_OIPC_240x280.c.obj
+[51/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_tq1_alpha_123x119.c.obj
+[52/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_4afc305c6f5f0a5ea5b41a1f0498f5f7_240x280.c.obj
+[53/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_volu_alpha_40x40.c.obj
+[54/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/images/_water_alpha_61x70.c.obj
+[55/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_lis_page.c.obj
+[56/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_music_list.c.obj
+[57/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_load_page.c.obj
+[58/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_screen.c.obj
+[59/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_heart_page.c.obj
+[60/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_math_page.c.obj
+[61/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_connect_page.c.obj
+[62/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_settings_page.c.obj
+[63/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_light_page.c.obj
+[64/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_tianqi_page.c.obj
+[65/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_shezhi.c.obj
+[66/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_txt_page.c.obj
+[67/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_temp_page.c.obj
+[68/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_duogongneng.c.obj
+[69/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/widgets_init.c.obj
+[70/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_vol_page.c.obj
+[71/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_txt_veiw.c.obj
+[72/78] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_tianqi_page1.c.obj
+[73/78] Linking C static library esp-idf/ui/libui.a
+[74/78] Linking C static library esp-idf/main/libmain.a
+[75/78] Generating ld/sections.ld
+[76/78] Linking CXX executable lvgl_port2.elf
+[77/78] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+[78/78] cd /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/vl/esp32/project_my/lvgl_port2/build/partition_table/partition-table.bin /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+lvgl_port2.bin binary size 0x20fc80 bytes. Smallest app partition is 0x300000 bytes. 0xf0380 bytes (31%) free.

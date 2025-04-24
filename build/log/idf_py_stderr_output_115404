@@ -1,0 +1,16 @@
+CMake Warning at /home/vl/esp32/esp-idf/tools/cmake/component.cmake:269 (message):
+  SRCS and SRC_DIRS are both specified; ignoring SRC_DIRS.
+Call Stack (most recent call first):
+  /home/vl/esp32/esp-idf/tools/cmake/component.cmake:443 (__component_add_sources)
+  components/gui-guider/CMakeLists.txt:18 (idf_component_register)
+
+
+CMake Error at /home/vl/esp32/esp-idf/tools/cmake/component.cmake:313 (message):
+  Include directory
+  '/home/vl/esp32/project_my/lvgl_port2/components/gui-guider/ui/custom' is
+  not a directory.
+Call Stack (most recent call first):
+  /home/vl/esp32/esp-idf/tools/cmake/component.cmake:481 (__component_add_include_dirs)
+  components/gui-guider/CMakeLists.txt:18 (idf_component_register)
+
+

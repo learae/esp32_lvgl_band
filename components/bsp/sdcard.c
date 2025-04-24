@@ -33,8 +33,8 @@ int sdcard_init(void)
 //列出SD卡中的文件
     //传入的指针是一个二维数组，第一维是文件数量，第二维是文件名长度
     //返回值是文件数量
-    //注意：传入的指针必须是一个二维数组，第一维大小足够大，第二维大小为256
-int sdcard_filelist(char (**file)[256])
+    //注意：传入的指针必须是一个二维数组，第一维大小足够大，第二维大小为50
+int sdcard_filelist(char (**file)[50])
     
 {
     DIR *dir;
@@ -49,7 +49,7 @@ int sdcard_filelist(char (**file)[256])
     }
     while ((entry = readdir(dir)) != NULL) {
         if (entry->d_type == DT_REG) { //如果是文件
-            snprintf((*file)[count], 256, "%s", entry->d_name); //将文件名存入数组
+            snprintf((*file)[count], 50, "%.49s", entry->d_name); //将文件名存入数组
             count++;
         }
     }
