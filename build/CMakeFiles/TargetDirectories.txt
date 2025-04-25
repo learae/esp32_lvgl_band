@@ -185,6 +185,13 @@
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/esp_partition/CMakeFiles/install/local.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/esp_partition/CMakeFiles/install/strip.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/app_update/CMakeFiles/__idf_app_update.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/app_update/CMakeFiles/blank_ota_data.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/app_update/CMakeFiles/read-otadata.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/app_update/CMakeFiles/read_otadata.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/app_update/CMakeFiles/erase-otadata.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/app_update/CMakeFiles/erase_otadata.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/app_update/CMakeFiles/otadata-flash.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/app_update/CMakeFiles/encrypted-otadata-flash.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/app_update/CMakeFiles/edit_cache.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/app_update/CMakeFiles/rebuild_cache.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/app_update/CMakeFiles/list_install_components.dir
@@ -630,9 +637,6 @@
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/wifi_provisioning/CMakeFiles/install/local.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/wifi_provisioning/CMakeFiles/install/strip.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/CMakeFiles/__idf_main.dir
-/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/CMakeFiles/spiffs_ui_img_bin.dir
-/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/CMakeFiles/ui_img-flash.dir
-/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/CMakeFiles/encrypted-ui_img-flash.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/CMakeFiles/edit_cache.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/CMakeFiles/rebuild_cache.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/main/CMakeFiles/list_install_components.dir

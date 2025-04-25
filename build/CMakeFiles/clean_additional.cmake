@@ -19,7 +19,6 @@ if("${CONFIG}" STREQUAL "" OR "${CONFIG}" STREQUAL "")
   "lvgl_port2.bin"
   "lvgl_port2.map"
   "project_elf_src_esp32.c"
-  "ui_img.bin"
   "x509_crt_bundle.S"
   )
 endif()

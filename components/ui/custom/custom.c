@@ -67,12 +67,12 @@ lv_obj_t *lv_dclock_create(lv_obj_t *parent, const char *init_text)
     return label;
 }
 
+
 void lv_dclock_set_text_fmt(lv_obj_t *obj, const char *fmt, ...)
 {
-    char buf[32];
     va_list args;
     va_start(args, fmt);
-    vsnprintf(buf, sizeof(buf), fmt, args);
+    lv_label_set_text_fmt(obj, fmt, args);
     va_end(args);
-    lv_label_set_text(obj, buf);
 }
+

@@ -1,0 +1,7 @@
+CMake Warning at /home/vl/esp32/esp-idf/tools/cmake/component.cmake:269 (message):
+  SRCS and SRC_DIRS are both specified; ignoring SRC_DIRS.
+Call Stack (most recent call first):
+  /home/vl/esp32/esp-idf/tools/cmake/component.cmake:443 (__component_add_sources)
+  components/ui/CMakeLists.txt:13 (idf_component_register)
+
+

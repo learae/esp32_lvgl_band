@@ -1,0 +1,39 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081d3d: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008b919: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40092a35: __assert_func at /home/vl/esp32/esp-idf/components/newlib/assert.c:81
+0x40082647: heap_caps_free at /home/vl/esp32/esp-idf/components/heap/heap_caps.c:392 (discriminator 1)
+0x40092a65: free at /home/vl/esp32/esp-idf/components/newlib/heap.c:39
+0x400e53ca: lv_mem_free at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_mem.c:183
+0x400fefad: lv_label_set_text at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/widgets/lv_label.c:116
+0x40107821: lv_dclock_set_text_fmt at /home/vl/esp32/project_my/lvgl_port2/components/ui/custom/custom.c:77
+0x4010772b: screen_digital_clock_home_timer at /home/vl/esp32/project_my/lvgl_port2/components/ui/generated/widgets_init.c:90
+0x400e5b79: lv_timer_exec at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:313 (discriminator 2)
+0x400e5c34: lv_timer_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:109
+0x400d96e7: lv_task_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/lv_api_map.h:37
+ (inlined by) lv_mjpeg_tack at /home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c:43
+0x4008c43d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081d3d: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008b919: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40092a35: __assert_func at /home/vl/esp32/esp-idf/components/newlib/assert.c:81
+0x40082647: heap_caps_free at /home/vl/esp32/esp-idf/components/heap/heap_caps.c:392 (discriminator 1)
+0x40092a65: free at /home/vl/esp32/esp-idf/components/newlib/heap.c:39
+0x400e53ca: lv_mem_free at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_mem.c:183
+0x400fefad: lv_label_set_text at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/widgets/lv_label.c:116
+0x40107821: lv_dclock_set_text_fmt at /home/vl/esp32/project_my/lvgl_port2/components/ui/custom/custom.c:77
+0x4010772b: screen_digital_clock_home_timer at /home/vl/esp32/project_my/lvgl_port2/components/ui/generated/widgets_init.c:90
+0x400e5b79: lv_timer_exec at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:313 (discriminator 2)
+0x400e5c34: lv_timer_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:109
+0x400d96e7: lv_task_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/lv_api_map.h:37
+ (inlined by) lv_mjpeg_tack at /home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c:43
+0x4008c43d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m
