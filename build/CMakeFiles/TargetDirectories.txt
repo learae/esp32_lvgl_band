@@ -671,3 +671,10 @@
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/ui/CMakeFiles/install.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/ui/CMakeFiles/install/local.dir
 /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/ui/CMakeFiles/install/strip.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/wifi_ble/CMakeFiles/__idf_wifi_ble.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/wifi_ble/CMakeFiles/edit_cache.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/wifi_ble/CMakeFiles/rebuild_cache.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/wifi_ble/CMakeFiles/list_install_components.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/wifi_ble/CMakeFiles/install.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/wifi_ble/CMakeFiles/install/local.dir
+/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/wifi_ble/CMakeFiles/install/strip.dir

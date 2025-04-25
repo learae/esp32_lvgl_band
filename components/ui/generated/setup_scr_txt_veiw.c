@@ -38,7 +38,7 @@ void setup_scr_txt_veiw(lv_ui *ui)
     lv_obj_set_style_pad_all(ui->txt_veiw_btn_txt_back, 0, LV_STATE_DEFAULT);
     lv_obj_set_width(ui->txt_veiw_btn_txt_back_label, LV_PCT(100));
     lv_obj_set_pos(ui->txt_veiw_btn_txt_back, 10, 10);
-    lv_obj_set_size(ui->txt_veiw_btn_txt_back, 61, 21);
+    lv_obj_set_size(ui->txt_veiw_btn_txt_back, 68, 24);
 
     //Write style for txt_veiw_btn_txt_back, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
     lv_obj_set_style_bg_opa(ui->txt_veiw_btn_txt_back, 42, LV_PART_MAIN|LV_STATE_DEFAULT);

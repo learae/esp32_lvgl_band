@@ -7,6 +7,7 @@
 #include "esp_lcd_panel_commands.h"
 #include "driver/gpio.h"
 #include "driver/spi_master.h"
+#include "driver/ledc.h" 
 #include "esp_err.h"
 #include "esp_log.h"
 #include "st7789_driver.h"
@@ -64,6 +65,28 @@ esp_err_t st7789_driver_hw_init(st7789_cfg_t* cfg)
         .pin_bit_mask = (1<<cfg->bl)                //GPIO脚
     };
     gpio_config(&bl_gpio_cfg);
+
+    // Configure PWM for backlight control
+    ledc_timer_config_t ledc_timer = {
+        .speed_mode = LEDC_LOW_SPEED_MODE,       // high speed mode
+        .timer_num = LEDC_TIMER_0,              // Timer 0
+        .duty_resolution = LEDC_TIMER_10_BIT,   // Resolution of PWM duty
+        .freq_hz = 500,                        // Frequency of PWM signal
+        .clk_cfg = LEDC_AUTO_CLK                // Auto select clock source
+    };
+    ESP_ERROR_CHECK(ledc_timer_config(&ledc_timer));
+
+    ledc_channel_config_t ledc_channel = {
+        .gpio_num = cfg->bl,                    // GPIO for backlight
+        .speed_mode = LEDC_LOW_SPEED_MODE,       // low speed mode
+        .channel = LEDC_CHANNEL_0,              // Channel 0
+        .timer_sel = LEDC_TIMER_0,              // Use timer 0
+        .duty = 0,                              // Initial duty cycle (off)
+        .hpoint = 0                             // High point
+    };
+    ESP_ERROR_CHECK(ledc_channel_config(&ledc_channel));
+
+    // Set initial backlight brightness (duty cycle)
 
 
     //初始化复位脚

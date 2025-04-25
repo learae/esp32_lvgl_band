@@ -1,5 +1,8 @@
+file(GLOB_RECURSE srcs *.c
+                    )
+
 idf_component_register(
-    SRCS  "st7789_driver.c"  "cst816t_driver.c" "dht11.c" "led_ws2812.c" "sdcard.c"
+    SRCS  ${srcs}
     INCLUDE_DIRS    "."
     REQUIRES    esp_lcd  lvgl  esp_timer sdmmc fatfs
 )

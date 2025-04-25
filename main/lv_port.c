@@ -29,7 +29,7 @@ void lv_disp_init(void)
 {
     
     static lv_disp_draw_buf_t draw_buf;
-    const size_t draw_buf_size = LCD_HEIGHT*LCD_WIDTH/7;
+    const size_t draw_buf_size = LCD_HEIGHT*LCD_WIDTH/10;
     lv_color_t *draw1 = heap_caps_malloc(draw_buf_size*sizeof(lv_color_t),MALLOC_CAP_INTERNAL|MALLOC_CAP_DMA);
     lv_color_t *draw2 = heap_caps_malloc(draw_buf_size*sizeof(lv_color_t),MALLOC_CAP_INTERNAL|MALLOC_CAP_DMA);
     if(!draw1||!draw2)

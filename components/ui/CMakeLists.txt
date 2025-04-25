@@ -14,5 +14,5 @@ idf_component_register(
     SRC_DIRS .
     SRCS ${srcs}
     INCLUDE_DIRS ${include_dirs}
-    REQUIRES lvgl
+    REQUIRES lvgl driver main
 )

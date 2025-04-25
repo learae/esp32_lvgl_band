@@ -19,7 +19,7 @@
 int screen_digital_clock_home_min_value = 25;
 int screen_digital_clock_home_hour_value = 11;
 int screen_digital_clock_home_sec_value = 50;
-char screen_digital_clock_home_meridiem[] = "AM";
+char screen_digital_clock_home_meridiem[3] = "AM";
 void setup_scr_screen(lv_ui *ui)
 {
     //Write codes screen

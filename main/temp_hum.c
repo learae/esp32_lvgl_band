@@ -9,17 +9,16 @@ LV_IMG_DECLARE(humidity_img)
 
 static lv_timer_t *s_dht11_timer;
 
-static lv_obj_t *s_temp_img;
-static lv_obj_t *s_hum_img;
 
 static lv_obj_t *s_temp_label;
 static lv_obj_t *s_hum_label;
 
+/*
 static lv_obj_t *s_light_slider;
 
-ws2812_strip_handle_t light_handle;
+ws2812_strip_handle_t light_handle;*/
 
-void light_slider_event_cb(lv_event_t *e)
+/*void light_slider_event_cb(lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
     switch (code)
@@ -38,16 +37,22 @@ void light_slider_event_cb(lv_event_t *e)
     default:
         break;
     }
-}
+}*/
 
 void dht11_timer_cb(struct _lv_timer_t *)
 {
+    static bool dht11_init_flag = false;
+    if(!dht11_init_flag)
+    {
+        DHT11_Init(GPIO_NUM_25);
+        dht11_init_flag = true;
+    }
     int temp,hum;
     if(DHT11_StartGet(&temp, &hum))
     {
        
         char disp_buf[32];
-        snprintf(disp_buf,sizeof(disp_buf),"%.1f",(float)temp/10.0);
+        snprintf(disp_buf,sizeof(disp_buf),"%.1f'C",(float)temp/10.0-12.0);
         lv_label_set_text(s_temp_label, disp_buf);
      
         snprintf(disp_buf,sizeof(disp_buf),"%d%%",hum);
@@ -56,7 +61,24 @@ void dht11_timer_cb(struct _lv_timer_t *)
     }
 }
 
-void ui_thp_create(void)
+void temp_hum_timer_create(lv_obj_t *temp_label, lv_obj_t *hum_label)
+{
+    s_temp_label = temp_label;
+    s_hum_label = hum_label;
+    s_dht11_timer = lv_timer_create(dht11_timer_cb, 5000, NULL);
+}
+
+
+void temp_hum_timer_delete(void)
+{
+    if(s_dht11_timer)
+    {
+        lv_timer_del(s_dht11_timer);
+        s_dht11_timer = NULL;
+    }
+}
+
+/*void ui_thp_create(void)
 {
     lv_obj_set_style_bg_color(lv_scr_act(),lv_color_black(),0); //设置背景为黑色
 
@@ -84,12 +106,13 @@ void ui_thp_create(void)
     lv_obj_set_style_text_font(s_hum_label,&lv_font_montserrat_38,LV_STATE_DEFAULT);
 
     //创建定时器
-    s_dht11_timer = lv_timer_create(dht11_timer_cb,2000,NULL);
+    s_dht11_timer = lv_timer_create(dht11_timer_cb,5000,NULL);
+
+    //lv_timer_del(s_dht11_timer);
 
     //初始化ws2812
     ws2812_init(GPIO_NUM_33,12,&light_handle);
 
     //初始化dht11
     DHT11_Init(GPIO_NUM_25);
-
-}
+}*/

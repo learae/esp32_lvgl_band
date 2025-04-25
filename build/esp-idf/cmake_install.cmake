@@ -437,3 +437,8 @@ if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   include("/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/ui/cmake_install.cmake")
 endif()
 
+if(NOT CMAKE_INSTALL_LOCAL_ONLY)
+  # Include the install script for the subdirectory.
+  include("/home/vl/esp32/project_my/lvgl_port2/build/esp-idf/wifi_ble/cmake_install.cmake")
+endif()
+

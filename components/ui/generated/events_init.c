@@ -10,6 +10,9 @@
 #include "events_init.h"
 #include <stdio.h>
 #include "lvgl.h"
+#include "driver/ledc.h"
+#include "temp_hum.h"
+#include "esp_err.h"
 
 #if LV_USE_GUIDER_SIMULATOR && LV_USE_FREEMASTER
 #include "freemaster_client.h"
@@ -173,7 +176,9 @@ static void shezhi_slider_li_event_handler (lv_event_t *e)
     switch (code) {
     case LV_EVENT_VALUE_CHANGED:
     {
-
+        int slider_value = lv_slider_get_value(lv_event_get_target(e));
+        ESP_ERROR_CHECK(ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, slider_value*5));
+        ESP_ERROR_CHECK(ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0));
         break;
     }
     default:
@@ -255,6 +260,7 @@ static void duogongneng_temp_btn_event_handler (lv_event_t *e)
     case LV_EVENT_CLICKED:
     {
         ui_load_scr_animation(&guider_ui, &guider_ui.temp_page, guider_ui.temp_page_del, &guider_ui.duogongneng_del, setup_scr_temp_page, LV_SCR_LOAD_ANIM_FADE_ON, 200, 200, false, true);
+        temp_hum_timer_create(guider_ui.temp_page_label_temp, guider_ui.temp_page_label_hum);
         break;
     }
     default:
@@ -380,6 +386,7 @@ static void duogongneng_temp_img_event_handler (lv_event_t *e)
     case LV_EVENT_CLICKED:
     {
         ui_load_scr_animation(&guider_ui, &guider_ui.temp_page, guider_ui.temp_page_del, &guider_ui.duogongneng_del, setup_scr_temp_page, LV_SCR_LOAD_ANIM_FADE_ON, 200, 200, false, false);
+        temp_hum_timer_create(guider_ui.temp_page_label_temp, guider_ui.temp_page_label_hum);
         break;
     }
     default:
@@ -681,12 +688,14 @@ static void temp_page_event_handler (lv_event_t *e)
         {
             lv_indev_wait_release(lv_indev_get_act());
             ui_load_scr_animation(&guider_ui, &guider_ui.duogongneng, guider_ui.duogongneng_del, &guider_ui.temp_page_del, setup_scr_duogongneng, LV_SCR_LOAD_ANIM_FADE_ON, 200, 200, false, true);
+            temp_hum_timer_delete();
             break;
         }
         case LV_DIR_RIGHT:
         {
             lv_indev_wait_release(lv_indev_get_act());
             ui_load_scr_animation(&guider_ui, &guider_ui.duogongneng, guider_ui.duogongneng_del, &guider_ui.temp_page_del, setup_scr_duogongneng, LV_SCR_LOAD_ANIM_FADE_ON, 200, 200, false, true);
+            temp_hum_timer_delete();
             break;
         }
         default:
@@ -740,7 +749,9 @@ static void light_page_slider_light_event_handler (lv_event_t *e)
     switch (code) {
     case LV_EVENT_VALUE_CHANGED:
     {
-
+        int slider_value = lv_slider_get_value(lv_event_get_target(e));
+        ESP_ERROR_CHECK(ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, slider_value * 5));
+        ESP_ERROR_CHECK(ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0));
         break;
     }
     default:
@@ -868,6 +879,38 @@ static void connect_page_event_handler (lv_event_t *e)
     }
 }
 
+static void connect_page_wifi_sw_event_handler (lv_event_t *e)
+{
+    lv_event_code_t code = lv_event_get_code(e);
+    switch (code) {
+    case LV_EVENT_VALUE_CHANGED:
+    {
+        lv_obj_t * status_obj = lv_event_get_target(e);
+        int status = lv_obj_has_state(status_obj, LV_STATE_CHECKED) ? true : false;
+
+        break;
+    }
+    default:
+        break;
+    }
+}
+
+static void connect_page_AP_sw_event_handler (lv_event_t *e)
+{
+    lv_event_code_t code = lv_event_get_code(e);
+    switch (code) {
+    case LV_EVENT_VALUE_CHANGED:
+    {
+        lv_obj_t * status_obj = lv_event_get_target(e);
+        int status = lv_obj_has_state(status_obj, LV_STATE_CHECKED) ? true : false;
+
+        break;
+    }
+    default:
+        break;
+    }
+}
+
 static void connect_page_smratconfig_btn_event_handler (lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
@@ -899,6 +942,8 @@ static void connect_page_mqtt_btn_event_handler (lv_event_t *e)
 void events_init_connect_page (lv_ui *ui)
 {
     lv_obj_add_event_cb(ui->connect_page, connect_page_event_handler, LV_EVENT_ALL, ui);
+    lv_obj_add_event_cb(ui->connect_page_wifi_sw, connect_page_wifi_sw_event_handler, LV_EVENT_ALL, ui);
+    lv_obj_add_event_cb(ui->connect_page_AP_sw, connect_page_AP_sw_event_handler, LV_EVENT_ALL, ui);
     lv_obj_add_event_cb(ui->connect_page_smratconfig_btn, connect_page_smratconfig_btn_event_handler, LV_EVENT_ALL, ui);
     lv_obj_add_event_cb(ui->connect_page_mqtt_btn, connect_page_mqtt_btn_event_handler, LV_EVENT_ALL, ui);
 }
@@ -1001,6 +1046,34 @@ static void settings_page_btn_time_cor_event_handler (lv_event_t *e)
     }
 }
 
+static void settings_page_btn_other_event_handler (lv_event_t *e)
+{
+    lv_event_code_t code = lv_event_get_code(e);
+    switch (code) {
+    case LV_EVENT_CLICKED:
+    {
+
+        break;
+    }
+    default:
+        break;
+    }
+}
+
+static void settings_page_btn_version_event_handler (lv_event_t *e)
+{
+    lv_event_code_t code = lv_event_get_code(e);
+    switch (code) {
+    case LV_EVENT_CLICKED:
+    {
+
+        break;
+    }
+    default:
+        break;
+    }
+}
+
 static void settings_page_btn_set_back_event_handler (lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
@@ -1018,6 +1091,8 @@ static void settings_page_btn_set_back_event_handler (lv_event_t *e)
 void events_init_settings_page (lv_ui *ui)
 {
     lv_obj_add_event_cb(ui->settings_page_btn_time_cor, settings_page_btn_time_cor_event_handler, LV_EVENT_ALL, ui);
+    lv_obj_add_event_cb(ui->settings_page_btn_other, settings_page_btn_other_event_handler, LV_EVENT_ALL, ui);
+    lv_obj_add_event_cb(ui->settings_page_btn_version, settings_page_btn_version_event_handler, LV_EVENT_ALL, ui);
     lv_obj_add_event_cb(ui->settings_page_btn_set_back, settings_page_btn_set_back_event_handler, LV_EVENT_ALL, ui);
 }
 
@@ -1210,6 +1285,15 @@ static void math_page_btnm_1_event_handler (lv_event_t *e)
         lv_obj_t * obj = lv_event_get_target(e);
         uint32_t id = lv_btnmatrix_get_selected_btn(obj);
 
+        switch (id) {
+        case (0):
+        {
+
+            break;
+        }
+        default:
+            break;
+        }
         break;
     }
     default:

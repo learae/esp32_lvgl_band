@@ -5,14 +5,17 @@
 #include "lv_demos.h"
 #include "st7789_driver.h"
 #include "uiled.h"
-#include "ui_temp_hum.h"
+#include "temp_hum.h"
 #include "driver/gpio.h"
 #include "esp_log.h"
 #include "esp_spiffs.h"
 #include "ui.mjpeg.h"
 #include "esp_vfs_fat.h"
-
+#include "esp_err.h"
+#include "driver/ledc.h"
 #include "ui/generated/gui_guider.h"
+#include "wifi_ble/wifi_task.h"
+
 lv_ui guider_ui;
 
 void spiffs_init(char *partition_label,char*mount)
@@ -48,11 +51,10 @@ void lv_mjpeg_tack(void *params)
 
 void app_main(void)
 {
-    //spiffs_init("ui_img","/main/img");
     lv_port_init();
-    st7789_lcd_backlight(1);
-    //ui_mjpeg_create();
-    //ui_thp_create();
-    setup_ui(&guider_ui);
-    xTaskCreatePinnedToCore(lv_mjpeg_tack, "lv_mjpeg_tack", 8192, NULL, 5, NULL, 1);
+    ESP_ERROR_CHECK(ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, 250));
+    ESP_ERROR_CHECK(ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0));
+    /*setup_ui(&guider_ui);
+    xTaskCreatePinnedToCore(lv_mjpeg_tack, "lv_mjpeg_tack", 8192*2, NULL, 5, NULL, 1);*/
+    wifi_task();
 }
