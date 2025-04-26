@@ -15,6 +15,7 @@
 #include "driver/ledc.h"
 #include "ui/generated/gui_guider.h"
 #include "wifi_ble/wifi_task.h"
+#include "nvs_flash.h"
 
 lv_ui guider_ui;
 
@@ -39,7 +40,7 @@ void spiffs_init(char *partition_label,char*mount)
     }
 }
 
-void lv_mjpeg_tack(void *params)
+void lv_ui_tack(void *params)
 {
     while(1)
     {
@@ -55,6 +56,5 @@ void app_main(void)
     ESP_ERROR_CHECK(ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, 250));
     ESP_ERROR_CHECK(ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0));
     setup_ui(&guider_ui);
-    xTaskCreatePinnedToCore(lv_mjpeg_tack, "lv_mjpeg_tack", 8192*2, NULL, 5, NULL, 1);
-    //wifi_task();
+    xTaskCreatePinnedToCore(lv_ui_tack, "lv_ui_tack", 8192*2, NULL, 5, NULL, 1);
 }

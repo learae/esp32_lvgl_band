@@ -1,0 +1,37 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40113ba4: wifi_event_handler at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/smartconfig.c:26 (discriminator 1)
+[0m
+[0;33m--- 0x4008fc0b: _esp_error_check_failed at /home/vl/esp32/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081e99: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008fc15: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40098b35: abort at /home/vl/esp32/esp-idf/components/newlib/abort.c:38
+0x4008fc0b: _esp_error_check_failed at /home/vl/esp32/esp-idf/components/esp_system/esp_err.c:50
+0x40113ba4: wifi_event_handler at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/smartconfig.c:26 (discriminator 1)
+0x401caef9: handler_execute at /home/vl/esp32/esp-idf/components/esp_event/esp_event.c:137
+0x401ca97a: esp_event_loop_run at /home/vl/esp32/esp-idf/components/esp_event/esp_event.c:593
+0x401caa59: esp_event_loop_run_task at /home/vl/esp32/esp-idf/components/esp_event/esp_event.c:107
+0x400907b9: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40113ba4: wifi_event_handler at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/smartconfig.c:26 (discriminator 1)
+[0m
+[0;33m--- 0x4008fc0b: _esp_error_check_failed at /home/vl/esp32/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081e99: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008fc15: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40098b35: abort at /home/vl/esp32/esp-idf/components/newlib/abort.c:38
+0x4008fc0b: _esp_error_check_failed at /home/vl/esp32/esp-idf/components/esp_system/esp_err.c:50
+0x40113ba4: wifi_event_handler at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/smartconfig.c:26 (discriminator 1)
+0x401caef9: handler_execute at /home/vl/esp32/esp-idf/components/esp_event/esp_event.c:137
+0x401ca97a: esp_event_loop_run at /home/vl/esp32/esp-idf/components/esp_event/esp_event.c:593
+0x401caa59: esp_event_loop_run_task at /home/vl/esp32/esp-idf/components/esp_event/esp_event.c:107
+0x400907b9: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

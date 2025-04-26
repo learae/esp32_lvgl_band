@@ -2,6 +2,8 @@
 #include "led_ws2812.h"
 #include "dht11.h"
 #include "esp_log.h"
+#include "wifi_task.h"
+#include "freertos/FreeRTOS.h"
 
 
 LV_IMG_DECLARE(temp_img)
@@ -52,20 +54,30 @@ void dht11_timer_cb(struct _lv_timer_t *)
     {
        
         char disp_buf[32];
-        snprintf(disp_buf,sizeof(disp_buf),"%.1f'C",(float)temp/10.0-12.0);
+        snprintf(disp_buf,sizeof(disp_buf),"%.1f'C",(float)temp/10.0f-16.0f);
         lv_label_set_text(s_temp_label, disp_buf);
      
         snprintf(disp_buf,sizeof(disp_buf),"%d%%",hum);
         lv_label_set_text(s_hum_label, disp_buf);
 
+        float temp_value = (float)temp / 10.0f - 16.0f;
+        //give_temp_hum(&temp_value, hum);
     }
 }
 
 void temp_hum_timer_create(lv_obj_t *temp_label, lv_obj_t *hum_label)
 {
+    if (s_dht11_timer != NULL) {
+        ESP_LOGE("TEMP_HUM", "Timer already created");
+        return;
+    }
+
     s_temp_label = temp_label;
     s_hum_label = hum_label;
-    s_dht11_timer = lv_timer_create(dht11_timer_cb, 5000, NULL);
+    s_dht11_timer = lv_timer_create(dht11_timer_cb, 1000, NULL);
+    if (s_dht11_timer == NULL) {
+        ESP_LOGE("TEMP_HUM", "Failed to create lvgl timer");
+    }
 }
 
 

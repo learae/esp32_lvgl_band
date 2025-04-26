@@ -1,0 +1,47 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/vl/esp32/project_my/lvgl_port2/build/bootloader/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/vl/esp32/project_my/lvgl_port2/build/bootloader/bootloader.bin
+Bootloader binary size 0x6850 bytes. 0x7b0 bytes (7%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/events_init.c.obj
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c: In function 'shezhi_wifi_btn_event_handler':
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:202:61: warning: passing argument 1 of 'xTaskCreatePinnedToCore' from incompatible pointer type [-Wincompatible-pointer-types]
+  202 |         if(wifi_task_handle == NULL)xTaskCreatePinnedToCore(wifi_task, "wifi_task", 8192, NULL, 5, &wifi_task_handle, 0);
+      |                                                             ^~~~~~~~~
+      |                                                             |
+      |                                                             void (*)(void)
+In file included from /home/vl/esp32/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:20,
+                 from /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:1533,
+                 from /home/vl/esp32/esp-idf/components/esp_event/include/esp_event.h:12,
+                 from /home/vl/esp32/esp-idf/components/esp_wifi/include/esp_wifi.h:56,
+                 from /home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:17:
+/home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:382:67: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'void (*)(void)'
+  382 |         extern BaseType_t xTaskCreatePinnedToCore( TaskFunction_t pxTaskCode,
+      |                                                    ~~~~~~~~~~~~~~~^~~~~~~~~~
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c: In function 'light_page_pwm_mode_event_handler':
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:781:13: warning: unused variable 'status' [-Wunused-variable]
+  781 |         int status = lv_obj_has_state(status_obj, LV_STATE_CHECKED) ? true : false;
+      |             ^~~~~~
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c: In function 'light_page_dc_mode_event_handler':
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:797:13: warning: unused variable 'status' [-Wunused-variable]
+  797 |         int status = lv_obj_has_state(status_obj, LV_STATE_CHECKED) ? true : false;
+      |             ^~~~~~
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c: In function 'connect_page_wifi_sw_event_handler':
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:901:13: warning: unused variable 'status' [-Wunused-variable]
+  901 |         int status = lv_obj_has_state(status_obj, LV_STATE_CHECKED) ? true : false;
+      |             ^~~~~~
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c: In function 'connect_page_AP_sw_event_handler':
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:917:13: warning: unused variable 'status' [-Wunused-variable]
+  917 |         int status = lv_obj_has_state(status_obj, LV_STATE_CHECKED) ? true : false;
+      |             ^~~~~~
+[5/9] Linking C static library esp-idf/ui/libui.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable lvgl_port2.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+[9/9] cd /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/vl/esp32/project_my/lvgl_port2/build/partition_table/partition-table.bin /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+lvgl_port2.bin binary size 0x2f1fc0 bytes. Smallest app partition is 0x3b6000 bytes. 0xc4040 bytes (21%) free.

@@ -6,4 +6,5 @@
 void smartconfig_init(void);
 
 
+
 #endif // SMARTCONFIG_H

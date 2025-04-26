@@ -1,0 +1,65 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401135de: give_temp_hum at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:220
+[0m
+[0;33m--- 0x4008cf81: strcpy at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/strcpy.S:99
+0x4008cf99: strcpy at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/strcpy.S:131
+[0m
+[0;33m--- 0x401135db: give_temp_hum at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:219
+0x40114095: dht11_timer_cb at /home/vl/esp32/project_my/lvgl_port2/main/temp_hum.c:63
+0x400e7031: lv_timer_exec at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:313 (discriminator 2)
+0x400e70ed: lv_timer_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:109
+0x400da68f: lv_task_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/lv_api_map.h:37
+ (inlined by) lv_ui_tack at /home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c:47
+0x4009079d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401135de: give_temp_hum at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:220
+[0m
+[0;33m--- 0x4008cf81: strcpy at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/strcpy.S:99
+0x4008cf99: strcpy at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/strcpy.S:131
+[0m
+[0;33m--- 0x401135db: give_temp_hum at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:219
+0x40114095: dht11_timer_cb at /home/vl/esp32/project_my/lvgl_port2/main/temp_hum.c:63
+0x400e7031: lv_timer_exec at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:313 (discriminator 2)
+0x400e70ed: lv_timer_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:109
+0x400da68f: lv_task_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/lv_api_map.h:37
+ (inlined by) lv_ui_tack at /home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c:47
+0x4009079d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401135de: give_temp_hum at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:220
+[0m
+[0;33m--- 0x4008cf81: strcpy at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/strcpy.S:99
+0x4008cf99: strcpy at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/strcpy.S:131
+[0m
+[0;33m--- 0x401135db: give_temp_hum at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:219
+0x40114095: dht11_timer_cb at /home/vl/esp32/project_my/lvgl_port2/main/temp_hum.c:63
+0x400e7031: lv_timer_exec at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:313 (discriminator 2)
+0x400e70ed: lv_timer_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:109
+0x400da68f: lv_task_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/lv_api_map.h:37
+ (inlined by) lv_ui_tack at /home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c:47
+0x4009079d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401135de: give_temp_hum at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:220
+[0m
+[0;33m--- 0x4008cf81: strcpy at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/strcpy.S:99
+0x4008cf99: strcpy at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/strcpy.S:131
+[0m
+[0;33m--- 0x401135db: give_temp_hum at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:219
+0x40114095: dht11_timer_cb at /home/vl/esp32/project_my/lvgl_port2/main/temp_hum.c:63
+0x400e7031: lv_timer_exec at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:313 (discriminator 2)
+0x400e70ed: lv_timer_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:109
+0x400da68f: lv_task_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/lv_api_map.h:37
+ (inlined by) lv_ui_tack at /home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c:47
+0x4009079d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

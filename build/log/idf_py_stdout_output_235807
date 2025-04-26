@@ -1,0 +1,160 @@
+[0/1] Re-running CMake...
+-- Building ESP-IDF components for target esp32
+NOTICE: Processing 1 dependencies:
+NOTICE: [1/1] idf (5.2.0)
+-- Project sdkconfig file /home/vl/esp32/project_my/lvgl_port2/sdkconfig
+-- Compiler supported targets: xtensa-esp-elf
+-- App "lvgl_port2" version: 1.0.4
+-- Adding linker script /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/esp_system/ld/memory.ld
+-- Adding linker script /home/vl/esp32/esp-idf/components/esp_system/ld/esp32/sections.ld.in
+-- Adding linker script /home/vl/esp32/esp-idf/components/esp_rom/esp32/ld/esp32.rom.ld
+-- Adding linker script /home/vl/esp32/esp-idf/components/esp_rom/esp32/ld/esp32.rom.api.ld
+-- Adding linker script /home/vl/esp32/esp-idf/components/esp_rom/esp32/ld/esp32.rom.libgcc.ld
+-- Adding linker script /home/vl/esp32/esp-idf/components/esp_rom/esp32/ld/esp32.rom.newlib-data.ld
+-- Adding linker script /home/vl/esp32/esp-idf/components/esp_rom/esp32/ld/esp32.rom.syscalls.ld
+-- Adding linker script /home/vl/esp32/esp-idf/components/soc/esp32/ld/esp32.peripherals.ld
+-- Components: app_trace app_update bootloader bootloader_support bsp bt cmock console cxx driver efuse esp-tls esp_adc esp_app_format esp_bootloader_format esp_coex esp_common esp_eth esp_event esp_gdbstub esp_hid esp_http_client esp_http_server esp_https_ota esp_https_server esp_hw_support esp_lcd esp_local_ctrl esp_mm esp_netif esp_netif_stack esp_partition esp_phy esp_pm esp_psram esp_ringbuf esp_rom esp_system esp_timer esp_wifi espcoredump esptool_py fatfs freertos hal heap http_parser idf_test ieee802154 jpeg json log lvgl lwip main mbedtls mqtt newlib nvs_flash nvs_sec_provider openthread partition_table perfmon protobuf-c protocomm pthread sdmmc soc spi_flash spiffs tcp_transport ui ulp unity usb vfs wear_levelling wifi_ble wifi_provisioning wpa_supplicant xtensa
+-- Component paths: /home/vl/esp32/esp-idf/components/app_trace /home/vl/esp32/esp-idf/components/app_update /home/vl/esp32/esp-idf/components/bootloader /home/vl/esp32/esp-idf/components/bootloader_support /home/vl/esp32/project_my/lvgl_port2/components/bsp /home/vl/esp32/esp-idf/components/bt /home/vl/esp32/esp-idf/components/cmock /home/vl/esp32/esp-idf/components/console /home/vl/esp32/esp-idf/components/cxx /home/vl/esp32/esp-idf/components/driver /home/vl/esp32/esp-idf/components/efuse /home/vl/esp32/esp-idf/components/esp-tls /home/vl/esp32/esp-idf/components/esp_adc /home/vl/esp32/esp-idf/components/esp_app_format /home/vl/esp32/esp-idf/components/esp_bootloader_format /home/vl/esp32/esp-idf/components/esp_coex /home/vl/esp32/esp-idf/components/esp_common /home/vl/esp32/esp-idf/components/esp_eth /home/vl/esp32/esp-idf/components/esp_event /home/vl/esp32/esp-idf/components/esp_gdbstub /home/vl/esp32/esp-idf/components/esp_hid /home/vl/esp32/esp-idf/components/esp_http_client /home/vl/esp32/esp-idf/components/esp_http_server /home/vl/esp32/esp-idf/components/esp_https_ota /home/vl/esp32/esp-idf/components/esp_https_server /home/vl/esp32/esp-idf/components/esp_hw_support /home/vl/esp32/esp-idf/components/esp_lcd /home/vl/esp32/esp-idf/components/esp_local_ctrl /home/vl/esp32/esp-idf/components/esp_mm /home/vl/esp32/esp-idf/components/esp_netif /home/vl/esp32/esp-idf/components/esp_netif_stack /home/vl/esp32/esp-idf/components/esp_partition /home/vl/esp32/esp-idf/components/esp_phy /home/vl/esp32/esp-idf/components/esp_pm /home/vl/esp32/esp-idf/components/esp_psram /home/vl/esp32/esp-idf/components/esp_ringbuf /home/vl/esp32/esp-idf/components/esp_rom /home/vl/esp32/esp-idf/components/esp_system /home/vl/esp32/esp-idf/components/esp_timer /home/vl/esp32/esp-idf/components/esp_wifi /home/vl/esp32/esp-idf/components/espcoredump /home/vl/esp32/esp-idf/components/esptool_py /home/vl/esp32/esp-idf/components/fatfs /home/vl/esp32/esp-idf/components/freertos /home/vl/esp32/esp-idf/components/hal /home/vl/esp32/esp-idf/components/heap /home/vl/esp32/esp-idf/components/http_parser /home/vl/esp32/esp-idf/components/idf_test /home/vl/esp32/esp-idf/components/ieee802154 /home/vl/esp32/project_my/lvgl_port2/components/jpeg /home/vl/esp32/esp-idf/components/json /home/vl/esp32/esp-idf/components/log /home/vl/esp32/project_my/lvgl_port2/components/lvgl /home/vl/esp32/esp-idf/components/lwip /home/vl/esp32/project_my/lvgl_port2/main /home/vl/esp32/esp-idf/components/mbedtls /home/vl/esp32/esp-idf/components/mqtt /home/vl/esp32/esp-idf/components/newlib /home/vl/esp32/esp-idf/components/nvs_flash /home/vl/esp32/esp-idf/components/nvs_sec_provider /home/vl/esp32/esp-idf/components/openthread /home/vl/esp32/esp-idf/components/partition_table /home/vl/esp32/esp-idf/components/perfmon /home/vl/esp32/esp-idf/components/protobuf-c /home/vl/esp32/esp-idf/components/protocomm /home/vl/esp32/esp-idf/components/pthread /home/vl/esp32/esp-idf/components/sdmmc /home/vl/esp32/esp-idf/components/soc /home/vl/esp32/esp-idf/components/spi_flash /home/vl/esp32/esp-idf/components/spiffs /home/vl/esp32/esp-idf/components/tcp_transport /home/vl/esp32/project_my/lvgl_port2/components/ui /home/vl/esp32/esp-idf/components/ulp /home/vl/esp32/esp-idf/components/unity /home/vl/esp32/esp-idf/components/usb /home/vl/esp32/esp-idf/components/vfs /home/vl/esp32/esp-idf/components/wear_levelling /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble /home/vl/esp32/esp-idf/components/wifi_provisioning /home/vl/esp32/esp-idf/components/wpa_supplicant /home/vl/esp32/esp-idf/components/xtensa
+-- Configuring done (5.5s)
+-- Generating done (0.6s)
+-- Build files have been written to: /home/vl/esp32/project_my/lvgl_port2/build
+[1/6] Generating ../../partition_table/partition-table.bin
+Partition table binary generated. Contents:
+*******************************************************************************
+# ESP-IDF Partition Table
+# Name, Type, SubType, Offset, Size, Flags
+nvs,data,nvs,0x9000,16K,
+otadata,data,ota,0xd000,8K,
+phy_init,data,phy,0xf000,4K,
+ota_0,app,ota_0,0x10000,3800K,
+ota_1,app,ota_1,0x3d0000,3800K,
+*******************************************************************************
+[2/6] cd /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/vl/esp32/project_my/lvgl_port2/build/partition_table/partition-table.bin /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+lvgl_port2.bin binary size 0x2f1fc0 bytes. Smallest app partition is 0x3b6000 bytes. 0xc4040 bytes (21%) free.
+[3/6] Performing build step for 'bootloader'
+[1/1] cd /home/vl/esp32/project_my/lvgl_port2/build/bootloader/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/vl/esp32/project_my/lvgl_port2/build/bootloader/bootloader.bin
+Bootloader binary size 0x6850 bytes. 0x7b0 bytes (7%) free.
+[4/6] No install step for 'bootloader'
+[5/6] Completed 'bootloader'
+[5/6] cd /home/vl/esp32/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/vl/esp32/esp-idf -D "SERIAL_TOOL=/home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/home/vl/esp32/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/vl/esp32/project_my/lvgl_port2/build -P /home/vl/esp32/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 8MB 0x1000 bootloader/bootloader.bin 0x10000 lvgl_port2.bin 0x8000 partition_table/partition-table.bin 0xd000 ota_data_initial.bin
+esptool.py v4.8.1
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WDR2-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 30:c9:22:ff:6f:30
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00301fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000d000 to 0x0000efff...
+SHA digest in image updated
+Compressed 26704 bytes to 16348...
+Writing at 0x00001000... (100 %)
+Wrote 26704 bytes (16348 compressed) at 0x00001000 in 0.8 seconds (effective 254.1 kbit/s)...
+Hash of data verified.
+Compressed 3088320 bytes to 1360919...
+Writing at 0x00010000... (1 %)
+Writing at 0x000206b9... (2 %)
+Writing at 0x0002e13c... (3 %)
+Writing at 0x00035140... (4 %)
+Writing at 0x0003eb16... (5 %)
+Writing at 0x00045d07... (7 %)
+Writing at 0x0004dc75... (8 %)
+Writing at 0x00056a4a... (9 %)
+Writing at 0x000619a9... (10 %)
+Writing at 0x0006dcf5... (11 %)
+Writing at 0x00075c97... (13 %)
+Writing at 0x00081fc5... (14 %)
+Writing at 0x00099de6... (15 %)
+Writing at 0x000a1ac3... (16 %)
+Writing at 0x000a95a9... (17 %)
+Writing at 0x000b2455... (19 %)
+Writing at 0x000be279... (20 %)
+Writing at 0x000cdc50... (21 %)
+Writing at 0x000e26d9... (22 %)
+Writing at 0x000ece5d... (23 %)
+Writing at 0x000f5d12... (25 %)
+Writing at 0x00101444... (26 %)
+Writing at 0x00115482... (27 %)
+Writing at 0x0011f0c4... (28 %)
+Writing at 0x00127e1c... (29 %)
+Writing at 0x001311a8... (30 %)
+Writing at 0x0013c065... (32 %)
+Writing at 0x00147d82... (33 %)
+Writing at 0x0015934e... (34 %)
+Writing at 0x001923b3... (35 %)
+Writing at 0x001b5e42... (36 %)
+Writing at 0x001be5b6... (38 %)
+Writing at 0x001c3609... (39 %)
+Writing at 0x001c89e1... (40 %)
+Writing at 0x001ced57... (41 %)
+Writing at 0x001d3c38... (42 %)
+Writing at 0x001dcf4f... (44 %)
+Writing at 0x001e80b8... (45 %)
+Writing at 0x001ee42d... (46 %)
+Writing at 0x001f3be9... (47 %)
+Writing at 0x001faeac... (48 %)
+Writing at 0x002014fb... (50 %)
+Writing at 0x00207330... (51 %)
+Writing at 0x0020d7a2... (52 %)
+Writing at 0x00213d4d... (53 %)
+Writing at 0x00219d14... (54 %)
+Writing at 0x0021ff44... (55 %)
+Writing at 0x002262d3... (57 %)
+Writing at 0x0022c7ed... (58 %)
+Writing at 0x0023394a... (59 %)
+Writing at 0x0023994c... (60 %)
+Writing at 0x0024008b... (61 %)
+Writing at 0x002464a0... (63 %)
+Writing at 0x0024c5df... (64 %)
+Writing at 0x0025319a... (65 %)
+Writing at 0x00258e9b... (66 %)
+Writing at 0x0025f00c... (67 %)
+Writing at 0x00265731... (69 %)
+Writing at 0x0026b68c... (70 %)
+Writing at 0x0027129d... (71 %)
+Writing at 0x002764aa... (72 %)
+Writing at 0x0027b8c4... (73 %)
+Writing at 0x00280dde... (75 %)
+Writing at 0x0028617b... (76 %)
+Writing at 0x0028b7fe... (77 %)
+Writing at 0x00291149... (78 %)
+Writing at 0x00296fc3... (79 %)
+Writing at 0x0029c762... (80 %)
+Writing at 0x002a23ea... (82 %)
+Writing at 0x002a80dc... (83 %)
+Writing at 0x002adfe9... (84 %)
+Writing at 0x002b407f... (85 %)
+Writing at 0x002b9b6a... (86 %)
+Writing at 0x002bf989... (88 %)
+Writing at 0x002c5963... (89 %)
+Writing at 0x002cb16f... (90 %)
+Writing at 0x002d0e9f... (91 %)
+Writing at 0x002dadc2... (92 %)
+Writing at 0x002e39d4... (94 %)
+Writing at 0x002ea067... (95 %)
+Writing at 0x002effdb... (96 %)
+Writing at 0x002f60a1... (97 %)
+Writing at 0x002fc25e... (98 %)
+Writing at 0x003018da... (100 %)
+Wrote 3088320 bytes (1360919 compressed) at 0x00010000 in 34.0 seconds (effective 726.1 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 128...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (128 compressed) at 0x00008000 in 0.1 seconds (effective 329.7 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x0000d000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x0000d000 in 0.0 seconds (effective 2513.7 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

@@ -1,0 +1,207 @@
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 532, in parse_int
+    return int(v, 0)
+           ^^^^^^^^^
+ValueError: invalid literal for int() with base 0: '3.5'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 184, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 373, in from_csv
+    res.size = res.parse_address(fields[4])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 430, in parse_address
+    return parse_int(strval)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 531, in parse_int
+    return parse_int(v[:-1], keywords) * multiplier
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 535, in parse_int
+    raise InputError('Invalid field value %s' % v)
+gen_esp32part.InputError: Invalid field value 3.5
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/partition_table/parttool.py", line 363, in <module>
+    main()
+  File "/home/vl/esp32/esp-idf/components/partition_table/parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 186, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 6: Invalid field value 3.5
+Please check extra_partition_subtypes.inc file in build/config directory
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 532, in parse_int
+    return int(v, 0)
+           ^^^^^^^^^
+ValueError: invalid literal for int() with base 0: '3.5'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 184, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 373, in from_csv
+    res.size = res.parse_address(fields[4])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 430, in parse_address
+    return parse_int(strval)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 531, in parse_int
+    return parse_int(v[:-1], keywords) * multiplier
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 535, in parse_int
+    raise InputError('Invalid field value %s' % v)
+gen_esp32part.InputError: Invalid field value 3.5
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/partition_table/parttool.py", line 363, in <module>
+    main()
+  File "/home/vl/esp32/esp-idf/components/partition_table/parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 186, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 6: Invalid field value 3.5
+Please check extra_partition_subtypes.inc file in build/config directory
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 532, in parse_int
+    return int(v, 0)
+           ^^^^^^^^^
+ValueError: invalid literal for int() with base 0: '3.5'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 184, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 373, in from_csv
+    res.size = res.parse_address(fields[4])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 430, in parse_address
+    return parse_int(strval)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 531, in parse_int
+    return parse_int(v[:-1], keywords) * multiplier
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 535, in parse_int
+    raise InputError('Invalid field value %s' % v)
+gen_esp32part.InputError: Invalid field value 3.5
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/partition_table/parttool.py", line 363, in <module>
+    main()
+  File "/home/vl/esp32/esp-idf/components/partition_table/parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 186, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 6: Invalid field value 3.5
+Please check extra_partition_subtypes.inc file in build/config directory
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 532, in parse_int
+    return int(v, 0)
+           ^^^^^^^^^
+ValueError: invalid literal for int() with base 0: '3.5'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 184, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 373, in from_csv
+    res.size = res.parse_address(fields[4])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 430, in parse_address
+    return parse_int(strval)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 531, in parse_int
+    return parse_int(v[:-1], keywords) * multiplier
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 535, in parse_int
+    raise InputError('Invalid field value %s' % v)
+gen_esp32part.InputError: Invalid field value 3.5
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/partition_table/parttool.py", line 363, in <module>
+    main()
+  File "/home/vl/esp32/esp-idf/components/partition_table/parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 186, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 6: Invalid field value 3.5
+Please check extra_partition_subtypes.inc file in build/config directory
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 532, in parse_int
+    return int(v, 0)
+           ^^^^^^^^^
+ValueError: invalid literal for int() with base 0: '3.5'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 184, in from_csv
+    res.append(PartitionDefinition.from_csv(line, line_no + 1))
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 373, in from_csv
+    res.size = res.parse_address(fields[4])
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 430, in parse_address
+    return parse_int(strval)
+           ^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 531, in parse_int
+    return parse_int(v[:-1], keywords) * multiplier
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 535, in parse_int
+    raise InputError('Invalid field value %s' % v)
+gen_esp32part.InputError: Invalid field value 3.5
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/vl/esp32/esp-idf/components/partition_table/parttool.py", line 363, in <module>
+    main()
+  File "/home/vl/esp32/esp-idf/components/partition_table/parttool.py", line 332, in main
+    target = ParttoolTarget(**target_args)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/parttool.py", line 97, in __init__
+    partition_table = gen.PartitionTable.from_csv(f.read())
+                      ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/vl/esp32/esp-idf/components/partition_table/gen_esp32part.py", line 186, in from_csv
+    raise InputError('Error at line %d: %s\nPlease check extra_partition_subtypes.inc file in build/config directory' % (line_no + 1, err))
+gen_esp32part.InputError: Error at line 6: Invalid field value 3.5
+Please check extra_partition_subtypes.inc file in build/config directory
+CMake Warning at /home/vl/esp32/esp-idf/tools/cmake/component.cmake:269 (message):
+  SRCS and SRC_DIRS are both specified; ignoring SRC_DIRS.
+Call Stack (most recent call first):
+  /home/vl/esp32/esp-idf/tools/cmake/component.cmake:443 (__component_add_sources)
+  components/ui/CMakeLists.txt:13 (idf_component_register)
+
+

@@ -13,6 +13,12 @@
 #include "driver/ledc.h"
 #include "temp_hum.h"
 #include "esp_err.h"
+#include "wifi_task.h"
+#include "esp_wifi.h"
+#include "esp_log.h"
+#include "freertos/FreeRTOS.h"
+#include "freertos/task.h"
+
 
 #if LV_USE_GUIDER_SIMULATOR && LV_USE_FREEMASTER
 #include "freemaster_client.h"
@@ -186,23 +192,39 @@ static void shezhi_slider_li_event_handler (lv_event_t *e)
     }
 }
 
+
 static void shezhi_wifi_btn_event_handler (lv_event_t *e)
 {
+    static TaskHandle_t wifi_task_handle = NULL;
+    static bool wifi_task_started = true;
     lv_event_code_t code = lv_event_get_code(e);
     switch (code) {
-    case LV_EVENT_PRESSED:
-    {
-
-        break;
-    }
-    case LV_EVENT_RELEASED:
-    {
-
-        break;
-    }
-    default:
-        break;
-    }
+        case LV_EVENT_PRESSED:
+        {
+            if(wifi_task_handle == NULL)
+                xTaskCreatePinnedToCore(wifi_task, "wifi_task", 8192, NULL, 5, &wifi_task_handle, 0);
+            break;
+        }
+        case LV_EVENT_RELEASED: //除第一次外接下来每次点击都执行
+        {
+            if(wifi_task_handle != NULL){
+                if (wifi_task_started==false)
+                {
+                    wifi_task_started = true;
+                    esp_wifi_stop();
+                    ESP_LOGI("WIFI_EVENT", "WiFi is OFF");
+                }
+                else{
+                    esp_wifi_start();
+                    wifi_task_started = false;
+                    ESP_LOGI("WIFI_EVENT", "WiFi is ON");
+                }
+            }
+            break;
+        }
+        default:
+            break;
+        }
 }
 
 void events_init_shezhi (lv_ui *ui)

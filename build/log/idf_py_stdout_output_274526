@@ -1,0 +1,46 @@
+[1/9] Performing build step for 'bootloader'
+[1/1] cd /home/vl/esp32/project_my/lvgl_port2/build/bootloader/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/vl/esp32/project_my/lvgl_port2/build/bootloader/bootloader.bin
+Bootloader binary size 0x6850 bytes. 0x7b0 bytes (7%) free.
+[2/9] No install step for 'bootloader'
+[3/9] Completed 'bootloader'
+[4/9] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/temp_hum.c.obj
+/home/vl/esp32/project_my/lvgl_port2/main/temp_hum.c: In function 'dht11_timer_cb':
+/home/vl/esp32/project_my/lvgl_port2/main/temp_hum.c:64:36: warning: passing argument 2 of 'give_temp_hum' makes pointer from integer without a cast [-Wint-conversion]
+   64 |         give_temp_hum(&temp_value, hum);
+      |                                    ^~~
+      |                                    |
+      |                                    int
+In file included from /home/vl/esp32/project_my/lvgl_port2/main/temp_hum.c:5:
+/home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.h:7:42: note: expected 'int16_t *' {aka 'short int *'} but argument is of type 'int'
+    7 | void give_temp_hum(float *temp, int16_t *hum);
+      |                                 ~~~~~~~~~^~~
+/home/vl/esp32/project_my/lvgl_port2/main/temp_hum.c: In function 'temp_hum_timer_create':
+/home/vl/esp32/project_my/lvgl_port2/main/temp_hum.c:72:19: warning: assignment to 'lv_timer_t *' {aka 'struct _lv_timer_t *'} from incompatible pointer type 'TimerHandle_t' {aka 'struct tmrTimerControl *'} [-Wincompatible-pointer-types]
+   72 |     s_dht11_timer = xTimerCreate("DHT11 Timer", pdMS_TO_TICKS(1000), pdTRUE, NULL, (TimerCallbackFunction_t)dht11_timer_cb);
+      |                   ^
+In file included from /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/event_groups.h:41,
+                 from /home/vl/esp32/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:25,
+                 from /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:1533,
+                 from /home/vl/esp32/project_my/lvgl_port2/main/temp_hum.c:6:
+/home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/timers.h:501:27: warning: passing argument 1 of 'xTimerGenericCommand' from incompatible pointer type [-Wincompatible-pointer-types]
+  501 |     xTimerGenericCommand( ( xTimer ), tmrCOMMAND_START, ( xTaskGetTickCount() ), NULL, ( xTicksToWait ) )
+      |                           ^~~~~~~~~~
+      |                           |
+      |                           lv_timer_t * {aka struct _lv_timer_t *}
+/home/vl/esp32/project_my/lvgl_port2/main/temp_hum.c:74:9: note: in expansion of macro 'xTimerStart'
+   74 |         xTimerStart(s_dht11_timer, 0);
+      |         ^~~~~~~~~~~
+/home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/timers.h:1313:48: note: expected 'TimerHandle_t' {aka 'struct tmrTimerControl *'} but argument is of type 'lv_timer_t *' {aka 'struct _lv_timer_t *'}
+ 1313 | BaseType_t xTimerGenericCommand( TimerHandle_t xTimer,
+      |                                  ~~~~~~~~~~~~~~^~~~~~
+[5/9] Linking C static library esp-idf/main/libmain.a
+[6/9] Generating ld/sections.ld
+[7/9] Linking CXX executable lvgl_port2.elf
+[8/9] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+[9/9] cd /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/vl/esp32/project_my/lvgl_port2/build/partition_table/partition-table.bin /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+lvgl_port2.bin binary size 0x2f2930 bytes. Smallest app partition is 0x3b6000 bytes. 0xc36d0 bytes (21%) free.

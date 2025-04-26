@@ -4,5 +4,5 @@
 
 void wifi_task(void);
 
-
+void give_temp_hum(float *temp, int16_t *hum);
 #endif 

@@ -13,6 +13,7 @@
 #include "mbedtls/md.h"
 #include "cjson_text.h"
 #include "al_ota.h"
+#include "smartconfig.h"
 
 
 
@@ -33,11 +34,18 @@
 #define MQTT_TOPIC_OTA_PROGRESS "/ota/device/progress/k1xujoU2Xot/esp01"
 #define MQTT_TOPIC_OTA_GET "/sys/k1xujoU2Xot/esp01/thing/ota/firmware/get"
 
-static SemaphoreHandle_t wifi_semaphore = NULL;
+SemaphoreHandle_t wifi_semaphore = NULL;
+
+static SemaphoreHandle_t smartconfig_semaphore = NULL;
+
+static QueueHandle_t temp_hum_queue = NULL;
 
 static esp_mqtt_client_handle_t client = NULL;
 
-void wifi_event_handler(void* event_handler_arg,esp_event_base_t event_base,int32_t event_id,void* event_data)
+static float temp_hum[2] = {0};
+
+static float temp_hum_data[2] = {0};
+/*void wifi_event_handler(void* event_handler_arg,esp_event_base_t event_base,int32_t event_id,void* event_data)
     {
         if(event_base == WIFI_EVENT)
         {
@@ -73,7 +81,9 @@ void wifi_event_handler(void* event_handler_arg,esp_event_base_t event_base,int3
                     break;
             }
         }
-    }
+    }*/
+    
+extern void wifi_event_handler(void* event_handler_arg,esp_event_base_t event_base,int32_t event_id,void* event_data);
 
 void wifi_simple_config(void)
 {
@@ -204,7 +214,18 @@ void mqtt_start(void)
     esp_mqtt_client_start(client);
 }
 
-
+void give_temp_hum(float *temp, int16_t *hum)
+{
+    temp_hum[0] = *temp;
+    temp_hum[1] = *hum;
+    if(temp_hum_queue == NULL) {
+        ESP_LOGE("WIFI_EVENT", "Temperature and humidity queue is not initialized");
+        return;
+    }
+    if (xQueueSend(temp_hum_queue, &temp_hum, 0) != pdTRUE) {
+        ESP_LOGE("WIFI_EVENT", "Failed to send temperature and humidity data to queue");
+    }
+}
 //上报温度
 void push_temp_hum(float temp, int16_t hum)
 {
@@ -219,7 +240,6 @@ void push_temp_hum(float temp, int16_t hum)
     esp_mqtt_client_publish(client, MQTT_TOPIC_TH, dm->dm_json_str, 0, 0, 0);
     aliot_free_dm(dm);
 }
-
 
 //上报版本号
 void ota_version_imform(void)
@@ -236,13 +256,44 @@ void ota_version_imform(void)
 
 void wifi_task(void)
 {
-    wifi_semaphore = xSemaphoreCreateBinary();
+    if (wifi_semaphore == NULL) {
+        wifi_semaphore = xSemaphoreCreateBinary();
+    }
+    if (smartconfig_semaphore == NULL) {
+        smartconfig_semaphore = xSemaphoreCreateBinary();
+    }
+    if (temp_hum_queue == NULL) {
+        temp_hum_queue = xQueueCreate(10, sizeof(temp_hum)); // Create a queue for temperature and humidity data
+    }
     wifi_simple_config();
     mqtt_start();
-    //push_temp_hum(25.5, 60); 
+
     while (1) {
-        
-        vTaskDelay(1000 / portTICK_PERIOD_MS);
+        wifi_mode_t mode;
+        if (esp_wifi_get_mode(&mode) == ESP_OK) {
+            if (mode == WIFI_MODE_NULL) {
+                ESP_LOGI("WIFI_EVENT", "WiFi is OFF");
+                vTaskDelay(pdMS_TO_TICKS(10));
+                continue;
+            } else {
+                ESP_LOGI("WIFI_EVENT", "WiFi is ON");
+            }
+        } else {
+            ESP_LOGE("WIFI_EVENT", "Failed to get WiFi mode");
+            vTaskDelay(pdMS_TO_TICKS(10));
+            continue;
+        }
+
+        if (xSemaphoreTake(smartconfig_semaphore, pdMS_TO_TICKS(100)) == pdTRUE) {
+            ESP_LOGI("WIFI_EVENT", "SmartConfig started");
+            smartconfig_init();
+        }
+
+        if (xQueueReceive(temp_hum_queue, &temp_hum_data, pdMS_TO_TICKS(100)) == pdTRUE) {
+            float temp = temp_hum_data[0];
+            int16_t hum = (int16_t)temp_hum_data[1];
+            push_temp_hum(temp, hum);
+        }
+        vTaskDelay(pdMS_TO_TICKS(10));
     }
 }
-

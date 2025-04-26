@@ -1,0 +1,47 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4011337e: wifi_simple_config at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:91 (discriminator 1)
+[0m
+[0;33m--- 0x4008fbef: _esp_error_check_failed at /home/vl/esp32/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081e7d: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008fbf9: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x400989f1: abort at /home/vl/esp32/esp-idf/components/newlib/abort.c:38
+0x4008fbef: _esp_error_check_failed at /home/vl/esp32/esp-idf/components/esp_system/esp_err.c:50
+0x4011337e: wifi_simple_config at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:91 (discriminator 1)
+0x40113665: wifi_task at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:262
+0x4009079d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4011337e: wifi_simple_config at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:91 (discriminator 1)
+[0m
+[0;33m--- 0x4008fbef: _esp_error_check_failed at /home/vl/esp32/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081e7d: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008fbf9: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x400989f1: abort at /home/vl/esp32/esp-idf/components/newlib/abort.c:38
+0x4008fbef: _esp_error_check_failed at /home/vl/esp32/esp-idf/components/esp_system/esp_err.c:50
+0x4011337e: wifi_simple_config at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:91 (discriminator 1)
+0x40113665: wifi_task at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:262
+0x4009079d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4011337e: wifi_simple_config at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:91 (discriminator 1)
+[0m
+[0;33m--- 0x4008fbef: _esp_error_check_failed at /home/vl/esp32/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081e7d: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008fbf9: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x400989f1: abort at /home/vl/esp32/esp-idf/components/newlib/abort.c:38
+0x4008fbef: _esp_error_check_failed at /home/vl/esp32/esp-idf/components/esp_system/esp_err.c:50
+0x4011337e: wifi_simple_config at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:91 (discriminator 1)
+0x40113665: wifi_task at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:262
+0x4009079d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m
