@@ -54,7 +54,7 @@ void app_main(void)
     lv_port_init();
     ESP_ERROR_CHECK(ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, 250));
     ESP_ERROR_CHECK(ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0));
-    /*setup_ui(&guider_ui);
-    xTaskCreatePinnedToCore(lv_mjpeg_tack, "lv_mjpeg_tack", 8192*2, NULL, 5, NULL, 1);*/
-    wifi_task();
+    setup_ui(&guider_ui);
+    xTaskCreatePinnedToCore(lv_mjpeg_tack, "lv_mjpeg_tack", 8192*2, NULL, 5, NULL, 1);
+    //wifi_task();
 }
