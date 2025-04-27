@@ -16,6 +16,7 @@
 #include "ui/generated/gui_guider.h"
 #include "wifi_ble/wifi_task.h"
 #include "nvs_flash.h"
+#include "sdcard.h"
 
 lv_ui guider_ui;
 
@@ -53,6 +54,10 @@ void lv_ui_tack(void *params)
 void app_main(void)
 {
     lv_port_init();
+    if (sdcard_init() != ESP_OK) {
+        ESP_LOGE("sdcard", "SD card initialization failed");
+        return;
+    }
     ESP_ERROR_CHECK(ledc_set_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0, 250));
     ESP_ERROR_CHECK(ledc_update_duty(LEDC_LOW_SPEED_MODE, LEDC_CHANNEL_0));
     setup_ui(&guider_ui);

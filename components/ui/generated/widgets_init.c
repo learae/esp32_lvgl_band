@@ -85,6 +85,7 @@ extern char screen_digital_clock_home_meridiem[];
 
 void screen_digital_clock_home_timer(lv_timer_t *timer)
 {
+    
     clock_count_12(&screen_digital_clock_home_hour_value, &screen_digital_clock_home_min_value, &screen_digital_clock_home_sec_value, screen_digital_clock_home_meridiem);
     if (lv_obj_is_valid(guider_ui.screen_digital_clock_home))
     {

@@ -13,7 +13,7 @@
 #include "events_init.h"
 #include "widgets_init.h"
 #include "custom/custom.h"
-
+#include "sdcard.h"
 
 
 void setup_scr_txt_page(lv_ui *ui)
@@ -54,7 +54,18 @@ void setup_scr_txt_page(lv_ui *ui)
 
     //Write codes txt_page_list_txt
     ui->txt_page_list_txt = lv_list_create(ui->txt_page);
+    int i = 0;
+    char name[10][50] = {0};
+    i = sdcard_filelist(name);
+    for(int j = 0; j < i; j++)
+    {
+        if (strstr(name[j], ".txt") != NULL || strstr(name[j], ".TXT") != NULL) {
+            ui->txt_page_list_txt_item0 = lv_list_add_btn(ui->txt_page_list_txt, LV_SYMBOL_SAVE, name[j]);
+            lv_obj_set_style_text_font(ui->txt_page_list_txt_item0, &lv_font_simsun_16_cjk, LV_PART_MAIN | LV_STATE_DEFAULT);
+        }
+    }
     ui->txt_page_list_txt_item0 = lv_list_add_btn(ui->txt_page_list_txt, LV_SYMBOL_SAVE, "name.txt");
+
     lv_obj_set_pos(ui->txt_page_list_txt, 20, 38);
     lv_obj_set_size(ui->txt_page_list_txt, 200, 267);
     lv_obj_set_scrollbar_mode(ui->txt_page_list_txt, LV_SCROLLBAR_MODE_OFF);

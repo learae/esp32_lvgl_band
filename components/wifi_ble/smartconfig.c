@@ -122,3 +122,4 @@ void smartconfig_init(void)
     smartconfig_start_config_t config = SMARTCONFIG_START_CONFIG_DEFAULT();
     esp_smartconfig_start(&config); // Start SmartConfig
 }
+

@@ -12,6 +12,7 @@ typedef enum {
     OTA_VERSION = 5,
     OTA_FILE = 6,
     OTA_GET = 7,
+    NTP_TIME_GET = 8,
 } AliotMethod;
 
 typedef struct {

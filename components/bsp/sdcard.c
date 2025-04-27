@@ -35,7 +35,6 @@ int sdcard_init(void)
     //返回值是文件数量
     //注意：传入的指针必须是一个二维数组，第一维大小足够大，第二维大小为50
 int sdcard_filelist(char (**file)[50])
-    
 {
     DIR *dir;
     struct dirent *entry;
@@ -56,5 +55,4 @@ int sdcard_filelist(char (**file)[50])
 
     closedir(dir);
     return count;
-
 }

@@ -19,6 +19,7 @@ void custom_init(lv_ui *ui);
 void clock_count_12(int *hour, int *min, int *sec, char *meridiem);
 lv_obj_t *lv_dclock_create(lv_obj_t *parent, const char *init_text);
 void lv_dclock_set_text_fmt(lv_obj_t *obj, const char *fmt, ...);
+void timestamp_to_12h_str(long long times, int *hour, int *min, int *sec, char *meridiem);
 
 #ifdef __cplusplus
 }

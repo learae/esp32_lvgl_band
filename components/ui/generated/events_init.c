@@ -18,7 +18,7 @@
 #include "esp_log.h"
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
-
+#include "smartconfig.h"
 
 #if LV_USE_GUIDER_SIMULATOR && LV_USE_FREEMASTER
 #include "freemaster_client.h"
@@ -149,7 +149,7 @@ static void shezhi_config_btn_event_handler (lv_event_t *e)
     switch (code) {
     case LV_EVENT_PRESSED:
     {
-        ui_load_scr_animation(&guider_ui, &guider_ui.settings_page, guider_ui.settings_page_del, &guider_ui.shezhi_del, setup_scr_settings_page, LV_SCR_LOAD_ANIM_FADE_ON, 200, 200, false, true);
+        ui_load_scr_animation(&guider_ui, &guider_ui.settings_page, guider_ui.settings_page_del, &guider_ui.shezhi_del, setup_scr_settings_page, LV_SCR_LOAD_ANIM_FADE_ON, 200, 200, false,false);
         break;
     }
     default:
@@ -940,7 +940,7 @@ static void connect_page_smratconfig_btn_event_handler (lv_event_t *e)
     switch (code) {
     case LV_EVENT_CLICKED:
     {
-
+        smartconfig_init();
         break;
     }
     default:

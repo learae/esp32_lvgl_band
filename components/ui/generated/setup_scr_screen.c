@@ -9,17 +9,21 @@
 
 #include "lvgl.h"
 #include <stdio.h>
+#include <time.h>
 #include "gui_guider.h"
 #include "events_init.h"
 #include "widgets_init.h"
 #include "custom/custom.h"
+#include "esp_log.h"
 
 
-
-int screen_digital_clock_home_min_value = 25;
-int screen_digital_clock_home_hour_value = 11;
-int screen_digital_clock_home_sec_value = 50;
+int screen_digital_clock_home_min_value = 0;
+int screen_digital_clock_home_hour_value = 0;
+int screen_digital_clock_home_sec_value = 0;
 char screen_digital_clock_home_meridiem[3] = "AM";
+
+static bool screen_digital_clock_home_timer_enabled = false;
+
 void setup_scr_screen(lv_ui *ui)
 {
     //Write codes screen
@@ -46,8 +50,9 @@ void setup_scr_screen(lv_ui *ui)
     lv_obj_set_style_clip_corner(ui->screen_img_home, true, LV_PART_MAIN|LV_STATE_DEFAULT);
 
     //Write codes screen_digital_clock_home
-    static bool screen_digital_clock_home_timer_enabled = false;
-    ui->screen_digital_clock_home = lv_dclock_create(ui->screen, "11:25:50 AM");
+    
+    ui->screen_digital_clock_home = lv_dclock_create(ui->screen, "00:00:00 AM");
+    
     if (!screen_digital_clock_home_timer_enabled) {
         lv_timer_create(screen_digital_clock_home_timer, 1000, NULL);
         screen_digital_clock_home_timer_enabled = true;

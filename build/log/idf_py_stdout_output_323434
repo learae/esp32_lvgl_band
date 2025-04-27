@@ -1,0 +1,39 @@
+[1/31] Performing build step for 'bootloader'
+[1/1] cd /home/vl/esp32/project_my/lvgl_port2/build/bootloader/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/vl/esp32/project_my/lvgl_port2/build/bootloader/bootloader.bin
+Bootloader binary size 0x6850 bytes. 0x7b0 bytes (7%) free.
+[2/31] No install step for 'bootloader'
+[3/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_screen.c.obj
+[4/31] Completed 'bootloader'
+[5/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_lis_page.c.obj
+[6/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_music_list.c.obj
+[7/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_light_page.c.obj
+[8/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_shezhi.c.obj
+[9/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_connect_page.c.obj
+[10/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_math_page.c.obj
+[11/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/custom/custom.c.obj
+[12/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_load_page.c.obj
+[13/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_heart_page.c.obj
+[14/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_settings_page.c.obj
+[15/31] Building C object esp-idf/main/CMakeFiles/__idf_main.dir/temp_hum.c.obj
+[16/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_duogongneng.c.obj
+[17/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_temp_page.c.obj
+[18/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_txt_page.c.obj
+[19/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_tianqi_page.c.obj
+[20/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/widgets_init.c.obj
+[21/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_vol_page.c.obj
+[22/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_txt_veiw.c.obj
+[23/31] Building C object esp-idf/wifi_ble/CMakeFiles/__idf_wifi_ble.dir/wifi_task.c.obj
+[24/31] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/setup_scr_tianqi_page1.c.obj
+[25/31] Linking C static library esp-idf/wifi_ble/libwifi_ble.a
+[26/31] Linking C static library esp-idf/ui/libui.a
+[27/31] Linking C static library esp-idf/main/libmain.a
+[28/31] Generating ld/sections.ld
+[29/31] Linking CXX executable lvgl_port2.elf
+[30/31] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+[31/31] cd /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/vl/esp32/project_my/lvgl_port2/build/partition_table/partition-table.bin /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+lvgl_port2.bin binary size 0x2f2380 bytes. Smallest app partition is 0x3b6000 bytes. 0xc3c80 bytes (21%) free.

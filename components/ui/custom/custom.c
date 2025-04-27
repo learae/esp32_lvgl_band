@@ -14,6 +14,8 @@
 #include <stdio.h>
 #include "lvgl.h"
 #include "custom/custom.h"
+#include "time.h"
+#include "esp_log.h"
 
 /*********************
  *      DEFINES
@@ -35,14 +37,16 @@
  * Create a demo application
  */
 
+
 void custom_init(lv_ui *ui)
 {
     /* Add your codes here */
 }
 
+
 void clock_count_12(int *hour, int *min, int *sec, char *meridiem) {
     static int last_hour = 0;
-    if(++last_hour==30){ *sec += 1;last_hour=0; }
+    if(++last_hour==34){ *sec += 1;last_hour=0; }
     if (*sec >= 60) { *sec = 0; *min += 1; }
     if (*min >= 60) { *min = 0; *hour += 1; }
     if (*hour > 12) {
@@ -75,4 +79,24 @@ void lv_dclock_set_text_fmt(lv_obj_t *obj, const char *fmt, ...)
     vsnprintf(buf, sizeof(buf), fmt, args);
     va_end(args);
     lv_label_set_text(obj, buf);
+}
+
+void timestamp_to_12h_str(long long times, int *hour, int *min, int *sec, char *meridiem)
+{   
+    times = times / 1000; // 转换为秒
+    int total_sec = times % 86400; // 一天的秒数
+    int h = total_sec / 3600;
+    int m = (total_sec % 3600) / 60;
+    int s = total_sec % 60;
+    h+= 8; // UTC+8
+    *hour = h % 12;
+    if (*hour == 0) *hour = 12;
+    *min = m;
+    *sec = s;
+
+    if (h < 12) {
+        strcpy(meridiem, "AM");
+    } else {
+        strcpy(meridiem, "PM");
+    }
 }

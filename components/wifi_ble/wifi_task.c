@@ -14,8 +14,14 @@
 #include "cjson_text.h"
 #include "al_ota.h"
 #include "smartconfig.h"
+#include "time.h"
+#include "custom/custom.h"
+#include "generated/gui_guider.h"
 
-
+extern int screen_digital_clock_home_hour_value;
+extern int screen_digital_clock_home_min_value;
+extern int screen_digital_clock_home_sec_value;
+extern char screen_digital_clock_home_meridiem[];
 
 #define MQTT_PORT 1883
 #define MQTT_HOST "mqtt://iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com"
@@ -33,6 +39,8 @@
 #define MQTT_TOPIC_OTA "/ota/device/upgrade/k1xujoU2Xot/esp01"
 #define MQTT_TOPIC_OTA_PROGRESS "/ota/device/progress/k1xujoU2Xot/esp01"
 #define MQTT_TOPIC_OTA_GET "/sys/k1xujoU2Xot/esp01/thing/ota/firmware/get"
+#define MQTT_TOPIC_TIME_REQUEST "/ext/ntp/k1xujoU2Xot/esp01/request"
+#define MQTT_TOPIC_TIME_RESPONSE "/ext/ntp/k1xujoU2Xot/esp01/response"
 
 SemaphoreHandle_t wifi_semaphore = NULL;
 
@@ -43,6 +51,8 @@ QueueHandle_t temp_hum_queue = NULL;
 static esp_mqtt_client_handle_t client = NULL;
 
 static float temp_hum_data[2] = {0};
+
+
 /*void wifi_event_handler(void* event_handler_arg,esp_event_base_t event_base,int32_t event_id,void* event_data)
     {
         if(event_base == WIFI_EVENT)
@@ -147,9 +157,14 @@ void   mqtt_event_handler(void* event_handler_arg,esp_event_base_t event_base,in
             esp_mqtt_client_subscribe(client, MQTT_TOPIC_OTA, 0); // Subscribe to OTA topic
             esp_mqtt_client_subscribe(client, MQTT_TOPIC_OTA_PROGRESS, 0); // Subscribe to OTA progress topic
             esp_mqtt_client_subscribe(client, MQTT_TOPIC_OTA_GET, 0); // Subscribe to OTA get topic
-            char hello[64];
+            esp_mqtt_client_subscribe(client, MQTT_TOPIC_TIME_REQUEST, 0); // Subscribe to time request topic
+            esp_mqtt_client_subscribe(client, MQTT_TOPIC_TIME_RESPONSE, 0); // Subscribe to time response topic
+            char hello[64]; time_t now;
             snprintf(hello, sizeof(hello), "Hello from ESP32 %s", get_ota_version());
             esp_mqtt_client_publish(client, MQTT_TOPIC_TEST, hello, 0, 0, 0); // Publish a message
+            time(&now);
+            snprintf(hello, sizeof(hello), "{\"deviceSendTime\": \"%lld\"}", (long long)now);
+            esp_mqtt_client_publish(client, MQTT_TOPIC_TIME_REQUEST, hello, 0, 0, 0); // Publish a message
             break;
             case MQTT_EVENT_DISCONNECTED:
             ESP_LOGI("MQTT_EVENT", "MQTT_EVENT_DISCONNECTED");
@@ -185,6 +200,17 @@ void   mqtt_event_handler(void* event_handler_arg,esp_event_base_t event_base,in
                     al_ota_init(cJSON_GetStringValue(url), al_ota_callback);
                     al_ota_start();
                 }
+            }
+            if(strstr(data->topic, MQTT_TOPIC_TIME_RESPONSE) != NULL)
+            {
+                cJSON *json = cJSON_Parse(data->data);
+                cJSON *ServerRecvTime = cJSON_GetObjectItem(json, "serverRecvTime");
+                if (cJSON_IsString(ServerRecvTime) && (ServerRecvTime->valuestring != NULL)) {
+                    long long ms = atoll(ServerRecvTime->valuestring); // 毫秒
+                    ESP_LOGI("MQTT_EVENT", "Server time: %lld", (long long)ms);
+                    timestamp_to_12h_str(ms, &screen_digital_clock_home_hour_value, &screen_digital_clock_home_min_value, &screen_digital_clock_home_sec_value, screen_digital_clock_home_meridiem);
+                }
+                cJSON_Delete(json);
             }
             break;
         default:

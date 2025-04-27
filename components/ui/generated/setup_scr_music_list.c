@@ -13,7 +13,8 @@
 #include "events_init.h"
 #include "widgets_init.h"
 #include "custom/custom.h"
-
+#include "sdcard.h"
+#include "string.h"
 
 
 void setup_scr_music_list(lv_ui *ui)
@@ -31,6 +32,16 @@ void setup_scr_music_list(lv_ui *ui)
 
     //Write codes music_list_list_music
     ui->music_list_list_music = lv_list_create(ui->music_list);
+    int i = 0;
+    char name[10][50] = {0};
+    i = sdcard_filelist(name);
+    for(int j = 0; j < i; j++)
+    {
+        if (strstr(name[j], ".mp3") || strstr(name[j], ".MP3")) {
+            ui->music_list_list_music_item0 = lv_list_add_btn(ui->music_list_list_music, LV_SYMBOL_AUDIO, name[j]);
+            lv_obj_set_style_text_font(ui->music_list_list_music_item0, &lv_font_simsun_16_cjk, LV_PART_MAIN|LV_STATE_DEFAULT);
+        }
+    }
     ui->music_list_list_music_item0 = lv_list_add_btn(ui->music_list_list_music, LV_SYMBOL_AUDIO, "music.mp3");
     lv_obj_set_pos(ui->music_list_list_music, 20, 38);
     lv_obj_set_size(ui->music_list_list_music, 200, 267);

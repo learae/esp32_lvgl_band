@@ -1,0 +1,335 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x3f (SPI_FAST_FLASH_BOOT)
+configsip: 153911750, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Apr 25 2025 10:18:06[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (83) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 003e8000[0m
+[0;32mI (98) boot:  4 ota_1            OTA app          00 11 00400000 003e8000[0m
+[0;32mI (105) boot: End of partition table[0m
+[0;32mI (110) boot: No factory image, trying OTA 0[0m
+[0;32mI (114) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1d1604h (1906180) map[0m
+[0;32mI (776) esp_image: segment 1: paddr=001e162c vaddr=3ffb0000 size=04030h ( 16432) load[0m
+[0;32mI (783) esp_image: segment 2: paddr=001e5664 vaddr=40080000 size=0a9b4h ( 43444) load[0m
+[0;32mI (800) esp_image: segment 3: paddr=001f0020 vaddr=400d0020 size=fe664h (1042020) map[0m
+[0;32mI (1157) esp_image: segment 4: paddr=002ee68c vaddr=4008a9b4 size=13e60h ( 81504) load[0m
+[0;32mI (1204) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (1205) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (1205) boot: Disabling RNG early entropy source...[0m
+[0;32mI (1221) cpu_start: Multicore app[0m
+[0;32mI (1222) quad_psram: This chip is ESP32-D0WDR2-V3[0m
+[0;32mI (1224) esp_psram: Found 2MB PSRAM device[0m
+[0;32mI (1224) esp_psram: Speed: 40MHz[0m
+[0;32mI (1228) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;32mI (1699) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1707) cpu_start: Pro cpu start user code[0m
+[0;32mI (1707) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1707) cpu_start: Application information:[0m
+[0;32mI (1711) cpu_start: Project name:     lvgl_port2[0m
+[0;32mI (1716) cpu_start: App version:      1.0.4[0m
+[0;32mI (1721) cpu_start: Compile time:     Apr 25 2025 12:06:24[0m
+[0;32mI (1727) cpu_start: ELF file SHA256:  73393b1a0...[0m
+[0;32mI (1732) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (1737) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (1742) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (1747) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (1752) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1759) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (1765) heap_init: At 3FFB98F8 len 00026708 (153 KiB): DRAM[0m
+[0;32mI (1771) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (1778) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (1784) heap_init: At 4009E814 len 000017EC (5 KiB): IRAM[0m
+[0;32mI (1791) esp_psram: Adding pool of 2048K of PSRAM memory to heap allocator[0m
+[0;32mI (1799) spi_flash: detected chip: generic[0m
+[0;32mI (1803) spi_flash: flash io: dio[0m
+[0;33mW (1807) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1818) main_task: Started on CPU0[0m
+[0;32mI (1828) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1828) main_task: Calling app_main()[0m
+[0;32mI (1828) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1838) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1848) st7789: create esp_lcd_new_panel[0m
+[0;32mI (1858) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2698) cst816t: 	Chip ID: 0xb6[0m
+[0;32mI (2698) cst816t: 	Firmware version: 0x01[0m
+[0;32mI (2698) cst816t: 	Factory ID: 0xff[0m
+[0;32mI (2708) main_task: Returned from app_main()[0m
+[0;32mI (4948) wifi:wifi driver task: 3ffd1070, prio:23, stack:6656, core=0[0m
+[0;31mE (4948) mqtt_client: Client was not initialized[0m
+[0;32mI (4958) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (4958) wifi:wifi firmware version: cc1dd81[0m
+[0;32mI (4958) wifi:wifi certification version: v7.0[0m
+[0;32mI (4958) wifi:config NVS flash: enabled[0m
+[0;32mI (4958) wifi:config nano formating: disabled[0m
+[0;32mI (4968) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (4968) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (4978) wifi:Init management short buffer num: 32[0m
+[0;32mI (4978) wifi:Init static tx buffer num: 16[0m
+[0;32mI (4988) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (4988) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (4988) wifi:Init static rx buffer num: 10[0m
+[0;32mI (4998) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (4998) wifi_init: rx ba win: 6[0m
+[0;32mI (5008) wifi_init: tcpip mbox: 32[0m
+[0;32mI (5008) wifi_init: udp mbox: 6[0m
+[0;32mI (5008) wifi_init: tcp mbox: 6[0m
+[0;32mI (5018) wifi_init: tcp tx win: 5760[0m
+[0;32mI (5018) wifi_init: tcp rx win: 5760[0m
+[0;32mI (5028) wifi_init: tcp mss: 1440[0m
+[0;32mI (5028) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (5038) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (5038) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (5118) wifi:mode : sta (30:c9:22:ff:6f:30)[0m
+[0;32mI (5118) wifi:enable tsf[0m
+[0;32mI (5118) WIFI_EVENT: WIFI_EVENT_STA_START[0m
+[0;32mI (5158) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (5158) wifi:state: init -> auth (b0)[0m
+[0;32mI (5188) wifi:state: auth -> assoc (0)[0m
+[0;32mI (6188) wifi:state: assoc -> init (2700)[0m
+[0;32mI (6198) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (6198) WIFI_EVENT: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (8618) WIFI_EVENT: WIFI_EVENT_STA_DISCONNECTED[0m
+[0;32mI (8638) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (8638) wifi:state: init -> auth (b0)[0m
+[0;32mI (8688) wifi:state: auth -> assoc (0)[0m
+[0;32mI (8748) wifi:state: assoc -> run (10)[0m
+[0;32mI (8798) wifi:connected with hcc., aid = 4, channel 6, BW20, bssid = de:7f:cb:19:5b:a1[0m
+[0;32mI (8798) wifi:security: WPA2-PSK, phy: bgn, rssi: -21[0m
+[0;32mI (8808) wifi:pm start, type: 1[0m
+
+[0;32mI (8808) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (8818) WIFI_EVENT: WIFI_EVENT_STA_CONNECTED[0m
+[0;32mI (8818) MQTT_EVENT: Wi-Fi connected[0m
+[0;31mE (8828) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (8828) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (8838) mqtt_client: Error transport connect[0m
+[0;32mI (8848) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (8848) mqtt_client: Client force reconnect requested[0m
+[0;31mE (8858) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (8868) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (8878) mqtt_client: Error transport connect[0m
+[0;32mI (8878) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (8888) mqtt_client: Client force reconnect requested[0m
+[0;32mI (8868) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (8898) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;31mE (8898) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (8918) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (8918) mqtt_client: Error transport connect[0m
+[0;32mI (8928) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (8928) mqtt_client: Client force reconnect requested[0m
+[0;31mE (8938) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (8948) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (8958) mqtt_client: Error transport connect[0m
+[0;32mI (8958) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (8968) mqtt_client: Client force reconnect requested[0m
+[0;31mE (8978) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (8988) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (8988) mqtt_client: Error transport connect[0m
+[0;32mI (8998) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (8998) mqtt_client: Client force reconnect requested[0m
+[0;31mE (9008) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (9018) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (9028) mqtt_client: Error transport connect[0m
+[0;32mI (9028) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (9038) mqtt_client: Client force reconnect requested[0m
+[0;31mE (9038) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (9058) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (9058) mqtt_client: Error transport connect[0m
+[0;32mI (9068) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (9068) mqtt_client: Client force reconnect requested[0m
+[0;31mE (9078) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (9088) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (9098) mqtt_client: Error transport connect[0m
+[0;32mI (9098) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (9108) mqtt_client: Client force reconnect requested[0m
+[0;31mE (9108) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (9128) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (9128) mqtt_client: Error transport connect[0m
+[0;32mI (9138) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (9138) mqtt_client: Client force reconnect requested[0m
+[0;31mE (9148) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (9158) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (9168) mqtt_client: Error transport connect[0m
+[0;32mI (9168) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (9178) mqtt_client: Client force reconnect requested[0m
+[0;31mE (9178) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (9198) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (9198) mqtt_client: Error transport connect[0m
+[0;32mI (9208) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (9208) mqtt_client: Client force reconnect requested[0m
+[0;31mE (9218) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (9228) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (9238) mqtt_client: Error transport connect[0m
+[0;32mI (9238) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (9248) mqtt_client: Client force reconnect requested[0m
+[0;31mE (9248) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (9268) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (9268) mqtt_client: Error transport connect[0m
+[0;32mI (9278) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (9278) mqtt_client: Client force reconnect requested[0m
+[0;31mE (9288) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (9298) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (9308) mqtt_client: Error transport connect[0m
+[0;32mI (9308) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (9318) mqtt_client: Client force reconnect requested[0m
+[0;31mE (9318) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (9338) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (9338) mqtt_client: Error transport connect[0m
+[0;32mI (9348) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (9348) mqtt_client: Client force reconnect requested[0m
+[0;31mE (9358) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (9368) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (9378) mqtt_client: Error transport connect[0m
+[0;32mI (9378) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (9388) mqtt_client: Client force reconnect requested[0m
+[0;31mE (9388) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (9408) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (9408) mqtt_client: Error transport connect[0m
+[0;32mI (9418) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (9418) mqtt_client: Client force reconnect requested[0m
+[0;32mI (10318) esp_netif_handlers: sta ip: 192.168.20.185, mask: 255.255.255.0, gw: 192.168.20.165[0m
+[0;32mI (10318) IP_EVENT: IP_EVENT_STA_GOT_IP[0m
+[0;32mI (10668) wifi:<ba-add>idx:0 (ifx:0, de:7f:cb:19:5b:a1), tid:0, ssn:4, winSize:64[0m
+[0;32mI (10938) wifi:<ba-add>idx:1 (ifx:0, de:7f:cb:19:5b:a1), tid:6, ssn:4, winSize:64[0m
+[0;32mI (10978) MQTT_EVENT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (11338) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (11648) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (11648) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (11858) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (11868) MQTT_EVENT: Topic: /ext/ntp/k1xujoU2Xot/esp01/response[0m
+[0;32mI (11868) MQTT_EVENT: Data: {"deviceSendTime":"9","serverSendTime":"1745747094354","serverRecvTime":"1745747094354"}[0m
+[0;32mI (11878) MQTT_EVENT: Server time: 1745747094354[0m
+[0;32mI (11878) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (11888) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (11888) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (11898) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (11898) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (11908) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (11908) MQTT_EVENT: Topic: /k1xujoU2Xot/esp01/user/update[0m
+[0;32mI (11918) MQTT_EVENT: Data: Hello from ESP32 1.0.4[0m
+[0;32mI (17378) WIFI_EVENT: WiFi is OFF[0m
+[0;32mI (22248) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (22908) MQTT_EVENT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (23118) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (23328) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (23328) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (23338) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (23338) MQTT_EVENT: Topic: /ext/ntp/k1xujoU2Xot/esp01/response[0m
+[0;32mI (23338) MQTT_EVENT: Data: {"deviceSendTime":"21","serverSendTime":"1745747106038","serverRecvTime":"1745747106038"}[0m
+[0;32mI (23348) MQTT_EVENT: Server time: 1745747106038[0m
+[0;32mI (23358) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (23358) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (23368) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (23368) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (23378) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (23488) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (23488) MQTT_EVENT: Topic: /k1xujoU2Xot/esp01/user/update[0m
+[0;32mI (23488) MQTT_EVENT: Data: Hello from ESP32 1.0.4[0m
+[0;32mI (40658) WIFI_EVENT: WiFi is OFF[0m
+[0;32mI (40878) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (41338) MQTT_EVENT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (41558) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (41778) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (41778) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (41778) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (41778) MQTT_EVENT: Topic: /ext/ntp/k1xujoU2Xot/esp01/response[0m
+[0;32mI (41788) MQTT_EVENT: Data: {"deviceSendTime":"39","serverSendTime":"1745747124516","serverRecvTime":"1745747124516"}[0m
+[0;32mI (41798) MQTT_EVENT: Server time: 1745747124516[0m
+[0;32mI (41808) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (41808) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (41808) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (41988) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (42978) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (42978) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (42978) MQTT_EVENT: Topic: /k1xujoU2Xot/esp01/user/update[0m
+[0;32mI (42978) MQTT_EVENT: Data: Hello from ESP32 1.0.4[0m
+[0;32mI (53088) WIFI_EVENT: WiFi is OFF[0m
+[0;32mI (53358) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (53868) MQTT_EVENT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (54038) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (54238) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (54248) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (54248) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (54248) MQTT_EVENT: Topic: /ext/ntp/k1xujoU2Xot/esp01/response[0m
+[0;32mI (54258) MQTT_EVENT: Data: {"deviceSendTime":"52","serverSendTime":"1745747136947","serverRecvTime":"1745747136947"}[0m
+[0;32mI (54268) MQTT_EVENT: Server time: 1745747136947[0m
+[0;32mI (54278) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (54278) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (54288) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (54488) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (55068) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (55068) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (55068) MQTT_EVENT: Topic: /k1xujoU2Xot/esp01/user/update[0m
+[0;32mI (55078) MQTT_EVENT: Data: Hello from ESP32 1.0.4[0m
+[0;32mI (58748) WIFI_EVENT: WiFi is OFF[0m
+[0;32mI (59158) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (59568) MQTT_EVENT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (59768) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (59978) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (59988) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (59988) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (59988) MQTT_EVENT: Topic: /ext/ntp/k1xujoU2Xot/esp01/response[0m
+[0;32mI (59988) MQTT_EVENT: Data: {"deviceSendTime":"57","serverSendTime":"1745747142700","serverRecvTime":"1745747142700"}[0m
+[0;32mI (59998) MQTT_EVENT: Server time: 1745747142700[0m
+[0;32mI (60008) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (60018) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (60018) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (60028) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (60028) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (61008) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (61008) MQTT_EVENT: Topic: /k1xujoU2Xot/esp01/user/update[0m
+[0;32mI (61008) MQTT_EVENT: Data: Hello from ESP32 1.0.4[0m
+[0;32mI (65908) WIFI_EVENT: WiFi is OFF[0m
+[0;32mI (66058) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (66528) MQTT_EVENT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (66738) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (66968) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (66978) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (66978) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (66978) MQTT_EVENT: Topic: /ext/ntp/k1xujoU2Xot/esp01/response[0m
+[0;32mI (66988) MQTT_EVENT: Data: {"deviceSendTime":"64","serverSendTime":"1745747149653","serverRecvTime":"1745747149653"}[0m
+[0;32mI (66998) MQTT_EVENT: Server time: 1745747149653[0m
+[0;32mI (67008) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (67008) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (67018) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (67018) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (68038) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (68048) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (68048) MQTT_EVENT: Topic: /k1xujoU2Xot/esp01/user/update[0m
+[0;32mI (68048) MQTT_EVENT: Data: Hello from ESP32 1.0.4[0m
+[0;32mI (76968) WIFI_EVENT: WiFi is OFF[0m
+[0;32mI (77858) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (78418) MQTT_EVENT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (78608) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (78828) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (78828) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (78838) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (78838) MQTT_EVENT: Topic: /ext/ntp/k1xujoU2Xot/esp01/response[0m
+[0;32mI (78838) MQTT_EVENT: Data: {"deviceSendTime":"76","serverSendTime":"1745747161533","serverRecvTime":"1745747161533"}[0m
+[0;32mI (78848) MQTT_EVENT: Server time: 1745747161533[0m
+[0;32mI (78858) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (78858) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (78868) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (78868) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (78988) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (79838) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (79838) MQTT_EVENT: Topic: /k1xujoU2Xot/esp01/user/update[0m
+[0;32mI (79838) MQTT_EVENT: Data: Hello from ESP32 1.0.4[0m

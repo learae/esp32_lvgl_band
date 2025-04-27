@@ -1,0 +1,139 @@
+[1/10] Performing build step for 'bootloader'
+[1/1] cd /home/vl/esp32/project_my/lvgl_port2/build/bootloader/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/vl/esp32/project_my/lvgl_port2/build/bootloader/bootloader.bin
+Bootloader binary size 0x6850 bytes. 0x7b0 bytes (7%) free.
+[2/10] No install step for 'bootloader'
+[3/10] Completed 'bootloader'
+[4/10] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/custom/custom.c.obj
+[5/10] Linking C static library esp-idf/ui/libui.a
+[6/10] Generating ld/sections.ld
+[7/10] Linking CXX executable lvgl_port2.elf
+[8/10] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+[9/10] cd /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/vl/esp32/project_my/lvgl_port2/build/partition_table/partition-table.bin /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+lvgl_port2.bin binary size 0x2f2580 bytes. Smallest app partition is 0x3e8000 bytes. 0xf5a80 bytes (25%) free.
+[9/10] cd /home/vl/esp32/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/vl/esp32/esp-idf -D "SERIAL_TOOL=/home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/home/vl/esp32/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/vl/esp32/project_my/lvgl_port2/build -P /home/vl/esp32/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 8MB 0x1000 bootloader/bootloader.bin 0x10000 lvgl_port2.bin 0x8000 partition_table/partition-table.bin 0xd000 ota_data_initial.bin
+esptool.py v4.8.1
+Serial port /dev/ttyUSB0
+Connecting....
+Chip is ESP32-D0WDR2-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 30:c9:22:ff:6f:30
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00302fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000d000 to 0x0000efff...
+SHA digest in image updated
+Compressed 26704 bytes to 16348...
+Writing at 0x00001000... (100 %)
+Wrote 26704 bytes (16348 compressed) at 0x00001000 in 0.8 seconds (effective 252.6 kbit/s)...
+Hash of data verified.
+Compressed 3089792 bytes to 1361661...
+Writing at 0x00010000... (1 %)
+Writing at 0x0002071c... (2 %)
+Writing at 0x0002e1c5... (3 %)
+Writing at 0x000351f7... (4 %)
+Writing at 0x0003ec19... (5 %)
+Writing at 0x00045e01... (7 %)
+Writing at 0x0004dd2c... (8 %)
+Writing at 0x00056ae5... (9 %)
+Writing at 0x00061987... (10 %)
+Writing at 0x0006de4c... (11 %)
+Writing at 0x00075c29... (13 %)
+Writing at 0x00082073... (14 %)
+Writing at 0x00099f42... (15 %)
+Writing at 0x000a19ae... (16 %)
+Writing at 0x000a962f... (17 %)
+Writing at 0x000b2599... (19 %)
+Writing at 0x000be2e8... (20 %)
+Writing at 0x000cdb58... (21 %)
+Writing at 0x000e2680... (22 %)
+Writing at 0x000ecf85... (23 %)
+Writing at 0x000f5e20... (25 %)
+Writing at 0x00101378... (26 %)
+Writing at 0x001154d7... (27 %)
+Writing at 0x0011f1c6... (28 %)
+Writing at 0x00127f29... (29 %)
+Writing at 0x001311ea... (30 %)
+Writing at 0x0013c13a... (32 %)
+Writing at 0x00147d55... (33 %)
+Writing at 0x001592b6... (34 %)
+Writing at 0x001922d5... (35 %)
+Writing at 0x001b5c55... (36 %)
+Writing at 0x001be763... (38 %)
+Writing at 0x001c37b4... (39 %)
+Writing at 0x001c8b90... (40 %)
+Writing at 0x001cef07... (41 %)
+Writing at 0x001d3ddd... (42 %)
+Writing at 0x001dd013... (44 %)
+Writing at 0x001e825f... (45 %)
+Writing at 0x001ee57f... (46 %)
+Writing at 0x001f3d79... (47 %)
+Writing at 0x001fb02a... (48 %)
+Writing at 0x002016a5... (50 %)
+Writing at 0x002074d2... (51 %)
+Writing at 0x0020d97a... (52 %)
+Writing at 0x00213f66... (53 %)
+Writing at 0x00219edf... (54 %)
+Writing at 0x002201ed... (55 %)
+Writing at 0x002264d1... (57 %)
+Writing at 0x0022c9be... (58 %)
+Writing at 0x00233b40... (59 %)
+Writing at 0x00239a97... (60 %)
+Writing at 0x00240222... (61 %)
+Writing at 0x0024666d... (63 %)
+Writing at 0x0024c787... (64 %)
+Writing at 0x00253340... (65 %)
+Writing at 0x0025903a... (66 %)
+Writing at 0x0025f1d4... (67 %)
+Writing at 0x00265915... (69 %)
+Writing at 0x0026b81b... (70 %)
+Writing at 0x00271441... (71 %)
+Writing at 0x002766ba... (72 %)
+Writing at 0x0027bac0... (73 %)
+Writing at 0x00280f9f... (75 %)
+Writing at 0x0028637a... (76 %)
+Writing at 0x0028ba0f... (77 %)
+Writing at 0x0029133c... (78 %)
+Writing at 0x00297134... (79 %)
+Writing at 0x0029c933... (80 %)
+Writing at 0x002a2771... (82 %)
+Writing at 0x002a82f2... (83 %)
+Writing at 0x002ae1f8... (84 %)
+Writing at 0x002b4262... (85 %)
+Writing at 0x002b9d42... (86 %)
+Writing at 0x002bfbb7... (88 %)
+Writing at 0x002c5b32... (89 %)
+Writing at 0x002cb372... (90 %)
+Writing at 0x002d0ebc... (91 %)
+Writing at 0x002dadcb... (92 %)
+Writing at 0x002e3b9e... (94 %)
+Writing at 0x002ea281... (95 %)
+Writing at 0x002f01fb... (96 %)
+Writing at 0x002f61fa... (97 %)
+Writing at 0x002fc46a... (98 %)
+Writing at 0x00301895... (100 %)
+Wrote 3089792 bytes (1361661 compressed) at 0x00010000 in 35.0 seconds (effective 707.0 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 128...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (128 compressed) at 0x00008000 in 0.1 seconds (effective 319.1 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x0000d000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x0000d000 in 0.1 seconds (effective 746.4 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

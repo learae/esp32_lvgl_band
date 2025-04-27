@@ -1,0 +1,36 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x400e796c: lv_font_get_line_height at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/../font/lv_font.h:126
+ (inlined by) lv_txt_get_size at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_txt.c:104
+[0m
+[0;33m--- 0x4008da89: strcpy at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/strcpy.S:99
+0x4008daa1: strcpy at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/strcpy.S:131
+[0m
+[0;33m--- 0x400e7969: lv_txt_get_size at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_txt.c:100 (discriminator 1)
+0x40100965: lv_label_refr_text at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/widgets/lv_label.c:917
+0x40101512: lv_label_event at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/widgets/lv_label.c:750
+0x401cac11: lv_obj_event_base at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:98
+0x400e805a: event_send_core at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:458
+0x400e8152: lv_event_send at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:75
+0x400dffa0: lv_obj_refresh_style at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_obj_style.c:187
+0x400e01cd: lv_obj_set_local_style_prop at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_obj_style.c:275
+0x400e097e: lv_obj_set_style_text_font at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_obj_style_gen.c:544
+0x40110954: setup_scr_load_page at /home/vl/esp32/project_my/lvgl_port2/components/ui/generated/setup_scr_load_page.c:92
+0x401098d7: ui_load_scr_animation at /home/vl/esp32/project_my/lvgl_port2/components/ui/generated/gui_guider.c:41
+0x4010a22d: duogongneng_load_img_event_handler at /home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:440
+0x400e808d: event_send_core at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:467
+0x400e8152: lv_event_send at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:75
+0x400e8ac2: indev_proc_release at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_indev.c:980
+0x400e97c2: indev_pointer_proc at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_indev.c:384
+0x400e98dd: lv_indev_read_timer_cb at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_indev.c:101
+0x400e7155: lv_timer_exec at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:313 (discriminator 2)
+0x400e7211: lv_timer_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:109
+0x400da793: lv_task_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/lv_api_map.h:37
+ (inlined by) lv_ui_tack at /home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c:48
+0x40091a0d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

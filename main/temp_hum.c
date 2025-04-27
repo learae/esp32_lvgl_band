@@ -52,7 +52,7 @@ void dht11_timer_cb(struct _lv_timer_t *)
     int temp,hum;
     static int measure_count = 0;
     measure_count++;
-    if (measure_count >= 30) {
+    if (measure_count >= 60) {
         measure_count = 0;
         if (DHT11_StartGet(&temp, &hum)) {
             char disp_buf[32];
