@@ -311,4 +311,5 @@ AP's beacon interval = 102400 us, DTIM period = 2
 [0;32mI (80658) MQTT_EVENT: Topic: /sys/k1xujoU2Xot/esp01/thing/event/property/post[0m
 [0;32mI (80658) MQTT_EVENT: Data: {"id":"0","version":"1.0.4","method":"thing.event.property.post","params":{"temp":25.599998474121094,"hum":38}}[0m
 [0;32mI (82088) MQTT_EVENT: MQTT_EVENT_DATA[0m
-[0;32mI
+[0;32mI (82088) MQTT_EVENT: Topic: /sys/k1xujoU2Xot/esp01/thing/event/property/post[0m
+[0;32mI (82088) MQTT_EVENT: Data: {"id":"0","version":"1.0.4","method":"thing.event.property.post","params":{"temp":25.599998474121094,"hum":37}}[0m
