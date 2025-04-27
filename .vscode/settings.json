@@ -17,6 +17,7 @@
         "type_traits": "cpp",
         "utility": "cpp",
         "esp_vfs_fat.h": "c",
-        "mjpeg_frame.h": "c"
+        "mjpeg_frame.h": "c",
+        "wifi_task.h": "c"
     }
 }

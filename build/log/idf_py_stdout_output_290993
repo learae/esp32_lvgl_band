@@ -1,0 +1,809 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x3f (SPI_FAST_FLASH_BOOT)
+configsip: 153911750, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Apr 25 2025 10:18:06[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (83) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 003b6000[0m
+[0;32mI (98) boot:  4 ota_1            OTA app          00 11 003d0000 003b6000[0m
+[0;32mI (105) boot: End of partition table[0m
+[0;32mI (110) boot: No factory image, trying OTA 0[0m
+[0;32mI (114) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1d1564h (1906020) map[0m
+[0;32mI (776) esp_image: segment 1: paddr=001e158c vaddr=3ffb0000 size=04040h ( 16448) load[0m
+[0;32mI (783) esp_image: segment 2: paddr=001e55d4 vaddr=40080000 size=0aa44h ( 43588) load[0m
+[0;32mI (800) esp_image: segment 3: paddr=001f0020 vaddr=400d0020 size=fe430h (1041456) map[0m
+[0;32mI (1157) esp_image: segment 4: paddr=002ee458 vaddr=4008aa44 size=13dd0h ( 81360) load[0m
+[0;32mI (1204) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (1205) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (1205) boot: Disabling RNG early entropy source...[0m
+[0;32mI (1221) cpu_start: Multicore app[0m
+[0;32mI (1221) quad_psram: This chip is ESP32-D0WDR2-V3[0m
+[0;32mI (1223) esp_psram: Found 2MB PSRAM device[0m
+[0;32mI (1224) esp_psram: Speed: 40MHz[0m
+[0;32mI (1228) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;32mI (1699) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1707) cpu_start: Pro cpu start user code[0m
+[0;32mI (1707) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1707) cpu_start: Application information:[0m
+[0;32mI (1710) cpu_start: Project name:     lvgl_port2[0m
+[0;32mI (1716) cpu_start: App version:      1.0.4[0m
+[0;32mI (1720) cpu_start: Compile time:     Apr 25 2025 12:06:24[0m
+[0;32mI (1727) cpu_start: ELF file SHA256:  1154b857a...[0m
+[0;32mI (1732) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (1737) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (1742) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (1747) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (1752) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1759) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (1765) heap_init: At 3FFB98F8 len 00026708 (153 KiB): DRAM[0m
+[0;32mI (1771) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (1778) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (1784) heap_init: At 4009E814 len 000017EC (5 KiB): IRAM[0m
+[0;32mI (1791) esp_psram: Adding pool of 2048K of PSRAM memory to heap allocator[0m
+[0;32mI (1799) spi_flash: detected chip: generic[0m
+[0;32mI (1803) spi_flash: flash io: dio[0m
+[0;33mW (1807) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1818) main_task: Started on CPU0[0m
+[0;32mI (1828) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1828) main_task: Calling app_main()[0m
+[0;32mI (1828) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1838) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1848) st7789: create esp_lcd_new_panel[0m
+[0;32mI (1858) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2698) cst816t: 	Chip ID: 0xb6[0m
+[0;32mI (2698) cst816t: 	Firmware version: 0x01[0m
+[0;32mI (2698) cst816t: 	Factory ID: 0xff[0m
+[0;32mI (2708) main_task: Returned from app_main()[0m
+[0;31mE (16658) TEMP_HUM: create lvgl timer[0m
+[0;32mI (16658) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (16658) DHT11: register RX done callback[0m
+Guru Meditation Error: Core  1 panic'ed (LoadProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x401135ec  PS      : 0x00060430  A0      : 0x801140a8  A1      : 0x3ffca070  
+A2      : 0x3ffca0c8  A3      : 0x00000020  A4      : 0x3f408bcc  A5      : 0x00000020  
+A6      : 0x80000000  A7      : 0x3ffc6078  A8      : 0x418ccccc  A9      : 0x3ffca060  
+A10     : 0x3ffca070  A11     : 0x00000000  A12     : 0x00000008  A13     : 0x3ffca078  
+A14     : 0x00000000  A15     : 0x00000000  SAR     : 0x00000020  EXCCAUSE: 0x0000001c  
+EXCVADDR: 0x00000020  LBEG    : 0x4008cf81  LEND    : 0x4008cf99  LCOUNT  : 0xffffffff  
+
+
+Backtrace: 0x401135e9:0x3ffca070 0x401140a5:0x3ffca0a0 0x400e7031:0x3ffca100 0x400e70ed:0x3ffca120 0x400da68f:0x3ffca140 0x4009079d:0x3ffca160
+
+
+
+
+ELF file SHA256: 1154b857a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x3f (SPI_FAST_FLASH_BOOT)
+configsip: 153911750, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Apr 25 2025 10:18:06[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (83) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 003b6000[0m
+[0;32mI (98) boot:  4 ota_1            OTA app          00 11 003d0000 003b6000[0m
+[0;32mI (105) boot: End of partition table[0m
+[0;32mI (110) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1d1564h (1906020) map[0m
+[0;32mI (771) esp_image: segment 1: paddr=001e158c vaddr=3ffb0000 size=04040h ( 16448) load[0m
+[0;32mI (777) esp_image: segment 2: paddr=001e55d4 vaddr=40080000 size=0aa44h ( 43588) load[0m
+[0;32mI (795) esp_image: segment 3: paddr=001f0020 vaddr=400d0020 size=fe430h (1041456) map[0m
+[0;32mI (1152) esp_image: segment 4: paddr=002ee458 vaddr=4008aa44 size=13dd0h ( 81360) load[0m
+[0;32mI (1199) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (1199) boot: Disabling RNG early entropy source...[0m
+[0;32mI (1211) cpu_start: Multicore app[0m
+[0;32mI (1211) quad_psram: This chip is ESP32-D0WDR2-V3[0m
+[0;32mI (1213) esp_psram: Found 2MB PSRAM device[0m
+[0;32mI (1214) esp_psram: Speed: 40MHz[0m
+[0;32mI (1218) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;32mI (1688) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1696) cpu_start: Pro cpu start user code[0m
+[0;32mI (1696) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1697) cpu_start: Application information:[0m
+[0;32mI (1700) cpu_start: Project name:     lvgl_port2[0m
+[0;32mI (1705) cpu_start: App version:      1.0.4[0m
+[0;32mI (1710) cpu_start: Compile time:     Apr 25 2025 12:06:24[0m
+[0;32mI (1716) cpu_start: ELF file SHA256:  1154b857a...[0m
+[0;32mI (1722) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (1726) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (1731) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (1736) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (1741) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1748) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (1754) heap_init: At 3FFB98F8 len 00026708 (153 KiB): DRAM[0m
+[0;32mI (1761) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (1767) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (1774) heap_init: At 4009E814 len 000017EC (5 KiB): IRAM[0m
+[0;32mI (1780) esp_psram: Adding pool of 2048K of PSRAM memory to heap allocator[0m
+[0;32mI (1789) spi_flash: detected chip: generic[0m
+[0;32mI (1792) spi_flash: flash io: dio[0m
+[0;33mW (1797) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1808) main_task: Started on CPU0[0m
+[0;32mI (1818) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1818) main_task: Calling app_main()[0m
+[0;32mI (1818) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1828) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1838) st7789: create esp_lcd_new_panel[0m
+[0;32mI (1848) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2688) cst816t: 	Chip ID: 0xb6[0m
+[0;32mI (2688) cst816t: 	Firmware version: 0x01[0m
+[0;32mI (2688) cst816t: 	Factory ID: 0xff[0m
+[0;32mI (2698) main_task: Returned from app_main()[0m
+[0;32mI (7478) wifi:wifi driver task: 3ffd1070, prio:23, stack:6656, core=0[0m
+[0;32mI (7478) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (7488) wifi:wifi firmware version: cc1dd81[0m
+[0;32mI (7488) wifi:wifi certification version: v7.0[0m
+[0;32mI (7488) wifi:config NVS flash: enabled[0m
+[0;32mI (7488) wifi:config nano formating: disabled[0m
+[0;32mI (7498) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (7498) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (7508) wifi:Init management short buffer num: 32[0m
+[0;32mI (7508) wifi:Init static tx buffer num: 16[0m
+[0;32mI (7518) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (7518) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (7518) wifi:Init static rx buffer num: 10[0m
+[0;32mI (7528) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (7528) wifi_init: rx ba win: 6[0m
+[0;32mI (7528) wifi_init: tcpip mbox: 32[0m
+[0;32mI (7538) wifi_init: udp mbox: 6[0m
+[0;32mI (7538) wifi_init: tcp mbox: 6[0m
+[0;32mI (7548) wifi_init: tcp tx win: 5760[0m
+[0;32mI (7548) wifi_init: tcp rx win: 5760[0m
+[0;32mI (7548) wifi_init: tcp mss: 1440[0m
+[0;32mI (7558) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (7558) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (7568) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (7638) wifi:mode : sta (30:c9:22:ff:6f:30)[0m
+[0;32mI (7648) wifi:enable tsf[0m
+[0;32mI (7648) WIFI_EVENT: WIFI_EVENT_STA_START[0m
+[0;32mI (7688) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (7688) wifi:state: init -> auth (b0)[0m
+[0;32mI (7708) wifi:state: auth -> assoc (0)[0m
+[0;32mI (7728) wifi:state: assoc -> run (10)[0m
+[0;32mI (7758) wifi:connected with hcc., aid = 2, channel 6, BW20, bssid = de:7f:cb:19:5b:a1[0m
+[0;32mI (7758) wifi:security: WPA2-PSK, phy: bgn, rssi: -29[0m
+[0;32mI (7768) wifi:pm start, type: 1[0m
+
+[0;32mI (7768) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (7778) WIFI_EVENT: WIFI_EVENT_STA_CONNECTED[0m
+[0;32mI (7778) MQTT_EVENT: Wi-Fi connected[0m
+[0;32mI (7788) WIFI_EVENT: WiFi is ON[0m
+[0;31mE (7788) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (7798) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (7808) mqtt_client: Error transport connect[0m
+[0;32mI (7808) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (7818) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (7818) mqtt_client: Client force reconnect requested[0m
+[0;31mE (7828) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (7838) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (7848) mqtt_client: Error transport connect[0m
+[0;32mI (7848) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (7858) mqtt_client: Client force reconnect requested[0m
+[0;32mI (7848) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;31mE (7868) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;32mI (7868) wifi:[0;31mE (7878) transport_base: Failed to open a new connection: 32769[0m[0m
+AP's beacon interval = 102400 us, DTIM period = 2[0;31mE (7888) mqtt_client: Error transport connect[0m
+
+[0;32mI (7898) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (7848) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (7908) mqtt_client: Client force reconnect requested[0m
+[0;31mE (7918) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (7928) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (7928) mqtt_client: Error transport connect[0m
+[0;32mI (7938) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (7938) mqtt_client: Client force reconnect requested[0m
+[0;32mI (7948) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (7978) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8008) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8038) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8068) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8098) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8128) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8158) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8188) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8218) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8248) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8278) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8308) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8338) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8368) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8398) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8428) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8458) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8488) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8518) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8548) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8578) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8608) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8638) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8668) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8698) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8728) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8758) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8778) esp_netif_handlers: sta ip: 192.168.20.185, mask: 255.255.255.0, gw: 192.168.20.165[0m
+[0;32mI (8778) IP_EVENT: IP_EVENT_STA_GOT_IP[0m
+[0;32mI (8788) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8818) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8848) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8878) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8908) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8938) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8968) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (8998) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9028) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9058) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9088) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9118) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9148) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9178) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9208) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9238) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9268) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9298) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9328) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9348) wifi:<ba-add>idx:0 (ifx:0, de:7f:cb:19:5b:a1), tid:0, ssn:4, winSize:64[0m
+[0;32mI (9358) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9388) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9418) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9448) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9478) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9508) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9538) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9568) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9598) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9628) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9658) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9688) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9718) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9748) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9778) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9808) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9838) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9868) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9898) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9928) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9958) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (9988) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10018) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10048) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10078) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10108) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10138) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10168) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10198) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10228) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10258) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10288) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10318) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10348) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10378) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10408) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10438) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10468) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10498) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10528) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10558) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10588) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10618) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10648) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10678) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10708) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10738) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10768) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10798) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10828) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10858) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10888) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10918) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10948) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (10978) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11008) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11038) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11068) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11098) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11128) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11158) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11188) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11218) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11248) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11278) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11308) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11338) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11368) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11398) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11428) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11458) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11488) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11518) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11548) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11578) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11608) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11638) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11668) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11698) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11728) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11758) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11788) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11818) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11848) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11878) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11908) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11938) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11968) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (11998) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12028) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12058) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12088) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12118) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12148) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12178) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12208) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12238) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12268) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12298) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12328) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12358) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12388) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12418) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12448) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12478) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12508) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12538) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12568) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12598) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12628) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12658) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12688) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12718) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12748) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12778) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12808) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12838) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12868) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12898) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12928) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12958) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (12988) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13018) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13048) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13078) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13108) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13138) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13168) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13198) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13228) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13258) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13288) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13318) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13348) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13378) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13408) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13438) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13468) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13498) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13528) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13558) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13588) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13618) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13648) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13678) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13708) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13738) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13768) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13798) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13828) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13858) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13888) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13918) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13948) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13978) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14008) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14038) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14068) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14098) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14128) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14158) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14188) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14218) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14248) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14278) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14308) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14338) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14368) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14398) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14428) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14458) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14488) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14518) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14548) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14578) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14608) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14638) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14668) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14698) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14728) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14758) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14788) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14818) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14848) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14878) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14908) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14938) WIFI_EVENT: WiFi is ON[0m
+[0;31mE (14948) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (14948) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (14948) mqtt_client: Error transport connect[0m
+[0;32mI (14958) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (14958) mqtt_client: Client force reconnect requested[0m
+[0;32mI (14968) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14998) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15028) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15058) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15088) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15118) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15148) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15178) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15208) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15238) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15268) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15298) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15328) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15358) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15388) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15418) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15448) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15478) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15508) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15538) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15568) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15598) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15628) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15658) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15688) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15718) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15748) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15778) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15808) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15838) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15868) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15898) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15928) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15958) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (15988) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (16018) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (16048) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (16078) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (16108) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (16138) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (16168) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (16198) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (16228) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (16258) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (16288) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (16318) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (16348) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (16348) wifi:state: run -> init (0)[0m
+[0;32mI (16348) wifi:pm stop, total sleep time: 5599609 us / 8581335 us[0m
+
+[0;32mI (16348) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (16348) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[1;31mE (16358) wifi:NAN WiFi stop[0m
+[0;32mI (16358) WIFI_EVENT: WIFI_EVENT_STA_DISCONNECTED[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x3002 (ESP_ERR_WIFI_NOT_STARTED) at 0x40113c79
+file: "./components/wifi_ble/smartconfig.c" line 33
+func: wifi_event_handler
+expression: esp_wifi_connect()
+
+abort() was called at PC 0x4008fbef on core 0
+
+
+Backtrace: 0x40081e7d:0x3ffce610 0x4008fbf9:0x3ffce630 0x400989f1:0x3ffce650 0x4008fbef:0x3ffce6c0 0x40113c79:0x3ffce6f0 0x401cafc1:0x3ffce7d0 0x401caa42:0x3ffce800 0x401cab21:0x3ffce840 0x4009079d:0x3ffce860
+
+
+
+
+ELF file SHA256: 1154b857a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x3f (SPI_FAST_FLASH_BOOT)
+configsip: 153911750, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Apr 25 2025 10:18:06[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (83) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 003b6000[0m
+[0;32mI (98) boot:  4 ota_1            OTA app          00 11 003d0000 003b6000[0m
+[0;32mI (105) boot: End of partition table[0m
+[0;32mI (110) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1d1564h (1906020) map[0m
+[0;32mI (771) esp_image: segment 1: paddr=001e158c vaddr=3ffb0000 size=04040h ( 16448) load[0m
+[0;32mI (777) esp_image: segment 2: paddr=001e55d4 vaddr=40080000 size=0aa44h ( 43588) load[0m
+[0;32mI (795) esp_image: segment 3: paddr=001f0020 vaddr=400d0020 size=fe430h (1041456) map[0m
+[0;32mI (1152) esp_image: segment 4: paddr=002ee458 vaddr=4008aa44 size=13dd0h ( 81360) load[0m
+[0;32mI (1199) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (1199) boot: Disabling RNG early entropy source...[0m
+[0;32mI (1211) cpu_start: Multicore app[0m
+[0;32mI (1211) quad_psram: This chip is ESP32-D0WDR2-V3[0m
+[0;32mI (1213) esp_psram: Found 2MB PSRAM device[0m
+[0;32mI (1214) esp_psram: Speed: 40MHz[0m
+[0;32mI (1218) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;32mI (1688) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1697) cpu_start: Pro cpu start user code[0m
+[0;32mI (1697) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1697) cpu_start: Application information:[0m
+[0;32mI (1700) cpu_start: Project name:     lvgl_port2[0m
+[0;32mI (1705) cpu_start: App version:      1.0.4[0m
+[0;32mI (1710) cpu_start: Compile time:     Apr 25 2025 12:06:24[0m
+[0;32mI (1716) cpu_start: ELF file SHA256:  1154b857a...[0m
+[0;32mI (1722) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (1726) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (1731) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (1736) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (1741) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1748) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (1754) heap_init: At 3FFB98F8 len 00026708 (153 KiB): DRAM[0m
+[0;32mI (1761) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (1767) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (1774) heap_init: At 4009E814 len 000017EC (5 KiB): IRAM[0m
+[0;32mI (1780) esp_psram: Adding pool of 2048K of PSRAM memory to heap allocator[0m
+[0;32mI (1789) spi_flash: detected chip: generic[0m
+[0;32mI (1792) spi_flash: flash io: dio[0m
+[0;33mW (1797) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1808) main_task: Started on CPU0[0m
+[0;32mI (1818) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1818) main_task: Calling app_main()[0m
+[0;32mI (1818) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1828) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1838) st7789: create esp_lcd_new_panel[0m
+[0;32mI (1848) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2688) cst816t: 	Chip ID: 0xb6[0m
+[0;32mI (2688) cst816t: 	Firmware version: 0x01[0m
+[0;32mI (2688) cst816t: 	Factory ID: 0xff[0m
+[0;32mI (2698) main_task: Returned from app_main()[0m
+[0;32mI (13068) wifi:wifi driver task: 3ffd1070, prio:23, stack:6656, core=0[0m
+[0;32mI (13078) wifi:wifi firmware version: cc1dd81[0m
+[0;32mI (13078) wifi:wifi certification version: v7.0[0m
+[0;32mI (13078) wifi:config NVS flash: enabled[0m
+[0;32mI (13078) wifi:config nano formating: disabled[0m
+[0;32mI (13088) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (13088) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13088) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (13098) wifi:Init management short buffer num: 32[0m
+[0;32mI (13098) wifi:Init static tx buffer num: 16[0m
+[0;32mI (13108) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (13108) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (13118) wifi:Init static rx buffer num: 10[0m
+[0;32mI (13118) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (13128) wifi_init: rx ba win: 6[0m
+[0;32mI (13128) wifi_init: tcpip mbox: 32[0m
+[0;32mI (13128) wifi_init: udp mbox: 6[0m
+[0;32mI (13138) wifi_init: tcp mbox: 6[0m
+[0;32mI (13138) wifi_init: tcp tx win: 5760[0m
+[0;32mI (13148) wifi_init: tcp rx win: 5760[0m
+[0;32mI (13148) wifi_init: tcp mss: 1440[0m
+[0;32mI (13148) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (13158) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (13168) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (13238) wifi:mode : sta (30:c9:22:ff:6f:30)[0m
+[0;32mI (13238) wifi:enable tsf[0m
+[0;32mI (13238) WIFI_EVENT: WIFI_EVENT_STA_START[0m
+[0;32mI (13268) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (13268) wifi:state: init -> auth (b0)[0m
+[0;32mI (13308) wifi:state: auth -> assoc (0)[0m
+[0;32mI (13328) wifi:state: assoc -> run (10)[0m
+[0;32mI (13368) wifi:connected with hcc., aid = 2, channel 6, BW20, bssid = de:7f:cb:19:5b:a1[0m
+[0;32mI (13368) wifi:security: WPA2-PSK, phy: bgn, rssi: -22[0m
+[0;32mI (13378) wifi:pm start, type: 1[0m
+
+[0;32mI (13378) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (13388) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (13388) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (13398) WIFI_EVENT: WIFI_EVENT_STA_CONNECTED[0m
+[0;32mI (13398) MQTT_EVENT: Wi-Fi connected[0m
+[0;32mI (13408) WIFI_EVENT: WiFi is ON[0m
+[0;31mE (13408) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (13428) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (13428) mqtt_client: Error transport connect[0m
+[0;32mI (13438) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13438) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (13448) mqtt_client: Client force reconnect requested[0m
+[0;31mE (13448) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (13458) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (13468) mqtt_client: Error transport connect[0m
+[0;32mI (13468) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13478) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (13478) mqtt_client: Client force reconnect requested[0m
+[0;32mI (13508) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13538) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13568) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13598) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13628) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13658) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13688) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13718) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13748) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13778) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13808) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13838) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13868) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13898) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13928) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13958) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (13988) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14018) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14048) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14078) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14108) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14138) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14168) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14198) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14228) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14258) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14288) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14318) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14348) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14378) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14398) esp_netif_handlers: sta ip: 192.168.20.185, mask: 255.255.255.0, gw: 192.168.20.165[0m
+[0;32mI (14398) IP_EVENT: IP_EVENT_STA_GOT_IP[0m
+[0;32mI (14408) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14438) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14468) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14498) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14528) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14558) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14588) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14618) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14638) wifi:<ba-add>idx:0 (ifx:0, de:7f:cb:19:5b:a1), tid:0, ssn:4, winSize:64[0m
+[0;32mI (14648) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14678) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14708) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14738) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14768) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (14768) wifi:state: run -> init (0)[0m
+[0;32mI (14768) wifi:pm stop, total sleep time: 631043 us / 1393239 us[0m
+
+[0;32mI (14768) wifi:<ba-del>idx:0, tid:0[0m
+[0;32mI (14768) wifi:new:<6,0>, old:<6,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[1;31mE (14778) wifi:NAN WiFi stop[0m
+[0;32mI (14778) WIFI_EVENT: WIFI_EVENT_STA_DISCONNECTED[0m
+ESP_ERROR_CHECK failed: esp_err_t 0x3002 (ESP_ERR_WIFI_NOT_STARTED) at 0x40113c79
+file: "./components/wifi_ble/smartconfig.c" line 33
+func: wifi_event_handler
+expression: esp_wifi_connect()
+
+abort() was called at PC 0x4008fbef on core 0
+
+
+Backtrace: 0x40081e7d:0x3ffce610 0x4008fbf9:0x3ffce630 0x400989f1:0x3ffce650 0x4008fbef:0x3ffce6c0 0x40113c79:0x3ffce6f0 0x401cafc1:0x3ffce7d0 0x401caa42:0x3ffce800 0x401cab21:0x3ffce840 0x4009079d:0x3ffce860
+
+
+
+
+ELF file SHA256: 1154b857a
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x3f (SPI_FAST_FLASH_BOOT)
+configsip: 153911750, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Apr 25 2025 10:18:06[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (83) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 003b6000[0m
+[0;32mI (98) boot:  4 ota_1            OTA app          00 11 003d0000 003b6000[0m
+[0;32mI (105) boot: End of partition table[0m
+[0;32mI (110) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1d1564h (1906020) map[0m
+[0;32mI (771) esp_image: segment 1: paddr=001e158c vaddr=3ffb0000 size=04040h ( 16448) load[0m
+[0;32mI (777) esp_image: segment 2: paddr=001e55d4 vaddr=40080000 size=0aa44h ( 43588) load[0m
+[0;32mI (795) esp_image: segment 3: paddr=001f0020 vaddr=400d0020 size=fe430h (1041456) map[0m
+[0;32mI (1152) esp_image: segment 4: paddr=002ee458 vaddr=4008aa44 size=13dd0h ( 81360) load[0m
+[0;32mI (1199) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (1199) boot: Disabling RNG early entropy source...[0m
+[0;32mI (1211) cpu_start: Multicore app[0m
+[0;32mI (1211) quad_psram: This chip is ESP32-D0WDR2-V3[0m
+[0;32mI (1213) esp_psram: Found 2MB PSRAM device[0m
+[0;32mI (1214) esp_psram: Speed: 40MHz[0m
+[0;32mI (1218) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;32mI (1688) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1697) cpu_start: Pro cpu start user code[0m
+[0;32mI (1697) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1697) cpu_start: Application information:[0m
+[0;32mI (1700) cpu_start: Project name:     lvgl_port2[0m
+[0;32mI (1705) cpu_start: App version:      1.0.4[0m
+[0;32mI (1710) cpu_start: Compile time:     Apr 25 2025 12:06:24[0m
+[0;32mI (1716) cpu_start: ELF file SHA256:  1154b857a...[0m
+[0;32mI (1722) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (1726) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (1731) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (1736) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (1741) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1748) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (1754) heap_init: At 3FFB98F8 len 00026708 (153 KiB): DRAM[0m
+[0;32mI (1761) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (1767) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (1774) heap_init: At 4009E814 len 000017EC (5 KiB): IRAM[0m
+[0;32mI (1780) esp_psram: Adding pool of 2048K of PSRAM memory to heap allocator[0m
+[0;32mI (1789) spi_flash: detected chip: generic[0m
+[0;32mI (1792) spi_flash: flash io: dio[0m
+[0;33mW (1797) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1808) main_task: Started on CPU0[0m
+[0;32mI (1818) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1818) main_task: Calling app_main()[0m
+[0;32mI (1818) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1828) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1838) st7789: create esp_lcd_new_panel[0m
+[0;32mI (1848) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2688) cst816t: 	Chip ID: 0xb6[0m
+[0;32mI (2688) cst816t: 	Firmware version: 0x01[0m
+[0;32mI (2688) cst816t: 	Factory ID: 0xff[0m
+[0;32mI (2698) main_task: Returned from app_main()[0m

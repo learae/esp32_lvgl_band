@@ -1,0 +1,52 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x401135ec: give_temp_hum at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:219
+[0m
+[0;33m--- 0x4008cf81: strcpy at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/strcpy.S:99
+0x4008cf99: strcpy at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/strcpy.S:131
+[0m
+[0;33m--- 0x401135e9: give_temp_hum at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/wifi_task.c:218
+0x401140a5: dht11_timer_cb at /home/vl/esp32/project_my/lvgl_port2/main/temp_hum.c:64
+0x400e7031: lv_timer_exec at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:313 (discriminator 2)
+0x400e70ed: lv_timer_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:109
+0x400da68f: lv_task_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/lv_api_map.h:37
+ (inlined by) lv_ui_tack at /home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c:47
+0x4009079d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40113c79: wifi_event_handler at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/smartconfig.c:33 (discriminator 1)
+[0m
+[0;33m--- 0x4008fbef: _esp_error_check_failed at /home/vl/esp32/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081e7d: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008fbf9: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x400989f1: abort at /home/vl/esp32/esp-idf/components/newlib/abort.c:38
+0x4008fbef: _esp_error_check_failed at /home/vl/esp32/esp-idf/components/esp_system/esp_err.c:50
+0x40113c79: wifi_event_handler at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/smartconfig.c:33 (discriminator 1)
+0x401cafc1: handler_execute at /home/vl/esp32/esp-idf/components/esp_event/esp_event.c:137
+0x401caa42: esp_event_loop_run at /home/vl/esp32/esp-idf/components/esp_event/esp_event.c:593
+0x401cab21: esp_event_loop_run_task at /home/vl/esp32/esp-idf/components/esp_event/esp_event.c:107
+0x4009079d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40113c79: wifi_event_handler at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/smartconfig.c:33 (discriminator 1)
+[0m
+[0;33m--- 0x4008fbef: _esp_error_check_failed at /home/vl/esp32/esp-idf/components/esp_system/esp_err.c:50
+[0m
+[0;33m--- 0x40081e7d: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x4008fbf9: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x400989f1: abort at /home/vl/esp32/esp-idf/components/newlib/abort.c:38
+0x4008fbef: _esp_error_check_failed at /home/vl/esp32/esp-idf/components/esp_system/esp_err.c:50
+0x40113c79: wifi_event_handler at /home/vl/esp32/project_my/lvgl_port2/components/wifi_ble/smartconfig.c:33 (discriminator 1)
+0x401cafc1: handler_execute at /home/vl/esp32/esp-idf/components/esp_event/esp_event.c:137
+0x401caa42: esp_event_loop_run at /home/vl/esp32/esp-idf/components/esp_event/esp_event.c:593
+0x401cab21: esp_event_loop_run_task at /home/vl/esp32/esp-idf/components/esp_event/esp_event.c:107
+0x4009079d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

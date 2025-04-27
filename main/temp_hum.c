@@ -9,7 +9,7 @@
 LV_IMG_DECLARE(temp_img)
 LV_IMG_DECLARE(humidity_img)
 
-static lv_timer_t *s_dht11_timer;
+lv_timer_t *s_dht11_timer;
 
 
 static lv_obj_t *s_temp_label;
@@ -50,18 +50,22 @@ void dht11_timer_cb(struct _lv_timer_t *)
         dht11_init_flag = true;
     }
     int temp,hum;
-    if(DHT11_StartGet(&temp, &hum))
-    {
-       
-        char disp_buf[32];
-        snprintf(disp_buf,sizeof(disp_buf),"%.1f'C",(float)temp/10.0f-16.0f);
-        lv_label_set_text(s_temp_label, disp_buf);
-     
-        snprintf(disp_buf,sizeof(disp_buf),"%d%%",hum);
-        lv_label_set_text(s_hum_label, disp_buf);
+    static int measure_count = 0;
+    measure_count++;
+    if (measure_count >= 30) {
+        measure_count = 0;
+        if (DHT11_StartGet(&temp, &hum)) {
+            char disp_buf[32];
+            snprintf(disp_buf, sizeof(disp_buf), "%.1f'C", (float)temp / 10.0f - 16.0f);
+            lv_label_set_text(s_temp_label, disp_buf);
 
-        float temp_value = (float)temp / 10.0f - 16.0f;
-        //give_temp_hum(&temp_value, hum);
+            snprintf(disp_buf, sizeof(disp_buf), "%d%%", hum);
+            lv_label_set_text(s_hum_label, disp_buf);
+
+            float temp_value = (float)temp / 10.0f - 16.0f;
+            int16_t hum_value = (int16_t)hum;
+            give_temp_hum(&temp_value, &hum_value);
+        }
     }
 }
 
@@ -74,9 +78,13 @@ void temp_hum_timer_create(lv_obj_t *temp_label, lv_obj_t *hum_label)
 
     s_temp_label = temp_label;
     s_hum_label = hum_label;
-    s_dht11_timer = lv_timer_create(dht11_timer_cb, 1000, NULL);
-    if (s_dht11_timer == NULL) {
-        ESP_LOGE("TEMP_HUM", "Failed to create lvgl timer");
+   
+    if (s_dht11_timer == NULL) { 
+        s_dht11_timer = lv_timer_create(dht11_timer_cb, 1000, NULL);
+        ESP_LOGE("TEMP_HUM", "create lvgl timer");
+    }
+    else {
+        ESP_LOGE("TEMP_HUM", "Timer already created");
     }
 }
 

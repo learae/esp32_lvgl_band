@@ -211,11 +211,12 @@ static void shezhi_wifi_btn_event_handler (lv_event_t *e)
                 if (wifi_task_started==false)
                 {
                     wifi_task_started = true;
-                    esp_wifi_stop();
+                    wifi_mqtt_stop();
                     ESP_LOGI("WIFI_EVENT", "WiFi is OFF");
                 }
                 else{
-                    esp_wifi_start();
+
+                    wifi_mqtt_start();
                     wifi_task_started = false;
                     ESP_LOGI("WIFI_EVENT", "WiFi is ON");
                 }

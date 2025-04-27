@@ -1,0 +1,365 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x3f (SPI_FAST_FLASH_BOOT)
+configsip: 153911750, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Apr 25 2025 10:18:06[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (83) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 003b6000[0m
+[0;32mI (98) boot:  4 ota_1            OTA app          00 11 003d0000 003b6000[0m
+[0;32mI (105) boot: End of partition table[0m
+[0;32mI (110) boot: No factory image, trying OTA 0[0m
+[0;32mI (114) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1d1564h (1906020) map[0m
+[0;32mI (776) esp_image: segment 1: paddr=001e158c vaddr=3ffb0000 size=04040h ( 16448) load[0m
+[0;32mI (783) esp_image: segment 2: paddr=001e55d4 vaddr=40080000 size=0aa44h ( 43588) load[0m
+[0;32mI (800) esp_image: segment 3: paddr=001f0020 vaddr=400d0020 size=fe3a0h (1041312) map[0m
+[0;32mI (1157) esp_image: segment 4: paddr=002ee3c8 vaddr=4008aa44 size=13dd0h ( 81360) load[0m
+[0;32mI (1204) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (1205) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (1205) boot: Disabling RNG early entropy source...[0m
+[0;32mI (1221) cpu_start: Multicore app[0m
+[0;32mI (1221) quad_psram: This chip is ESP32-D0WDR2-V3[0m
+[0;32mI (1223) esp_psram: Found 2MB PSRAM device[0m
+[0;32mI (1224) esp_psram: Speed: 40MHz[0m
+[0;32mI (1228) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;32mI (1699) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1707) cpu_start: Pro cpu start user code[0m
+[0;32mI (1707) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1707) cpu_start: Application information:[0m
+[0;32mI (1710) cpu_start: Project name:     lvgl_port2[0m
+[0;32mI (1716) cpu_start: App version:      1.0.4[0m
+[0;32mI (1720) cpu_start: Compile time:     Apr 25 2025 12:06:24[0m
+[0;32mI (1727) cpu_start: ELF file SHA256:  bd95a78c0...[0m
+[0;32mI (1732) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (1737) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (1742) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (1747) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (1752) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1759) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (1765) heap_init: At 3FFB98F8 len 00026708 (153 KiB): DRAM[0m
+[0;32mI (1771) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (1778) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (1784) heap_init: At 4009E814 len 000017EC (5 KiB): IRAM[0m
+[0;32mI (1791) esp_psram: Adding pool of 2048K of PSRAM memory to heap allocator[0m
+[0;32mI (1799) spi_flash: detected chip: generic[0m
+[0;32mI (1803) spi_flash: flash io: dio[0m
+[0;33mW (1807) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1818) main_task: Started on CPU0[0m
+[0;32mI (1828) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1828) main_task: Calling app_main()[0m
+[0;32mI (1828) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1838) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1848) st7789: create esp_lcd_new_panel[0m
+[0;32mI (1858) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2698) cst816t: 	Chip ID: 0xb6[0m
+[0;32mI (2698) cst816t: 	Firmware version: 0x01[0m
+[0;32mI (2698) cst816t: 	Factory ID: 0xff[0m
+[0;32mI (2708) main_task: Returned from app_main()[0m
+[0;32mI (4828) wifi:wifi driver task: 3ffd1070, prio:23, stack:6656, core=0[0m
+[0;31mE (4828) mqtt_client: Client was not initialized[0m
+[0;32mI (4838) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (4838) wifi:wifi firmware version: cc1dd81[0m
+[0;32mI (4838) wifi:wifi certification version: v7.0[0m
+[0;32mI (4838) wifi:config NVS flash: enabled[0m
+[0;32mI (4838) wifi:config nano formating: disabled[0m
+[0;32mI (4848) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (4848) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (4858) wifi:Init management short buffer num: 32[0m
+[0;32mI (4858) wifi:Init static tx buffer num: 16[0m
+[0;32mI (4868) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (4868) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (4868) wifi:Init static rx buffer num: 10[0m
+[0;32mI (4878) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (4878) wifi_init: rx ba win: 6[0m
+[0;32mI (4888) wifi_init: tcpip mbox: 32[0m
+[0;32mI (4888) wifi_init: udp mbox: 6[0m
+[0;32mI (4888) wifi_init: tcp mbox: 6[0m
+[0;32mI (4898) wifi_init: tcp tx win: 5760[0m
+[0;32mI (4898) wifi_init: tcp rx win: 5760[0m
+[0;32mI (4908) wifi_init: tcp mss: 1440[0m
+[0;32mI (4908) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (4918) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (4918) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (4998) wifi:mode : sta (30:c9:22:ff:6f:30)[0m
+[0;32mI (4998) wifi:enable tsf[0m
+[0;32mI (4998) WIFI_EVENT: WIFI_EVENT_STA_START[0m
+[0;32mI (5018) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (5018) wifi:state: init -> auth (b0)[0m
+[0;32mI (5048) wifi:state: auth -> assoc (0)[0m
+[0;32mI (5138) wifi:state: assoc -> run (10)[0m
+[0;32mI (5168) wifi:connected with hcc., aid = 2, channel 6, BW20, bssid = de:7f:cb:19:5b:a1[0m
+[0;32mI (5168) wifi:security: WPA2-PSK, phy: bgn, rssi: -33[0m
+[0;32mI (5178) wifi:pm start, type: 1[0m
+
+[0;32mI (5178) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (5188) WIFI_EVENT: WIFI_EVENT_STA_CONNECTED[0m
+[0;32mI (5188) MQTT_EVENT: Wi-Fi connected[0m
+[0;31mE (5198) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (5208) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (5208) mqtt_client: Error transport connect[0m
+[0;32mI (5218) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5218) mqtt_client: Client force reconnect requested[0m
+[0;31mE (5228) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (5238) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (5248) mqtt_client: Error transport connect[0m
+[0;32mI (5248) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (5258) mqtt_client: Client force reconnect requested[0m
+[0;32mI (5268) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (5268) wifi:AP's beacon interval = 102400 us, DTIM period = 2[0m
+[0;32mI (6188) esp_netif_handlers: sta ip: 192.168.20.185, mask: 255.255.255.0, gw: 192.168.20.165[0m
+[0;32mI (6188) IP_EVENT: IP_EVENT_STA_GOT_IP[0m
+[0;32mI (6848) wifi:<ba-add>idx:0 (ifx:0, de:7f:cb:19:5b:a1), tid:0, ssn:4, winSize:64[0m
+[0;31mE (12258) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (12258) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (12258) mqtt_client: Error transport connect[0m
+[0;32mI (12268) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (12268) mqtt_client: Client force reconnect requested[0m
+[0;31mE (19278) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (19278) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (19278) mqtt_client: Error transport connect[0m
+[0;32mI (19288) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (19288) mqtt_client: Client force reconnect requested[0m
+[0;32mI (20978) MQTT_EVENT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (20978) wifi:<ba-add>idx:1 (ifx:0, de:7f:cb:19:5b:a1), tid:6, ssn:4, winSize:64[0m
+[0;32mI (21158) WIFI_EVENT: WiFi is OFF[0m
+[0;32mI (26608) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (28178) MQTT_EVENT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (28318) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (28788) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (28788) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (28788) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (28798) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (28798) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (28798) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (28808) MQTT_EVENT: Topic: /k1xujoU2Xot/esp01/user/update[0m
+[0;32mI (28808) MQTT_EVENT: Data: Hello from ESP32 1.0.4[0m
+[0;32mI (30838) WIFI_EVENT: WiFi is OFF[0m
+[0;32mI (37768) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (38208) MQTT_EVENT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (38388) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (38568) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (38568) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (38568) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (38578) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (38578) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (38578) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (38578) MQTT_EVENT: Topic: /k1xujoU2Xot/esp01/user/update[0m
+[0;32mI (38588) MQTT_EVENT: Data: Hello from ESP32 1.0.4[0m
+[0;32mI (53748) WIFI_EVENT: WiFi is OFF[0m
+[0;32mI (61948) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (62318) MQTT_EVENT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (62928) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (62928) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (62938) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (62938) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (62938) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (62948) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (62948) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (62948) MQTT_EVENT: Topic: /k1xujoU2Xot/esp01/user/update[0m
+[0;32mI (62958) MQTT_EVENT: Data: Hello from ESP32 1.0.4[0m
+[0;32mI (71538) WIFI_EVENT: WiFi is OFF[0m
+[0;31mE (86918) TEMP_HUM: create lvgl timer[0m
+[0;32mI (86928) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (86928) DHT11: register RX done callback[0m
+[0;31mE (91848) TEMP_HUM: create lvgl timer[0m
+[0;31mE (101648) TEMP_HUM: create lvgl timer[0m
+[0;31mE (152858) TEMP_HUM: create lvgl timer[0m
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x3f (SPI_FAST_FLASH_BOOT)
+configsip: 153911750, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Apr 25 2025 10:18:06[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (83) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 003b6000[0m
+[0;32mI (98) boot:  4 ota_1            OTA app          00 11 003d0000 003b6000[0m
+[0;32mI (105) boot: End of partition table[0m
+[0;32mI (110) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1d1564h (1906020) map[0m
+[0;32mI (771) esp_image: segment 1: paddr=001e158c vaddr=3ffb0000 size=04040h ( 16448) load[0m
+[0;32mI (778) esp_image: segment 2: paddr=001e55d4 vaddr=40080000 size=0aa44h ( 43588) load[0m
+[0;32mI (795) esp_image: segment 3: paddr=001f0020 vaddr=400d0020 size=fe3a0h (1041312) map[0m
+[0;32mI (1152) esp_image: segment 4: paddr=002ee3c8 vaddr=4008aa44 size=13dd0h ( 81360) load[0m
+[0;32mI (1199) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (1199) boot: Disabling RNG early entropy source...[0m
+[0;32mI (1211) cpu_start: Multicore app[0m
+[0;32mI (1211) quad_psram: This chip is ESP32-D0WDR2-V3[0m
+[0;32mI (1213) esp_psram: Found 2MB PSRAM device[0m
+[0;32mI (1214) esp_psram: Speed: 40MHz[0m
+[0;32mI (1218) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;32mI (1688) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1697) cpu_start: Pro cpu start user code[0m
+[0;32mI (1697) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1697) cpu_start: Application information:[0m
+[0;32mI (1700) cpu_start: Project name:     lvgl_port2[0m
+[0;32mI (1705) cpu_start: App version:      1.0.4[0m
+[0;32mI (1710) cpu_start: Compile time:     Apr 25 2025 12:06:24[0m
+[0;32mI (1716) cpu_start: ELF file SHA256:  bd95a78c0...[0m
+[0;32mI (1722) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (1726) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (1731) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (1736) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (1741) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1748) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (1754) heap_init: At 3FFB98F8 len 00026708 (153 KiB): DRAM[0m
+[0;32mI (1761) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (1767) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (1774) heap_init: At 4009E814 len 000017EC (5 KiB): IRAM[0m
+[0;32mI (1780) esp_psram: Adding pool of 2048K of PSRAM memory to heap allocator[0m
+[0;32mI (1789) spi_flash: detected chip: generic[0m
+[0;32mI (1792) spi_flash: flash io: dio[0m
+[0;33mW (1797) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1808) main_task: Started on CPU0[0m
+[0;32mI (1818) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1818) main_task: Calling app_main()[0m
+[0;32mI (1818) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1828) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1838) st7789: create esp_lcd_new_panel[0m
+[0;32mI (1848) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2688) cst816t: 	Chip ID: 0xb6[0m
+[0;32mI (2688) cst816t: 	Firmware version: 0x01[0m
+[0;32mI (2688) cst816t: 	Factory ID: 0xff[0m
+[0;32mI (2698) main_task: Returned from app_main()[0m
+[0;31mE (6118) TEMP_HUM: create lvgl timer[0m
+[0;32mI (6118) gpio: GPIO[25]| InputEn: 1| OutputEn: 0| OpenDrain: 0| Pullup: 1| Pulldown: 0| Intr:0 [0m
+[0;32mI (6118) DHT11: register RX done callback[0m
+[0;31mE (80338) TEMP_HUM: create lvgl timer[0m
+[0;32mI (143978) wifi:wifi driver task: 3ffd3bd0, prio:23, stack:6656, core=0[0m
+[0;31mE (143978) mqtt_client: Client was not initialized[0m
+[0;32mI (143988) WIFI_EVENT: WiFi is ON[0m
+[0;32mI (143988) wifi:wifi firmware version: cc1dd81[0m
+[0;32mI (143988) wifi:wifi certification version: v7.0[0m
+[0;32mI (143988) wifi:config NVS flash: enabled[0m
+[0;32mI (143998) wifi:config nano formating: disabled[0m
+[0;32mI (143998) wifi:Init data frame dynamic rx buffer num: 32[0m
+[0;32mI (144008) wifi:Init static rx mgmt buffer num: 5[0m
+[0;32mI (144008) wifi:Init management short buffer num: 32[0m
+[0;32mI (144008) wifi:Init static tx buffer num: 16[0m
+[0;32mI (144018) wifi:Init tx cache buffer num: 32[0m
+[0;32mI (144018) wifi:Init static rx buffer size: 1600[0m
+[0;32mI (144028) wifi:Init static rx buffer num: 10[0m
+[0;32mI (144028) wifi:Init dynamic rx buffer num: 32[0m
+[0;32mI (144038) wifi_init: rx ba win: 6[0m
+[0;32mI (144038) wifi_init: tcpip mbox: 32[0m
+[0;32mI (144038) wifi_init: udp mbox: 6[0m
+[0;32mI (144048) wifi_init: tcp mbox: 6[0m
+[0;32mI (144048) wifi_init: tcp tx win: 5760[0m
+[0;32mI (144058) wifi_init: tcp rx win: 5760[0m
+[0;32mI (144058) wifi_init: tcp mss: 1440[0m
+[0;32mI (144058) wifi_init: WiFi IRAM OP enabled[0m
+[0;32mI (144068) wifi_init: WiFi RX IRAM OP enabled[0m
+[0;32mI (144078) phy_init: phy_version 4791,2c4672b,Dec 20 2023,16:06:06[0m
+[0;32mI (144148) wifi:mode : sta (30:c9:22:ff:6f:30)[0m
+[0;32mI (144148) wifi:enable tsf[0m
+[0;32mI (144158) WIFI_EVENT: WIFI_EVENT_STA_START[0m
+[0;32mI (144168) wifi:new:<6,0>, old:<1,0>, ap:<255,255>, sta:<6,0>, prof:1[0m
+[0;32mI (144178) wifi:state: init -> auth (b0)[0m
+[0;32mI (144198) wifi:state: auth -> assoc (0)[0m
+[0;32mI (144308) wifi:state: assoc -> run (10)[0m
+[0;32mI (144348) wifi:connected with hcc., aid = 2, channel 6, BW20, bssid = de:7f:cb:19:5b:a1[0m
+[0;32mI (144348) wifi:security: WPA2-PSK, phy: bgn, rssi: -44[0m
+[0;32mI (144358) wifi:pm start, type: 1[0m
+
+[0;32mI (144358) wifi:dp: 1, bi: 102400, li: 3, scale listen interval from 307200 us to 307200 us[0m
+[0;32mI (144368) WIFI_EVENT: WIFI_EVENT_STA_CONNECTED[0m
+[0;32mI (144368) MQTT_EVENT: Wi-Fi connected[0m
+[0;31mE (144378) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (144378) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (144388) mqtt_client: Error transport connect[0m
+[0;32mI (144398) wifi:dp: 2, bi: 102400, li: 4, scale listen interval from 307200 us to 409600 us[0m
+[0;32mI (144398) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (144398) wifi:[0;32mI (144408) mqtt_client: Client force reconnect requested[0m[0m
+AP's beacon interval = 102400 us, DTIM period = 2
+[0;31mE (144418) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (144428) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (144438) mqtt_client: Error transport connect[0m
+[0;32mI (144448) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (144448) mqtt_client: Client force reconnect requested[0m
+[0;31mE (144458) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (144468) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (144478) mqtt_client: Error transport connect[0m
+[0;32mI (144478) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (144488) mqtt_client: Client force reconnect requested[0m
+[0;31mE (144488) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (144508) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (144508) mqtt_client: Error transport connect[0m
+[0;32mI (144518) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (144518) mqtt_client: Client force reconnect requested[0m
+[0;31mE (144528) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (144538) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (144548) mqtt_client: Error transport connect[0m
+[0;32mI (144548) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (144558) mqtt_client: Client force reconnect requested[0m
+[0;31mE (144558) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (144578) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (144578) mqtt_client: Error transport connect[0m
+[0;32mI (144588) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (144588) mqtt_client: Client force reconnect requested[0m
+[0;31mE (144598) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (144608) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (144618) mqtt_client: Error transport connect[0m
+[0;32mI (144618) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (144628) mqtt_client: Client force reconnect requested[0m
+[0;31mE (144638) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (144648) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (144658) mqtt_client: Error transport connect[0m
+[0;32mI (144658) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (144668) mqtt_client: Client force reconnect requested[0m
+[0;32mI (145368) esp_netif_handlers: sta ip: 192.168.20.185, mask: 255.255.255.0, gw: 192.168.20.165[0m
+[0;32mI (145368) IP_EVENT: IP_EVENT_STA_GOT_IP[0m
+[0;32mI (145998) wifi:<ba-add>idx:0 (ifx:0, de:7f:cb:19:5b:a1), tid:0, ssn:4, winSize:64[0m
+[0;31mE (151668) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (151668) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (151668) mqtt_client: Error transport connect[0m
+[0;32mI (151678) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (151678) mqtt_client: Client force reconnect requested[0m
+[0;31mE (158688) esp-tls: couldn't get hostname for :iot-06z00aum8d7gatw.mqtt.iothub.aliyuncs.com: getaddrinfo() returns 202, addrinfo=0x0[0m
+[0;31mE (158688) transport_base: Failed to open a new connection: 32769[0m
+[0;31mE (158698) mqtt_client: Error transport connect[0m
+[0;32mI (158698) MQTT_EVENT: MQTT_EVENT_DISCONNECTED[0m
+[0;32mI (158708) mqtt_client: Client force reconnect requested[0m
+[0;32mI (159398) wifi:<ba-add>idx:1 (ifx:0, de:7f:cb:19:5b:a1), tid:6, ssn:4, winSize:64[0m
+[0;32mI (159398) MQTT_EVENT: MQTT_EVENT_CONNECTED[0m
+[0;32mI (160538) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (160798) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (160798) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (161098) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (161108) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (161108) MQTT_EVENT: MQTT_EVENT_SUBSCRIBED[0m
+[0;32mI (161118) MQTT_EVENT: MQTT_EVENT_DATA[0m
+[0;32mI (161118) MQTT_EVENT: Topic: /k1xujoU2Xot/esp01/user/update[0m
+[0;32mI (161118) MQTT_EVENT: Data: Hello from ESP32 1.0.4[0m
+[0;31mE (163958) TEMP_HUM: create lvgl timer[0m

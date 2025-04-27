@@ -38,11 +38,9 @@ SemaphoreHandle_t wifi_semaphore = NULL;
 
 static SemaphoreHandle_t smartconfig_semaphore = NULL;
 
-static QueueHandle_t temp_hum_queue = NULL;
+QueueHandle_t temp_hum_queue = NULL;
 
 static esp_mqtt_client_handle_t client = NULL;
-
-static float temp_hum[2] = {0};
 
 static float temp_hum_data[2] = {0};
 /*void wifi_event_handler(void* event_handler_arg,esp_event_base_t event_base,int32_t event_id,void* event_data)
@@ -216,16 +214,18 @@ void mqtt_start(void)
 
 void give_temp_hum(float *temp, int16_t *hum)
 {
+    float temp_hum[2] = {0};
     temp_hum[0] = *temp;
-    temp_hum[1] = *hum;
+    temp_hum[1] = (float)*hum;
     if(temp_hum_queue == NULL) {
         ESP_LOGE("WIFI_EVENT", "Temperature and humidity queue is not initialized");
         return;
     }
-    if (xQueueSend(temp_hum_queue, &temp_hum, 0) != pdTRUE) {
+    if (xQueueSend(temp_hum_queue, temp_hum, 0) != pdTRUE) {
         ESP_LOGE("WIFI_EVENT", "Failed to send temperature and humidity data to queue");
     }
 }
+
 //上报温度
 void push_temp_hum(float temp, int16_t hum)
 {
@@ -263,7 +263,7 @@ void wifi_task(void)
         smartconfig_semaphore = xSemaphoreCreateBinary();
     }
     if (temp_hum_queue == NULL) {
-        temp_hum_queue = xQueueCreate(10, sizeof(temp_hum)); // Create a queue for temperature and humidity data
+        temp_hum_queue = xQueueCreate(10, sizeof(temp_hum_data)); // Create a queue for temperature and humidity data
     }
     wifi_simple_config();
     mqtt_start();
@@ -273,14 +273,14 @@ void wifi_task(void)
         if (esp_wifi_get_mode(&mode) == ESP_OK) {
             if (mode == WIFI_MODE_NULL) {
                 ESP_LOGI("WIFI_EVENT", "WiFi is OFF");
-                vTaskDelay(pdMS_TO_TICKS(10));
+                vTaskDelay(pdMS_TO_TICKS(100));
                 continue;
             } else {
-                ESP_LOGI("WIFI_EVENT", "WiFi is ON");
+                
             }
         } else {
             ESP_LOGE("WIFI_EVENT", "Failed to get WiFi mode");
-            vTaskDelay(pdMS_TO_TICKS(10));
+            vTaskDelay(pdMS_TO_TICKS(100));
             continue;
         }
 
@@ -289,11 +289,27 @@ void wifi_task(void)
             smartconfig_init();
         }
 
-        if (xQueueReceive(temp_hum_queue, &temp_hum_data, pdMS_TO_TICKS(100)) == pdTRUE) {
+        if (xQueueReceive(temp_hum_queue, temp_hum_data, pdMS_TO_TICKS(100)) == pdTRUE) {
             float temp = temp_hum_data[0];
             int16_t hum = (int16_t)temp_hum_data[1];
             push_temp_hum(temp, hum);
         }
+
         vTaskDelay(pdMS_TO_TICKS(10));
     }
+}
+
+void wifi_mqtt_stop(void)
+{
+    if(esp_mqtt_client_stop(client)==1)
+    {
+        vTaskDelay(pdMS_TO_TICKS(10));
+        esp_wifi_stop();
+    }
+}
+
+void wifi_mqtt_start(void)
+{
+    esp_mqtt_client_start(client);
+    esp_wifi_start();
 }
