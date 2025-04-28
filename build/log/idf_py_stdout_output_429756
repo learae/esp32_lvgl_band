@@ -1,0 +1,137 @@
+[1/5] cd /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/vl/esp32/project_my/lvgl_port2/build/partition_table/partition-table.bin /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+lvgl_port2.bin binary size 0x328930 bytes. Smallest app partition is 0x3e8000 bytes. 0xbf6d0 bytes (19%) free.
+[2/5] Performing build step for 'bootloader'
+[1/1] cd /home/vl/esp32/project_my/lvgl_port2/build/bootloader/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/vl/esp32/project_my/lvgl_port2/build/bootloader/bootloader.bin
+Bootloader binary size 0x6850 bytes. 0x7b0 bytes (7%) free.
+[3/5] No install step for 'bootloader'
+[4/5] Completed 'bootloader'
+[4/5] cd /home/vl/esp32/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/vl/esp32/esp-idf -D "SERIAL_TOOL=/home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/home/vl/esp32/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/vl/esp32/project_my/lvgl_port2/build -P /home/vl/esp32/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 8MB 0x1000 bootloader/bootloader.bin 0x10000 lvgl_port2.bin 0x8000 partition_table/partition-table.bin 0xd000 ota_data_initial.bin
+esptool.py v4.8.1
+Serial port /dev/ttyUSB0
+Connecting......
+Chip is ESP32-D0WDR2-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 30:c9:22:ff:6f:30
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00338fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000d000 to 0x0000efff...
+SHA digest in image updated
+Compressed 26704 bytes to 16348...
+Writing at 0x00001000... (100 %)
+Wrote 26704 bytes (16348 compressed) at 0x00001000 in 0.8 seconds (effective 256.6 kbit/s)...
+Hash of data verified.
+Compressed 3311920 bytes to 1494714...
+Writing at 0x00010000... (1 %)
+Writing at 0x00020b14... (2 %)
+Writing at 0x0002e91e... (3 %)
+Writing at 0x000368ef... (4 %)
+Writing at 0x0004045c... (5 %)
+Writing at 0x0004742d... (6 %)
+Writing at 0x0004f199... (7 %)
+Writing at 0x00057997... (8 %)
+Writing at 0x000624b7... (9 %)
+Writing at 0x0006eb47... (10 %)
+Writing at 0x00076e2c... (11 %)
+Writing at 0x000828c6... (13 %)
+Writing at 0x00097a55... (14 %)
+Writing at 0x000a2eb6... (15 %)
+Writing at 0x000aaf02... (16 %)
+Writing at 0x000b3597... (17 %)
+Writing at 0x000bfbe4... (18 %)
+Writing at 0x000cd13e... (19 %)
+Writing at 0x000e1a22... (20 %)
+Writing at 0x000ee2de... (21 %)
+Writing at 0x000f70bc... (22 %)
+Writing at 0x00100719... (23 %)
+Writing at 0x00114dc0... (25 %)
+Writing at 0x0012037c... (26 %)
+Writing at 0x0012905b... (27 %)
+Writing at 0x001319ba... (28 %)
+Writing at 0x0013cd63... (29 %)
+Writing at 0x00147fba... (30 %)
+Writing at 0x00157b7c... (31 %)
+Writing at 0x00180c32... (32 %)
+Writing at 0x001b0f20... (33 %)
+Writing at 0x001c12ee... (34 %)
+Writing at 0x001c8284... (35 %)
+Writing at 0x001cf145... (36 %)
+Writing at 0x001d5826... (38 %)
+Writing at 0x001dbde4... (39 %)
+Writing at 0x001e210e... (40 %)
+Writing at 0x001e8638... (41 %)
+Writing at 0x001ed3ae... (42 %)
+Writing at 0x001f2835... (43 %)
+Writing at 0x001f8f36... (44 %)
+Writing at 0x001fdb81... (45 %)
+Writing at 0x00204e93... (46 %)
+Writing at 0x002117fe... (47 %)
+Writing at 0x00217183... (48 %)
+Writing at 0x0021ea0f... (50 %)
+Writing at 0x00224a02... (51 %)
+Writing at 0x0022ac47... (52 %)
+Writing at 0x00230ec5... (53 %)
+Writing at 0x00237503... (54 %)
+Writing at 0x0023d526... (55 %)
+Writing at 0x00243970... (56 %)
+Writing at 0x00249655... (57 %)
+Writing at 0x002503b8... (58 %)
+Writing at 0x00256db3... (59 %)
+Writing at 0x0025ce3f... (60 %)
+Writing at 0x00263302... (61 %)
+Writing at 0x00269a10... (63 %)
+Writing at 0x0026fc84... (64 %)
+Writing at 0x00275d2e... (65 %)
+Writing at 0x0027c8f3... (66 %)
+Writing at 0x002826d2... (67 %)
+Writing at 0x002888e7... (68 %)
+Writing at 0x0028ee1d... (69 %)
+Writing at 0x00294e16... (70 %)
+Writing at 0x0029aa40... (71 %)
+Writing at 0x0029fb92... (72 %)
+Writing at 0x002a5157... (73 %)
+Writing at 0x002aa5c2... (75 %)
+Writing at 0x002afa40... (76 %)
+Writing at 0x002b5039... (77 %)
+Writing at 0x002ba892... (78 %)
+Writing at 0x002c06d6... (79 %)
+Writing at 0x002c613c... (80 %)
+Writing at 0x002cbdfb... (81 %)
+Writing at 0x002d1a48... (82 %)
+Writing at 0x002d78fd... (83 %)
+Writing at 0x002dd8f1... (84 %)
+Writing at 0x002e33c2... (85 %)
+Writing at 0x002e9297... (86 %)
+Writing at 0x002ef1bc... (88 %)
+Writing at 0x002f496e... (89 %)
+Writing at 0x002fa6fe... (90 %)
+Writing at 0x003043c6... (91 %)
+Writing at 0x0030d177... (92 %)
+Writing at 0x00313936... (93 %)
+Writing at 0x0031a1eb... (94 %)
+Writing at 0x003204ec... (95 %)
+Writing at 0x00325c98... (96 %)
+Writing at 0x0032b7e9... (97 %)
+Writing at 0x00331ec7... (98 %)
+Writing at 0x003370d7... (100 %)
+Wrote 3311920 bytes (1494714 compressed) at 0x00010000 in 37.6 seconds (effective 704.6 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 128...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (128 compressed) at 0x00008000 in 0.1 seconds (effective 348.5 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x0000d000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x0000d000 in 0.1 seconds (effective 986.2 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...

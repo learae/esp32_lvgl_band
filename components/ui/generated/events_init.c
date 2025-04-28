@@ -19,6 +19,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "smartconfig.h"
+#include "sdcard.h"
 
 #if LV_USE_GUIDER_SIMULATOR && LV_USE_FREEMASTER
 #include "freemaster_client.h"
@@ -852,13 +853,17 @@ static void txt_page_event_handler (lv_event_t *e)
     }
 }
 
-static void txt_page_list_txt_item0_event_handler (lv_event_t *e)
+void txt_page_list_txt_item0_event_handler (lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
     switch (code) {
     case LV_EVENT_CLICKED:
     {
+        lv_obj_t *target = lv_event_get_target(e);
+        char *btn_text = lv_list_get_btn_text(lv_obj_get_parent(target), target);
+        ESP_LOGI("TXT_PAGE", "Button clicked: %s", btn_text);
         ui_load_scr_animation(&guider_ui, &guider_ui.txt_veiw, guider_ui.txt_veiw_del, &guider_ui.txt_page_del, setup_scr_txt_veiw, LV_SCR_LOAD_ANIM_FADE_ON, 200, 200, false, true);
+        lv_label_set_text(guider_ui.txt_veiw_label_txt, read_dir(btn_text,1));
         break;
     }
     default:
@@ -1020,13 +1025,16 @@ static void txt_veiw_btn_txt_back_event_handler (lv_event_t *e)
     }
 }
 
+
+
 static void txt_veiw_btn_last_event_handler (lv_event_t *e)
 {
     lv_event_code_t code = lv_event_get_code(e);
     switch (code) {
     case LV_EVENT_CLICKED:
     {
-
+        
+        lv_label_set_text(guider_ui.txt_veiw_label_txt, read_dir("flow", -1));
         break;
     }
     default:
@@ -1040,7 +1048,7 @@ static void txt_veiw_btn_next_event_handler (lv_event_t *e)
     switch (code) {
     case LV_EVENT_CLICKED:
     {
-
+        lv_label_set_text(guider_ui.txt_veiw_label_txt, read_dir("flow", 1));
         break;
     }
     default:

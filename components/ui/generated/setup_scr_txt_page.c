@@ -61,10 +61,34 @@ void setup_scr_txt_page(lv_ui *ui)
     {
         if (strstr(name[j], ".txt") != NULL || strstr(name[j], ".TXT") != NULL) {
             ui->txt_page_list_txt_item0 = lv_list_add_btn(ui->txt_page_list_txt, LV_SYMBOL_SAVE, name[j]);
-            lv_obj_set_style_text_font(ui->txt_page_list_txt_item0, &lv_font_simsun_16_cjk, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_text_font(ui->txt_page_list_txt_item0, &lv_font_montserratMedium_18, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_text_color(ui->txt_page_list_txt_item0, lv_color_hex(0xfef6ea), LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_border_width(ui->txt_page_list_txt_item0, 1, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_border_opa(ui->txt_page_list_txt_item0, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_border_color(ui->txt_page_list_txt_item0, lv_color_hex(0x6f6969), LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_border_side(ui->txt_page_list_txt_item0, LV_BORDER_SIDE_FULL, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_pad_top(ui->txt_page_list_txt_item0, 5, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_pad_left(ui->txt_page_list_txt_item0, 10, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_pad_bottom(ui->txt_page_list_txt_item0, 10, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_pad_right(ui->txt_page_list_txt_item0, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_radius(ui->txt_page_list_txt_item0, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_set_style_bg_opa(ui->txt_page_list_txt_item0, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+            lv_obj_add_event_cb(ui->txt_page_list_txt_item0, txt_page_list_txt_item0_event_handler, LV_EVENT_ALL, ui);
         }
     }
     ui->txt_page_list_txt_item0 = lv_list_add_btn(ui->txt_page_list_txt, LV_SYMBOL_SAVE, "name.txt");
+    lv_obj_set_style_text_font(ui->txt_page_list_txt_item0, &lv_font_montserratMedium_18, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_text_color(ui->txt_page_list_txt_item0, lv_color_hex(0xfef6ea), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_width(ui->txt_page_list_txt_item0, 1, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_opa(ui->txt_page_list_txt_item0, 255, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_color(ui->txt_page_list_txt_item0, lv_color_hex(0x6f6969), LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_border_side(ui->txt_page_list_txt_item0, LV_BORDER_SIDE_FULL, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_top(ui->txt_page_list_txt_item0, 5, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_left(ui->txt_page_list_txt_item0, 10, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_bottom(ui->txt_page_list_txt_item0, 10, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_pad_right(ui->txt_page_list_txt_item0, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_radius(ui->txt_page_list_txt_item0, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
+    lv_obj_set_style_bg_opa(ui->txt_page_list_txt_item0, 0, LV_PART_MAIN | LV_STATE_DEFAULT);
 
     lv_obj_set_pos(ui->txt_page_list_txt, 20, 38);
     lv_obj_set_size(ui->txt_page_list_txt, 200, 267);

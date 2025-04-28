@@ -1,0 +1,146 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x3f (SPI_FAST_FLASH_BOOT)
+configsip: 153911750, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Apr 25 2025 10:18:06[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (83) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 003e8000[0m
+[0;32mI (98) boot:  4 ota_1            OTA app          00 11 00400000 003e8000[0m
+[0;32mI (105) boot: End of partition table[0m
+[0;32mI (110) boot: No factory image, trying OTA 0[0m
+[0;32mI (114) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fcccch (2084044) map[0m
+[0;32mI (837) esp_image: segment 1: paddr=0020ccf4 vaddr=3ffb0000 size=03324h ( 13092) load[0m
+[0;32mI (842) esp_image: segment 2: paddr=00210020 vaddr=400d0020 size=107cd0h (1080528) map[0m
+[0;32mI (1213) esp_image: segment 3: paddr=00317cf8 vaddr=3ffb3324 size=011bch (  4540) load[0m
+[0;32mI (1215) esp_image: segment 4: paddr=00318ebc vaddr=40080000 size=1fa9ch (129692) load[0m
+[0;32mI (1286) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (1286) boot: Set actual ota_seq=1 in otadata[0][0m
+[0;32mI (1286) boot: Disabling RNG early entropy source...[0m
+[0;32mI (1303) cpu_start: Multicore app[0m
+[0;32mI (1303) quad_psram: This chip is ESP32-D0WDR2-V3[0m
+[0;32mI (1305) esp_psram: Found 2MB PSRAM device[0m
+[0;32mI (1306) esp_psram: Speed: 40MHz[0m
+[0;32mI (1310) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;32mI (1780) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1788) cpu_start: Pro cpu start user code[0m
+[0;32mI (1788) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1788) cpu_start: Application information:[0m
+[0;32mI (1792) cpu_start: Project name:     lvgl_port2[0m
+[0;32mI (1797) cpu_start: App version:      1.0.4[0m
+[0;32mI (1802) cpu_start: Compile time:     Apr 28 2025 09:10:30[0m
+[0;32mI (1808) cpu_start: ELF file SHA256:  da5ab8559...[0m
+[0;32mI (1813) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (1818) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (1823) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (1828) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (1833) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1840) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (1846) heap_init: At 3FFB9ED8 len 00026128 (152 KiB): DRAM[0m
+[0;32mI (1853) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (1859) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (1865) heap_init: At 4009FA9C len 00000564 (1 KiB): IRAM[0m
+[0;32mI (1872) esp_psram: Adding pool of 2048K of PSRAM memory to heap allocator[0m
+[0;32mI (1881) spi_flash: detected chip: generic[0m
+[0;32mI (1884) spi_flash: flash io: dio[0m
+[0;33mW (1889) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1899) main_task: Started on CPU0[0m
+[0;32mI (1909) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1909) main_task: Calling app_main()[0m
+[0;32mI (1909) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1919) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1929) st7789: create esp_lcd_new_panel[0m
+[0;32mI (1939) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2779) cst816t: 	Chip ID: 0xb6[0m
+[0;32mI (2779) cst816t: 	Firmware version: 0x01[0m
+[0;32mI (2779) cst816t: 	Factory ID: 0xff[0m
+[0;32mI (2789) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2839) SDCARD: SD Card mounted successfully[0m
+[0;32mI (2849) main_task: Returned from app_main()[0m
+[0;32mI (8319) TXT_PAGE: Button clicked: ���Ʋ��.TXT[0m
+[0;32mI (8339) TXT_PAGE: Button clicked: ���Ʋ��.TXT[0m
+[0;32mI (8339) TXT_PAGE: flie: ���Ʋ��.TXT[0m
+[0;32mI (8339) SDCARD: Read content: ��斗之力，三段！”
+
+望着测验魔石碑上面闪亮得甚至有些刺眼的五个大字�
+[0;32mI (9049) TXT_PAGE: Button clicked: flow[0m
+[0;32mI (9049) SDCARD: Read content: ��少年面无表情，唇角有着一抹自嘲，紧握的手掌，因为大力，而导致略微�[0m
+[0;32mI (11359) TXT_PAGE: Button clicked: flow[0m
+[0;32mI (11359) SDCARD: Read content: �锐���指甲深深的刺进了掌心之中，带来一阵阵钻心的疼痛…
+
+“萧炎，斗�[0m
+[0;32mI (12659) TXT_PAGE: Button clicked: flow[0m
+[0;32mI (12659) SDCARD: Read content: �力���三段！级别：低级！”测验魔石碑之旁，一位中年男子，看了一眼碑上[0m
+[0;32mI (13949) TXT_PAGE: Button clicked: flow[0m
+[0;32mI (13949) SDCARD: Read content: 所显示出来的信息，语气漠然的将之公布了出来…
+
+中年男子话刚刚脱口，[0m
+[0;32mI (15529) TXT_PAGE: Button clicked: flow[0m
+[0;32mI (15529) SDCARD: Read content: 便是不出意外的在人头汹涌的广场上带起了一阵嘲讽的骚动。
+
+“三段？嘿[0m
+[0;32mI (16929) TXT_PAGE: Button clicked: flow[0m
+[0;32mI (16929) SDCARD: Read content: 嘿，果然不出我所料，这个“天才”这一年又是在原地踏步！”
+
+“哎，这[0m
+[0;32mI (18699) TXT_PAGE: Button clicked: flow[0m
+[0;32mI (18699) SDCARD: Read content: 废物真是把家族的脸都给丢光了。”
+
+“要不是族长是他的父亲，这种废物[0m
+[0;32mI (20389) TXT_PAGE: Button clicked: flow[0m
+[0;32mI (20389) SDCARD: Read content: 嘿，果然不出我所料，这个“天才”这一年又是在原地踏步！”
+
+“哎，这[0m
+[0;32mI (21329) TXT_PAGE: Button clicked: flow[0m
+[0;32mI (21329) SDCARD: Read content: 便是不出意外的在人头汹涌的广场上带起了一阵嘲讽的骚动。
+
+“三段？嘿[0m
+[0;32mI (22089) TXT_PAGE: Button clicked: flow[0m
+[0;32mI (22089) SDCARD: Read content: 所显示出来的信息，语气漠然的将之公布了出来…
+
+中年男子话刚刚脱口，[0m
+[0;32mI (29769) TXT_PAGE: Button clicked: flow[0m
+[0;32mI (29769) SDCARD: Read content: �力���三段！级别：低级！”测验魔石碑之旁，一位中年男子，看了一眼碑上[0m
+[0;32mI (30599) TXT_PAGE: Button clicked: flow[0m
+[0;32mI (30599) SDCARD: Read content: �锐���指甲深深的刺进了掌心之中，带来一阵阵钻心的疼痛…
+
+“萧炎，斗�[0m
+[0;32mI (34699) TXT_PAGE: Button clicked: ���Ʋ��.TXT[0m
+[0;32mI (34719) TXT_PAGE: Button clicked: ���Ʋ��.TXT[0m
+[0;32mI (34719) TXT_PAGE: flie: ���Ʋ��.TXT[0m
+[0;32mI (34719) SDCARD: Read content: ��斗之力，三段！”
+
+望着测验魔石碑上面闪亮得甚至有些刺眼的五个大字�
+[0;32mI (37689) TXT_PAGE: Button clicked: flow[0m
+[0;32mI (37689) SDCARD: Read content: ��少年面无表情，唇角有着一抹自嘲，紧握的手掌，因为大力，而导致略微�[0m
+[0;32mI (38299) TXT_PAGE: Button clicked: flow[0m
+[0;32mI (38299) SDCARD: Read content: �锐���指甲深深的刺进了掌心之中，带来一阵阵钻心的疼痛…
+
+“萧炎，斗�[0m
+[0;32mI (40689) TXT_PAGE: Button clicked: flow[0m
+[0;32mI (40689) SDCARD: Read content: �力���三段！级别：低级！”测验魔石碑之旁，一位中年男子，看了一眼碑上[0m
+[0;32mI (41669) TXT_PAGE: Button clicked: flow[0m
+[0;32mI (41669) SDCARD: Read content: 所显示出来的信息，语气漠然的将之公布了出来…
+
+中年男子话刚刚脱口，[0m
+[0;32mI (43259) TXT_PAGE: Button clicked: name.txt[0m
+[0;32mI (43279) TXT_PAGE: Button clicked: name.txt[0m
+[0;32mI (43279) TXT_PAGE: flie: name.txt[0m
+[0;31mE (43279) SDCARD: Failed to open file: /sdcard/name.txt[0m

@@ -1,0 +1,30 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x40081f39: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x40090e69: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40099db5: __assert_func at /home/vl/esp32/esp-idf/components/newlib/assert.c:81
+0x400917ea: xQueueSemaphoreTake at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x4009190a: xQueueTakeMutexRecursive at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:835
+0x400831f5: lock_acquire_generic at /home/vl/esp32/esp-idf/components/newlib/locks.c:144
+0x4008330d: _lock_acquire_recursive at /home/vl/esp32/esp-idf/components/newlib/locks.c:158
+0x400833a6: __retarget_lock_acquire_recursive at /home/vl/esp32/esp-idf/components/newlib/locks.c:314
+0x4008bf3e: _fclose_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fclose.c:76 (discriminator 1)
+0x4008c007: fclose at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fclose.c:125 (discriminator 1)
+0x40109711: read_dir at /home/vl/esp32/project_my/lvgl_port2/components/bsp/sdcard.c:102
+0x4010afce: txt_page_list_txt_item0_event_handler at /home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:867
+0x400e80e9: event_send_core at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:467
+0x400e81ae: lv_event_send at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:75
+0x400e8b1e: indev_proc_release at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_indev.c:980
+0x400e981e: indev_pointer_proc at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_indev.c:384
+0x400e9939: lv_indev_read_timer_cb at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_indev.c:101
+0x400e71b1: lv_timer_exec at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:313 (discriminator 2)
+0x400e726d: lv_timer_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:109
+0x400da7ef: lv_task_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/lv_api_map.h:37
+ (inlined by) lv_ui_tack at /home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c:48
+0x40091a0d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

@@ -80,7 +80,7 @@ void setup_scr_load_page(lv_ui *ui)
 
     //Write codes load_page_label_load
     ui->load_page_label_load = lv_label_create(ui->load_page);
-    lv_label_set_text(ui->load_page_label_load, "请 先 连 接 手 机......");
+    lv_label_set_text(ui->load_page_label_load, "清 先 联 接 手 机......");
     lv_label_set_long_mode(ui->load_page_label_load, LV_LABEL_LONG_WRAP);
     lv_obj_set_pos(ui->load_page_label_load, 20, 60);
     lv_obj_set_size(ui->load_page_label_load, 200, 159);

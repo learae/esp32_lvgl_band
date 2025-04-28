@@ -1,0 +1,41 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- Warning: Failed to decode multiple lines in a row. Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m--- 0x40081f39: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x40090e69: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40099db5: __assert_func at /home/vl/esp32/esp-idf/components/newlib/assert.c:81
+0x400917ea: xQueueSemaphoreTake at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/queue.c:1713 (discriminator 1)
+0x40083204: lock_acquire_generic at /home/vl/esp32/esp-idf/components/newlib/locks.c:146
+0x400832fd: _lock_acquire at /home/vl/esp32/esp-idf/components/newlib/locks.c:154
+0x400d5665: esp_vfs_close at /home/vl/esp32/esp-idf/components/vfs/vfs.c:551
+0x4008d813: __sclose at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/stdio.c:130
+0x4008bf7a: _fclose_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fclose.c:96 (discriminator 1)
+0x4008c007: fclose at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/fclose.c:125 (discriminator 1)
+0x40109755: read_dir at /home/vl/esp32/project_my/lvgl_port2/components/bsp/sdcard.c:98
+0x4010b03f: txt_veiw_btn_next_event_handler at /home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:1051
+0x400e80f1: event_send_core at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:467
+0x400e81b6: lv_event_send at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:75
+0x400e8b26: indev_proc_release at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_indev.c:980
+0x400e9826: indev_pointer_proc at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_indev.c:384
+0x400e9941: lv_indev_read_timer_cb at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_indev.c:101
+0x400e71b9: lv_timer_exec at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:313 (discriminator 2)
+0x400e7275: lv_timer_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:109
+0x400da7f7: lv_task_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/lv_api_map.h:37
+ (inlined by) lv_ui_tack at /home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c:48
+0x40091a0d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- Warning: Failed to decode multiple lines in a row. Try checking the baud rate and XTAL frequency setting in menuconfig[0m
+[0;33m--- 0x40081f39: panic_abort at /home/vl/esp32/esp-idf/components/esp_system/panic.c:472
+0x40090e69: esp_system_abort at /home/vl/esp32/esp-idf/components/esp_system/port/esp_system_chip.c:93
+0x40091df6: vApplicationStackOverflowHook at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:553
+0x4009312f: vTaskSwitchContext at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/tasks.c:3630 (discriminator 7)
+0x40091f00: _frxt_dispatch at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:451
+0x40091eb2: _frxt_int_exit at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/portasm.S:246
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

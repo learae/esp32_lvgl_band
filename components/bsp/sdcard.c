@@ -5,6 +5,7 @@
 #include "driver/sdmmc_host.h"
 #include "driver/gpio.h"
 #include "dirent.h"
+#include "string.h"
 
 int sdcard_init(void)
 {
@@ -34,11 +35,10 @@ int sdcard_init(void)
     //传入的指针是一个二维数组，第一维是文件数量，第二维是文件名长度
     //返回值是文件数量
     //注意：传入的指针必须是一个二维数组，第一维大小足够大，第二维大小为50
-int sdcard_filelist(char (**file)[50])
+int sdcard_filelist(char file[][50])
 {
     DIR *dir;
     struct dirent *entry;
- 
     int count = 0;
 
     dir = opendir("/sdcard");
@@ -47,12 +47,60 @@ int sdcard_filelist(char (**file)[50])
         return -1;
     }
     while ((entry = readdir(dir)) != NULL) {
-        if (entry->d_type == DT_REG) { //如果是文件
-            snprintf((*file)[count], 50, "%.49s", entry->d_name); //将文件名存入数组
+        if (entry->d_type == DT_REG) {
+            snprintf(file[count], 50, "%.49s", entry->d_name);
             count++;
         }
     }
-
     closedir(dir);
     return count;
+}
+
+
+char* read_dir(const char *name, int readflow)
+{
+    static int i = 1;
+    static char flie_name[50] = {0}; 
+    char *buffer = malloc(101); // Allocate memory dynamically
+    ESP_LOGI("TXT_PAGE", "Button clicked: %s", name);
+    if (strstr(name, "flow") && readflow == 1)
+    {
+        i+=100;
+    }
+    else if(strstr(name, "flow") && readflow == -1)
+    {
+        i-=100;
+        if (i < 1) {
+            i = 1; // Reset to 1 if it goes below 1
+        }
+    }
+    else if(strstr(name, "flow")==NULL&&readflow == 1)
+    {
+        i = 1;
+        strncpy(flie_name, name, sizeof(flie_name) - 1);
+        flie_name[sizeof(flie_name) - 1] = '\0'; // Ensure null termination
+        ESP_LOGI("TXT_PAGE", "flie: %s", flie_name);
+    }
+    
+
+    if (buffer == NULL) {
+        ESP_LOGE("SDCARD", "Failed to allocate memory");
+        return "NULL";
+    }
+    memset(buffer, 0, 101); // Initialize memory
+    char filepath[101];
+    snprintf(filepath, sizeof(filepath), "/sdcard/%s", flie_name);
+    FILE *file = fopen(filepath, "r");
+    if (file) {
+        fseek(file, i, SEEK_SET); // Move the file pointer to the specified position
+        size_t bytesRead = fread(buffer, 1, 100, file);
+        buffer[bytesRead] = '\0'; // Ensure null termination
+        ESP_LOGI("SDCARD", "Read content: %s", buffer);
+        fclose(file);
+    } else {
+        ESP_LOGE("SDCARD", "Failed to open file: %s", filepath);
+        free(buffer); // Free allocated memory in case of failure
+        return "NULL";
+    }
+    return buffer;
 }

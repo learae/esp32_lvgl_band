@@ -36,6 +36,7 @@ void events_init_lis_page(lv_ui *ui);
 void events_init_math_page(lv_ui *ui);
 void events_init_load_page(lv_ui *ui);
 
+void txt_page_list_txt_item0_event_handler (lv_event_t *e);
 #ifdef __cplusplus
 }
 #endif

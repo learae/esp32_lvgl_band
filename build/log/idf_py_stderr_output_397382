@@ -1,0 +1,31 @@
+[0;33m--- esp-idf-monitor 1.5.0 on /dev/ttyUSB0 115200[0m
+[0;33m--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0;33m--- 0x4008cf65: memmove at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/string/memmove.c:75
+[0m
+[0;33m--- 0x4008ce2c: memcpy at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memcpy.S:162
+0x4008ce48: memcpy at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/machine/xtensa/memcpy.S:197
+[0m
+[0;33m--- 0x4008cf62: memmove at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/string/memmove.c:75
+0x401c749b: __ssprint_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/svfiprintf.c:336
+0x401bda49: _svfprintf_r at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/svfprintf.c:1766 (discriminator 1)
+0x401b67a9: snprintf at /builds/idf/crosstool-NG/.build/xtensa-esp-elf/src/newlib/newlib/libc/stdio/snprintf.c:85
+0x40109559: sdcard_filelist at /home/vl/esp32/project_my/lvgl_port2/components/bsp/sdcard.c:51
+0x40110cdf: setup_scr_music_list at /home/vl/esp32/project_my/lvgl_port2/components/ui/generated/setup_scr_music_list.c:37
+0x401098d7: ui_load_scr_animation at /home/vl/esp32/project_my/lvgl_port2/components/ui/generated/gui_guider.c:41
+0x4010a391: duogongneng_music_btn_event_handler at /home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:328
+0x400e808d: event_send_core at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:467
+0x400e8152: lv_event_send at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_event.c:75
+0x400e8ac2: indev_proc_release at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_indev.c:980
+0x400e97c2: indev_pointer_proc at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_indev.c:384
+0x400e98dd: lv_indev_read_timer_cb at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/core/lv_indev.c:101
+0x400e7155: lv_timer_exec at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:313 (discriminator 2)
+0x400e7211: lv_timer_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/misc/lv_timer.c:109
+0x400da793: lv_task_handler at /home/vl/esp32/project_my/lvgl_port2/components/lvgl/src/lv_api_map.h:37
+ (inlined by) lv_ui_tack at /home/vl/esp32/project_my/lvgl_port2/main/lvgl_port2.c:48
+0x40091a0d: vPortTaskWrapper at /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/portable/xtensa/port.c:134
+[0m
+[0;33m--- 0x40080400: _init at ??:?
+[0m
+[0m

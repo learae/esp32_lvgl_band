@@ -1,0 +1,167 @@
+ets Jul 29 2019 12:21:46
+
+rst:0x1 (POWERON_RESET),boot:0x3f (SPI_FAST_FLASH_BOOT)
+configsip: 153911750, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Apr 25 2025 10:18:06[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (43) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (83) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 003e8000[0m
+[0;32mI (98) boot:  4 ota_1            OTA app          00 11 00400000 003e8000[0m
+[0;32mI (105) boot: End of partition table[0m
+[0;32mI (110) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fc30ch (2081548) map[0m
+[0;32mI (831) esp_image: segment 1: paddr=0020c334 vaddr=3ffb0000 size=03ce4h ( 15588) load[0m
+[0;32mI (837) esp_image: segment 2: paddr=00210020 vaddr=400d0020 size=1078a8h (1079464) map[0m
+[0;32mI (1207) esp_image: segment 3: paddr=003178d0 vaddr=3ffb3ce4 size=007fch (  2044) load[0m
+[0;32mI (1209) esp_image: segment 4: paddr=003180d4 vaddr=40080000 size=1fa9ch (129692) load[0m
+[0;32mI (1280) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (1280) boot: Disabling RNG early entropy source...[0m
+[0;32mI (1292) cpu_start: Multicore app[0m
+[0;32mI (1292) quad_psram: This chip is ESP32-D0WDR2-V3[0m
+[0;32mI (1294) esp_psram: Found 2MB PSRAM device[0m
+[0;32mI (1294) esp_psram: Speed: 40MHz[0m
+[0;32mI (1298) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;32mI (1769) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1777) cpu_start: Pro cpu start user code[0m
+[0;32mI (1777) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1777) cpu_start: Application information:[0m
+[0;32mI (1781) cpu_start: Project name:     lvgl_port2[0m
+[0;32mI (1786) cpu_start: App version:      1.0.4[0m
+[0;32mI (1791) cpu_start: Compile time:     Apr 27 2025 10:36:10[0m
+[0;32mI (1797) cpu_start: ELF file SHA256:  eda92ce16...[0m
+[0;32mI (1803) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (1807) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (1812) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (1817) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (1822) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1829) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (1835) heap_init: At 3FFB9EA0 len 00026160 (152 KiB): DRAM[0m
+[0;32mI (1842) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (1848) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (1855) heap_init: At 4009FA9C len 00000564 (1 KiB): IRAM[0m
+[0;32mI (1861) esp_psram: Adding pool of 2048K of PSRAM memory to heap allocator[0m
+[0;32mI (1870) spi_flash: detected chip: generic[0m
+[0;32mI (1873) spi_flash: flash io: dio[0m
+[0;33mW (1878) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1888) main_task: Started on CPU0[0m
+[0;32mI (1898) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1898) main_task: Calling app_main()[0m
+[0;32mI (1898) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1908) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1918) st7789: create esp_lcd_new_panel[0m
+[0;32mI (1928) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2768) cst816t: 	Chip ID: 0xb6[0m
+[0;32mI (2768) cst816t: 	Firmware version: 0x01[0m
+[0;32mI (2768) cst816t: 	Factory ID: 0xff[0m
+[0;32mI (2778) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2828) SDCARD: SD Card mounted successfully[0m
+[0;32mI (2838) main_task: Returned from app_main()[0m
+Guru Meditation Error: Core  1 panic'ed (StoreProhibited). Exception was unhandled.
+
+Core  1 register dump:
+PC      : 0x4008cf65  PS      : 0x00060430  A0      : 0x801c749e  A1      : 0x3ffca2b0  
+A2      : 0x00000000  A3      : 0x3f8074ab  A4      : 0x0000000c  A5      : 0x00010000  
+A6      : 0x3f807464  A7      : 0x3f807464  A8      : 0x00000001  A9      : 0x00000000  
+A10     : 0x000000b6  A11     : 0xfffffff1  A12     : 0x00000000  A13     : 0x00000000  
+A14     : 0x3f800a7c  A15     : 0x000000a0  SAR     : 0x0000001d  EXCCAUSE: 0x0000001d  
+EXCVADDR: 0x00000000  LBEG    : 0x4008ce2c  LEND    : 0x4008ce48  LCOUNT  : 0x00000000  
+
+
+Backtrace: 0x4008cf62:0x3ffca2b0 0x401c749b:0x3ffca2d0 0x401bda49:0x3ffca300 0x401b67a9:0x3ffca620 0x40109559:0x3ffca6e0 0x40110cdf:0x3ffca700 0x401098d7:0x3ffca920 0x4010a391:0x3ffca950 0x400e808d:0x3ffca980 0x400e8152:0x3ffca9a0 0x400e8ac2:0x3ffca9e0 0x400e97c2:0x3ffcaa10 0x400e98dd:0x3ffcaa30 0x400e7155:0x3ffcaa70 0x400e7211:0x3ffcaa90 0x400da793:0x3ffcaab0 0x40091a0d:0x3ffcaad0
+
+
+
+
+ELF file SHA256: eda92ce16
+
+Rebooting...
+ets Jul 29 2019 12:21:46
+
+rst:0xc (SW_CPU_RESET),boot:0x3f (SPI_FAST_FLASH_BOOT)
+configsip: 153911750, SPIWP:0xee
+clk_drv:0x00,q_drv:0x00,d_drv:0x00,cs0_drv:0x00,hd_drv:0x00,wp_drv:0x00
+mode:DIO, clock div:2
+load:0x3fff0030,len:7172
+load:0x40078000,len:15532
+load:0x40080400,len:4
+load:0x40080404,len:3904
+entry 0x40080640
+[0;32mI (30) boot: ESP-IDF v5.2 2nd stage bootloader[0m
+[0;32mI (30) boot: compile time Apr 25 2025 10:18:06[0m
+[0;32mI (30) boot: Multicore bootloader[0m
+[0;32mI (34) boot: chip revision: v3.1[0m
+[0;32mI (38) boot.esp32: SPI Speed      : 40MHz[0m
+[0;32mI (42) boot.esp32: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32: SPI Flash Size : 8MB[0m
+[0;32mI (52) boot: Enabling RNG early entropy source...[0m
+[0;32mI (57) boot: Partition Table:[0m
+[0;32mI (61) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (68) boot:  0 nvs              WiFi data        01 02 00009000 00004000[0m
+[0;32mI (75) boot:  1 otadata          OTA data         01 00 0000d000 00002000[0m
+[0;32mI (83) boot:  2 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (90) boot:  3 ota_0            OTA app          00 10 00010000 003e8000[0m
+[0;32mI (98) boot:  4 ota_1            OTA app          00 11 00400000 003e8000[0m
+[0;32mI (105) boot: End of partition table[0m
+[0;32mI (110) esp_image: segment 0: paddr=00010020 vaddr=3f400020 size=1fc30ch (2081548) map[0m
+[0;32mI (831) esp_image: segment 1: paddr=0020c334 vaddr=3ffb0000 size=03ce4h ( 15588) load[0m
+[0;32mI (837) esp_image: segment 2: paddr=00210020 vaddr=400d0020 size=1078a8h (1079464) map[0m
+[0;32mI (1207) esp_image: segment 3: paddr=003178d0 vaddr=3ffb3ce4 size=007fch (  2044) load[0m
+[0;32mI (1208) esp_image: segment 4: paddr=003180d4 vaddr=40080000 size=1fa9ch (129692) load[0m
+[0;32mI (1280) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (1280) boot: Disabling RNG early entropy source...[0m
+[0;32mI (1291) cpu_start: Multicore app[0m
+[0;32mI (1292) quad_psram: This chip is ESP32-D0WDR2-V3[0m
+[0;32mI (1294) esp_psram: Found 2MB PSRAM device[0m
+[0;32mI (1294) esp_psram: Speed: 40MHz[0m
+[0;32mI (1298) esp_psram: PSRAM initialized, cache is in low/high (2-core) mode.[0m
+[0;32mI (1769) esp_psram: SPI SRAM memory test OK[0m
+[0;32mI (1777) cpu_start: Pro cpu start user code[0m
+[0;32mI (1777) cpu_start: cpu freq: 240000000 Hz[0m
+[0;32mI (1777) cpu_start: Application information:[0m
+[0;32mI (1781) cpu_start: Project name:     lvgl_port2[0m
+[0;32mI (1786) cpu_start: App version:      1.0.4[0m
+[0;32mI (1791) cpu_start: Compile time:     Apr 27 2025 10:36:10[0m
+[0;32mI (1797) cpu_start: ELF file SHA256:  eda92ce16...[0m
+[0;32mI (1802) cpu_start: ESP-IDF:          v5.2[0m
+[0;32mI (1807) cpu_start: Min chip rev:     v0.0[0m
+[0;32mI (1812) cpu_start: Max chip rev:     v3.99 [0m
+[0;32mI (1817) cpu_start: Chip rev:         v3.1[0m
+[0;32mI (1822) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (1829) heap_init: At 3FFAE6E0 len 00001920 (6 KiB): DRAM[0m
+[0;32mI (1835) heap_init: At 3FFB9EA0 len 00026160 (152 KiB): DRAM[0m
+[0;32mI (1841) heap_init: At 3FFE0440 len 00003AE0 (14 KiB): D/IRAM[0m
+[0;32mI (1848) heap_init: At 3FFE4350 len 0001BCB0 (111 KiB): D/IRAM[0m
+[0;32mI (1854) heap_init: At 4009FA9C len 00000564 (1 KiB): IRAM[0m
+[0;32mI (1861) esp_psram: Adding pool of 2048K of PSRAM memory to heap allocator[0m
+[0;32mI (1869) spi_flash: detected chip: generic[0m
+[0;32mI (1873) spi_flash: flash io: dio[0m
+[0;33mW (1877) i2c: This driver is an old driver, please migrate your application code to adapt `driver/i2c_master.h`[0m
+[0;32mI (1888) main_task: Started on CPU0[0m
+[0;32mI (1898) esp_psram: Reserving pool of 32K of internal memory for DMA/internal allocations[0m
+[0;32mI (1898) main_task: Calling app_main()[0m
+[0;32mI (1898) gpio: GPIO[26]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1908) gpio: GPIO[21]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (1918) st7789: create esp_lcd_new_panel[0m
+[0;32mI (1928) gpio: GPIO[17]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2768) cst816t: 	Chip ID: 0xb6[0m
+[0;32mI (2768) cst816t: 	Firmware version: 0x01[0m
+[0;32mI (2768) cst816t: 	Factory ID: 0xff[0m
+[0;32mI (2778) gpio: GPIO[13]| InputEn: 0| OutputEn: 1| OpenDrain: 0| Pullup: 0| Pulldown: 0| Intr:0 [0m
+[0;32mI (2828) SDCARD: SD Card mounted successfully[0m
+[0;32mI (2838) main_task: Returned from app_main()[0m

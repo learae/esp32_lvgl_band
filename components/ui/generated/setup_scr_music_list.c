@@ -39,7 +39,19 @@ void setup_scr_music_list(lv_ui *ui)
     {
         if (strstr(name[j], ".mp3") || strstr(name[j], ".MP3")) {
             ui->music_list_list_music_item0 = lv_list_add_btn(ui->music_list_list_music, LV_SYMBOL_AUDIO, name[j]);
-            lv_obj_set_style_text_font(ui->music_list_list_music_item0, &lv_font_simsun_16_cjk, LV_PART_MAIN|LV_STATE_DEFAULT);
+            lv_obj_set_style_pad_top(ui->music_list_list_music_item0, 5, LV_PART_MAIN|LV_STATE_DEFAULT);
+            lv_obj_set_style_pad_left(ui->music_list_list_music_item0, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+            lv_obj_set_style_pad_right(ui->music_list_list_music_item0, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+            lv_obj_set_style_pad_bottom(ui->music_list_list_music_item0, 10, LV_PART_MAIN|LV_STATE_DEFAULT);
+            lv_obj_set_style_border_width(ui->music_list_list_music_item0, 1, LV_PART_MAIN|LV_STATE_DEFAULT);
+            lv_obj_set_style_border_opa(ui->music_list_list_music_item0, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+            lv_obj_set_style_border_color(ui->music_list_list_music_item0, lv_color_hex(0x6f6969), LV_PART_MAIN|LV_STATE_DEFAULT);
+            lv_obj_set_style_border_side(ui->music_list_list_music_item0, LV_BORDER_SIDE_FULL, LV_PART_MAIN|LV_STATE_DEFAULT);
+            lv_obj_set_style_text_color(ui->music_list_list_music_item0, lv_color_hex(0xfef6ea), LV_PART_MAIN|LV_STATE_DEFAULT);
+            lv_obj_set_style_text_font(ui->music_list_list_music_item0, &lv_font_montserratMedium_18, LV_PART_MAIN|LV_STATE_DEFAULT);
+            lv_obj_set_style_text_opa(ui->music_list_list_music_item0, 255, LV_PART_MAIN|LV_STATE_DEFAULT);
+            lv_obj_set_style_radius(ui->music_list_list_music_item0, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
+            lv_obj_set_style_bg_opa(ui->music_list_list_music_item0, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
         }
     }
     ui->music_list_list_music_item0 = lv_list_add_btn(ui->music_list_list_music, LV_SYMBOL_AUDIO, "music.mp3");

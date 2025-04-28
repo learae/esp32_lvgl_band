@@ -1,0 +1,183 @@
+[1/12] Performing build step for 'bootloader'
+[1/1] cd /home/vl/esp32/project_my/lvgl_port2/build/bootloader/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 bootloader 0x1000 /home/vl/esp32/project_my/lvgl_port2/build/bootloader/bootloader.bin
+Bootloader binary size 0x6850 bytes. 0x7b0 bytes (7%) free.
+[2/12] No install step for 'bootloader'
+[3/12] Building C object esp-idf/bsp/CMakeFiles/__idf_bsp.dir/sdcard.c.obj
+[4/12] Completed 'bootloader'
+[5/12] Linking C static library esp-idf/bsp/libbsp.a
+[6/12] Building C object esp-idf/ui/CMakeFiles/__idf_ui.dir/generated/events_init.c.obj
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c: In function 'shezhi_wifi_btn_event_handler':
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:206:41: warning: passing argument 1 of 'xTaskCreatePinnedToCore' from incompatible pointer type [-Wincompatible-pointer-types]
+  206 |                 xTaskCreatePinnedToCore(wifi_task, "wifi_task", 8192, NULL, 5, &wifi_task_handle, 0);
+      |                                         ^~~~~~~~~
+      |                                         |
+      |                                         void (*)(void)
+In file included from /home/vl/esp32/esp-idf/components/freertos/esp_additions/include/freertos/idf_additions.h:20,
+                 from /home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/FreeRTOS.h:1533,
+                 from /home/vl/esp32/esp-idf/components/esp_event/include/esp_event.h:12,
+                 from /home/vl/esp32/esp-idf/components/esp_wifi/include/esp_wifi.h:56,
+                 from /home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:17:
+/home/vl/esp32/esp-idf/components/freertos/FreeRTOS-Kernel/include/freertos/task.h:382:67: note: expected 'TaskFunction_t' {aka 'void (*)(void *)'} but argument is of type 'void (*)(void)'
+  382 |         extern BaseType_t xTaskCreatePinnedToCore( TaskFunction_t pxTaskCode,
+      |                                                    ~~~~~~~~~~~~~~~^~~~~~~~~~
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c: In function 'light_page_pwm_mode_event_handler':
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:793:13: warning: unused variable 'status' [-Wunused-variable]
+  793 |         int status = lv_obj_has_state(status_obj, LV_STATE_CHECKED) ? true : false;
+      |             ^~~~~~
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c: In function 'light_page_dc_mode_event_handler':
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:809:13: warning: unused variable 'status' [-Wunused-variable]
+  809 |         int status = lv_obj_has_state(status_obj, LV_STATE_CHECKED) ? true : false;
+      |             ^~~~~~
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c: In function 'txt_page_list_txt_item0_event_handler':
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:863:26: warning: initialization discards 'const' qualifier from pointer target type [-Wdiscarded-qualifiers]
+  863 |         char *btn_text = lv_list_get_btn_text(lv_obj_get_parent(target), target);
+      |                          ^~~~~~~~~~~~~~~~~~~~
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c: In function 'connect_page_wifi_sw_event_handler':
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:917:13: warning: unused variable 'status' [-Wunused-variable]
+  917 |         int status = lv_obj_has_state(status_obj, LV_STATE_CHECKED) ? true : false;
+      |             ^~~~~~
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c: In function 'connect_page_AP_sw_event_handler':
+/home/vl/esp32/project_my/lvgl_port2/components/ui/generated/events_init.c:933:13: warning: unused variable 'status' [-Wunused-variable]
+  933 |         int status = lv_obj_has_state(status_obj, LV_STATE_CHECKED) ? true : false;
+      |             ^~~~~~
+[7/12] Linking C static library esp-idf/ui/libui.a
+[8/12] Generating ld/sections.ld
+[9/12] Linking CXX executable lvgl_port2.elf
+[10/12] Generating binary image from built executable
+esptool.py v4.8.1
+Creating esp32 image...
+Merged 2 ELF sections
+Successfully created esp32 image.
+Generated /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+[11/12] cd /home/vl/esp32/project_my/lvgl_port2/build/esp-idf/esptool_py && /home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python /home/vl/esp32/esp-idf/components/partition_table/check_sizes.py --offset 0x8000 partition --type app /home/vl/esp32/project_my/lvgl_port2/build/partition_table/partition-table.bin /home/vl/esp32/project_my/lvgl_port2/build/lvgl_port2.bin
+lvgl_port2.bin binary size 0x328910 bytes. Smallest app partition is 0x3e8000 bytes. 0xbf6f0 bytes (19%) free.
+[11/12] cd /home/vl/esp32/esp-idf/components/esptool_py && /usr/bin/cmake -D IDF_PATH=/home/vl/esp32/esp-idf -D "SERIAL_TOOL=/home/vl/.espressif/python_env/idf5.2_py3.12_env/bin/python;;/home/vl/esp32/esp-idf/components/esptool_py/esptool/esptool.py;--chip;esp32" -D "SERIAL_TOOL_ARGS=--before=default_reset;--after=hard_reset;write_flash;@flash_args" -D WORKING_DIRECTORY=/home/vl/esp32/project_my/lvgl_port2/build -P /home/vl/esp32/esp-idf/components/esptool_py/run_serial_tool.cmake
+esptool.py --chip esp32 -p /dev/ttyUSB0 -b 460800 --before=default_reset --after=hard_reset write_flash --flash_mode dio --flash_freq 40m --flash_size 8MB 0x1000 bootloader/bootloader.bin 0x10000 lvgl_port2.bin 0x8000 partition_table/partition-table.bin 0xd000 ota_data_initial.bin
+esptool.py v4.8.1
+Serial port /dev/ttyUSB0
+Connecting.....
+Chip is ESP32-D0WDR2-V3 (revision v3.1)
+Features: WiFi, BT, Dual Core, 240MHz, VRef calibration in efuse, Coding Scheme None
+Crystal is 40MHz
+MAC: 30:c9:22:ff:6f:30
+Uploading stub...
+Running stub...
+Stub running...
+Changing baud rate to 460800
+Changed.
+Configuring flash size...
+Flash will be erased from 0x00001000 to 0x00007fff...
+Flash will be erased from 0x00010000 to 0x00338fff...
+Flash will be erased from 0x00008000 to 0x00008fff...
+Flash will be erased from 0x0000d000 to 0x0000efff...
+SHA digest in image updated
+Compressed 26704 bytes to 16348...
+Writing at 0x00001000... (100 %)
+Wrote 26704 bytes (16348 compressed) at 0x00001000 in 0.8 seconds (effective 259.5 kbit/s)...
+Hash of data verified.
+Compressed 3311888 bytes to 1494748...
+Writing at 0x00010000... (1 %)
+Writing at 0x00020b16... (2 %)
+Writing at 0x0002e91e... (3 %)
+Writing at 0x000368ed... (4 %)
+Writing at 0x0004045b... (5 %)
+Writing at 0x00047429... (6 %)
+Writing at 0x0004f194... (7 %)
+Writing at 0x0005798e... (8 %)
+Writing at 0x000624b5... (9 %)
+Writing at 0x0006eb3b... (10 %)
+Writing at 0x00076e27... (11 %)
+Writing at 0x000828c0... (13 %)
+Writing at 0x00097a4b... (14 %)
+Writing at 0x000a2eb5... (15 %)
+Writing at 0x000aaf04... (16 %)
+Writing at 0x000b359d... (17 %)
+Writing at 0x000bfbe7... (18 %)
+Writing at 0x000cd13e... (19 %)
+Writing at 0x000e1a23... (20 %)
+Writing at 0x000ee2de... (21 %)
+Writing at 0x000f70bc... (22 %)
+Writing at 0x00100719... (23 %)
+Writing at 0x00114dc0... (25 %)
+Writing at 0x0012037b... (26 %)
+Writing at 0x0012905b... (27 %)
+Writing at 0x001319ba... (28 %)
+Writing at 0x0013cd63... (29 %)
+Writing at 0x00147faf... (30 %)
+Writing at 0x00157b7c... (31 %)
+Writing at 0x00180c32... (32 %)
+Writing at 0x001b0f1d... (33 %)
+Writing at 0x001c12eb... (34 %)
+Writing at 0x001c8280... (35 %)
+Writing at 0x001cf13d... (36 %)
+Writing at 0x001d5820... (38 %)
+Writing at 0x001dbde0... (39 %)
+Writing at 0x001e2105... (40 %)
+Writing at 0x001e8633... (41 %)
+Writing at 0x001ed3aa... (42 %)
+Writing at 0x001f2824... (43 %)
+Writing at 0x001f8f30... (44 %)
+Writing at 0x001fdb7e... (45 %)
+Writing at 0x00204e79... (46 %)
+Writing at 0x002117e3... (47 %)
+Writing at 0x00217178... (48 %)
+Writing at 0x0021ea08... (50 %)
+Writing at 0x002249f8... (51 %)
+Writing at 0x0022ac04... (52 %)
+Writing at 0x00230eae... (53 %)
+Writing at 0x002374df... (54 %)
+Writing at 0x0023d502... (55 %)
+Writing at 0x0024394d... (56 %)
+Writing at 0x0024963f... (57 %)
+Writing at 0x0025038f... (58 %)
+Writing at 0x00256d90... (59 %)
+Writing at 0x0025ce1d... (60 %)
+Writing at 0x002632da... (61 %)
+Writing at 0x002699e1... (63 %)
+Writing at 0x0026fc5d... (64 %)
+Writing at 0x00275d0b... (65 %)
+Writing at 0x0027c8c7... (66 %)
+Writing at 0x002826a3... (67 %)
+Writing at 0x002888c5... (68 %)
+Writing at 0x0028edf1... (69 %)
+Writing at 0x00294de8... (70 %)
+Writing at 0x0029aa13... (71 %)
+Writing at 0x0029fb64... (72 %)
+Writing at 0x002a5124... (73 %)
+Writing at 0x002aa590... (75 %)
+Writing at 0x002afa09... (76 %)
+Writing at 0x002b4ffd... (77 %)
+Writing at 0x002ba843... (78 %)
+Writing at 0x002c069c... (79 %)
+Writing at 0x002c60ed... (80 %)
+Writing at 0x002cbdb8... (81 %)
+Writing at 0x002d19ef... (82 %)
+Writing at 0x002d78b3... (83 %)
+Writing at 0x002dd89d... (84 %)
+Writing at 0x002e338a... (85 %)
+Writing at 0x002e925b... (86 %)
+Writing at 0x002ef17e... (88 %)
+Writing at 0x002f4905... (89 %)
+Writing at 0x002fa6c4... (90 %)
+Writing at 0x00304381... (91 %)
+Writing at 0x0030d12b... (92 %)
+Writing at 0x003138fe... (93 %)
+Writing at 0x0031a1a4... (94 %)
+Writing at 0x003204a6... (95 %)
+Writing at 0x00325c6b... (96 %)
+Writing at 0x0032b7b5... (97 %)
+Writing at 0x00331e93... (98 %)
+Writing at 0x00337094... (100 %)
+Wrote 3311888 bytes (1494748 compressed) at 0x00010000 in 36.3 seconds (effective 728.9 kbit/s)...
+Hash of data verified.
+Compressed 3072 bytes to 128...
+Writing at 0x00008000... (100 %)
+Wrote 3072 bytes (128 compressed) at 0x00008000 in 0.1 seconds (effective 313.5 kbit/s)...
+Hash of data verified.
+Compressed 8192 bytes to 31...
+Writing at 0x0000d000... (100 %)
+Wrote 8192 bytes (31 compressed) at 0x0000d000 in 0.1 seconds (effective 740.3 kbit/s)...
+Hash of data verified.
+
+Leaving...
+Hard resetting via RTS pin...
