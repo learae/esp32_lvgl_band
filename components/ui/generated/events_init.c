@@ -20,6 +20,7 @@
 #include "freertos/task.h"
 #include "smartconfig.h"
 #include "sdcard.h"
+#include "string.h"
 
 #if LV_USE_GUIDER_SIMULATOR && LV_USE_FREEMASTER
 #include "freemaster_client.h"
@@ -1309,26 +1310,80 @@ static void math_page_event_handler (lv_event_t *e)
 
 static void math_page_btnm_1_event_handler (lv_event_t *e)
 {
+    static char num[20] = {0};
     lv_event_code_t code = lv_event_get_code(e);
     switch (code) {
-    case LV_EVENT_CLICKED:
-    {
-        lv_obj_t * obj = lv_event_get_target(e);
-        uint32_t id = lv_btnmatrix_get_selected_btn(obj);
-
-        switch (id) {
-        case (0):
+        case LV_EVENT_CLICKED:
         {
+            lv_obj_t *obj = lv_event_get_target(e);
+            uint32_t id = lv_btnmatrix_get_selected_btn(obj);
+    
+            // 按钮 map，需与实际设置一致
+            static const char *math_page_btnm_1_text_map[] = {
+                "1", "2", "3", "=", 
+                "4", "5", "6", "+", 
+                "7", "8", "9", "-", 
+                "del", "0", "/", "*"
+            };
+    
+            // 检查id有效且不是换行或空字符串
+            if (id < (sizeof(math_page_btnm_1_text_map) / sizeof(math_page_btnm_1_text_map[0])) &&
+                strcmp(math_page_btnm_1_text_map[id], "\n") != 0 &&
+                strcmp(math_page_btnm_1_text_map[id], "") != 0) {
+                size_t len = strlen(num);
+                size_t btn_len = strlen(math_page_btnm_1_text_map[id]);
+                if(strcmp(math_page_btnm_1_text_map[id], "del") == 0) {
+                    if (len > 0) {
+                        num[len - 1] = '\0';
+                    }
+                }
+                else if(strcmp(math_page_btnm_1_text_map[id], "=") == 0) {
+                    // 计算结果
+                    char result[20];
+                    int cont = 0, res = 0;
+                    char op = '+';
+                    const char *p = num;
+                    while (*p) {
+                        if (*p >= '0' && *p <= '9') {
+                            cont = cont * 10 + (*p - '0');
+                        } else if (*p == '+' || *p == '-' || *p == '*' || *p == '/') {
+                            switch (op) {
+                                case '+': res += cont; break;
+                                case '-': res -= cont; break;
+                                case '*': res *= cont; break;
+                                case '/': if(cont != 0) res /= cont; break;
+                            }
+                            op = *p;
+                            cont = 0;
+                        }
+                        p++;
+                    }
+                    // 处理最后一个数
+                    switch (op) {
+                        case '+': res += cont; break;
+                        case '-': res -= cont; break;
+                        case '*': res *= cont; break;
+                        case '/': if(cont != 0) res /= cont; break;
+                    }
+                    snprintf(result, sizeof(result), "%d",res);
+                    lv_label_set_text(guider_ui.math_page_label_result, result);
+                    memset(num, 0, sizeof(num));
+                }
 
+                else{
+                    if (len + btn_len < sizeof(num)) {
+                        strcat(num, math_page_btnm_1_text_map[id]);
+                        lv_label_set_text(guider_ui.math_page_label_result, num);
+                    }
+                }
+            }
             break;
         }
+        case LV_EVENT_ALL:
+            // 可留空或加注释
+            break;
         default:
             break;
-        }
-        break;
-    }
-    default:
-        break;
     }
 }
 
