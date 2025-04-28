@@ -1,4 +1,4 @@
-  基于esp32-WROOM-32E,使用了PSRAM，flash为8M，使用lvgl开发手表的图形界面，移植了gui-guider生成的代码，触摸芯片采用cst816t，显示驱动芯片采用st7789，lvgl使用v8.3.10版本，mqtt连接阿里云iot平台
+  基于esp32-WROOM-32E,使用了PSRAM，flash为8M，使用lvgl开发手表的图形界面，移植了gui-guider生成的代码，触摸芯片采用cst816t，显示驱动芯片采用st7789，lvgl使用v8.3.10版本，mqtt连接阿里云iot平台,实现ota功能，以及各种数据的交换
   
   主界面如下：
   
