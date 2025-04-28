@@ -18,6 +18,7 @@
         "utility": "cpp",
         "esp_vfs_fat.h": "c",
         "mjpeg_frame.h": "c",
-        "wifi_task.h": "c"
+        "wifi_task.h": "c",
+        "cst816t_driver.h": "c"
     }
 }
