@@ -38,7 +38,7 @@
 
   ![image](https://github.com/user-attachments/assets/17df8cd0-3740-4376-88af-35bc1c00ee29)
 
-  声音控制界面：通过蓝牙来控制各个设备的声音（暂未完成）
+  声音控制界面：通过蓝牙来控制设备的声音和播放
 
   ![image](https://github.com/user-attachments/assets/2f7da221-857e-4492-a9cf-28723fd69bc3)
 
